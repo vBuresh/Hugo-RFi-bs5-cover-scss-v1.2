@@ -1,0 +1,4 @@
+# Configure Hugo: https://gohugo.io/getting-started/configuration/#configuration-file
+baseURL: https://cybmir.ru/
+languageCode: en-us
+title: Hugo ReFreshing Theme

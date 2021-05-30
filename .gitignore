@@ -1,0 +1,52 @@
+vv/
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+themes/
+
+archetypes/cmip.md
+archetypes/vera.md
+archetypes/leaf.md
+archetypes/post.md
+archetypes/wdev.md
+
+# assets/
+assets/bootstrap/
+assets/js
+assets/images
+assets/css
+
+static/images
+static/js/
+static/fonts
+static/css
+
+bootstrap.bundle.min.js.map
+
+# content/
+content/cmir/
+content/post/calligRus
+content/post/o-rusi
+content/vera
+
+exampleSite/zLayouts
+exampleSite/
+exampleSite/zOutdate
+exampleSite/samples
+
+
+
+wMedia/
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+wREADME.md
+resources/
+
+# Файлы редактора VScode
+.vscode
+
+# Директория выхлопа (по умолчанию - public, изменено в config.yaml: publishDir: "@_site"
+@_site/
