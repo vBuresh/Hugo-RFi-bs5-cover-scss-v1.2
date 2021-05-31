@@ -5,12 +5,6 @@ vv/
 *.scss.map
 themes/
 
-archetypes/cmip.md
-archetypes/vera.md
-archetypes/leaf.md
-archetypes/post.md
-archetypes/wdev.md
-
 # assets/
 assets/bootstrap/
 assets/js
@@ -31,11 +25,8 @@ content/post/o-rusi
 content/vera
 
 exampleSite/zLayouts
-exampleSite/
 exampleSite/zOutdate
 exampleSite/samples
-
-
 
 wMedia/
 
