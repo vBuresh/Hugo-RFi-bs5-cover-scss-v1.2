@@ -30,7 +30,7 @@
 
 На первом этапе нужно:
 
-1.  файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с файлом `cover.html`
+1.  Файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с файлом `cover.html`
 
 ```html
 <!DOCTYPE html>
@@ -48,11 +48,11 @@
 
 2.  В файлы директории `layouts`:
 
--   \_default/baseof.html
--   partials/head.html
--   partials/header.html
--   partials/footer.html
--   index.html
+    -   \_default/baseof.html
+    -   partials/head.html
+    -   partials/header.html
+    -   partials/footer.html
+    -   index.html
 
 поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (см. комментарии в файле `cover.html`)
 
@@ -165,11 +165,10 @@
 
 ### Третий этап
 
-На втором этапе:
+На третьем этапе требуется:
 
-1.  подключить `sidebar` и автоматизировать его (теги),
-2.  автоматизировать `navbar` (автоматическое формирование -по таксономии),
-3.  создать необходимые Gulp задачи, и очистить устаревшие и сформировать актуальные "активы" проекта:
+1.  Создать необходимые Gulp задачи и сформировать актуальные "активы" проекта (предварительно следует очистить устаревшие):
+
     -   assets/bootstrap/scss
     -   assets/css/cover.css
     -   assets/css/dark-mode.css
@@ -177,12 +176,17 @@
     -   assets/js/bootstrap.bundle.min.js
     -   assets/js/dark-mode-switch.js
     -   static/js/bootstrap.bundle.min.js.map
-4.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head),
-5.  создать подключить автономные:
-    -   layouts/partials/scripts.html
-    -   layouts/partials/stylesheets.html
-    -   layouts/partials/favicons.html
-    -   подключить автономные `stylesheets` и `scripts`.
-6.  разработать `config.yaml`
-7.  автоматизировать [footer](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)
-8.  подключить dark-mode switcher
+
+2.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
+
+    -   разработать и подключить автономные файлы активов:
+
+        -   layouts/partials/scripts.html
+        -   layouts/partials/stylesheets.html
+        -   layouts/partials/favicons.html
+
+3.  подключить `sidebar` и автоматизировать его (теги),
+4.  автоматизировать `navbar` (автоматическое формирование -по таксономии),
+5.  автоматизировать [footer](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)
+6.  подключить `dark-mode switcher`
+7.  разработать `config.yaml`
