@@ -18,14 +18,8 @@ static/css
 
 bootstrap.bundle.min.js.map
 
-# content/
-content/cmir/
-content/post/calligRus
-content/post/o-rusi
-content/vera
-
-exampleSite/zLayouts
-exampleSite/zOutdate
+exampleSite/vLayouts
+exampleSite/zzOutdate
 exampleSite/samples
 
 wMedia/
