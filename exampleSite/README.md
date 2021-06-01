@@ -14,27 +14,29 @@
 
 ## Практика применения шаблона в Hugo
 
-Исходники проекта [размещены на GitHub](https://github.com/vBuresh/Hugo-RFi-bs5-cover). Нужно "форкнуть" проект и найти его в своем репозитории GitHub. Затем, переименовать его, присвоев имя Hugo-RFm-bs5-cover. После этого - клонировать проект в рабочую директорию: `./atom-sites/`
+Исходники проекта [размещены на GitHub](https://github.com/vBuresh/Hugo-RFi-bs5-cover). Нужно "форкнуть" проект и найти его в своем репозитории GitHub. Затем, переименовать его, присвоив имя Hugo-RFm-bs5-cover. После этого - клонировать проект в рабочую директорию: `./atom-sites/`
 
 Исходники примера "Cover" - в директории `exampleSite/examples_bs5-cover`. Здесь же находится и файл `cover.html`. Полный путь к нему: `/home/w/vdev/atom-sites/_RFi-cover/exampleSite/examples_bs5-cover/cover.html`. Это полный действующий автономный пример "Cover" (использует интернет-ресурсы, необходимо интернет-подключение!).
 
 Исходный код файла содержит комментарии, которые помогут выделить фрагменты, для помещения в директорию `layouts`:
 
 1.  layouts/default/baseof.html
-2.  layouts/default/single.html
-3.  layouts/partials/footer.html
-4.  layouts/partials/head.html
-5.  layouts/partials/header.html
+2.  layouts/partials/head.html
+3.  layouts/partials/header.html
+4.  layouts/partials/footer.html
+5.  layouts/index.html
+6.  layouts/default/single.html
 
 ### первый этап
 
 На первом этапе: - содержимое выбранных фрагментов файла `cover.html` поместить в соответствующие файлы директории `layouts` (в режиме "как есть"):
 
-1.  /default/baseof.html
-2.  /default/single.html
-3.  /partials/footer.html
-4.  /partials/head.html
-5.  /partials/header.html
+1.  default/baseof.html (2/5, 4/51)
+2.  partials/head.html
+3.  partials/header.html
+4.  partials/footer.html
+5.  layouts/index.html
+6.  default/single.html
 
 После этого провести сборку командой `hugo server`.
 
