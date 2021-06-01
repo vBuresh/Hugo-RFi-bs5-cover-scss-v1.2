@@ -30,7 +30,7 @@
 
 На первом этапе нужно:
 
-1.  Файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с файлом `cover.html`
+1.  Файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с примером `cover.html`
 
 ```html
 <!DOCTYPE html>
@@ -105,9 +105,7 @@
 
 #### Шаблон homepage - `layouts/index.html`
 
-Особенности его разработки шаблона главной страницы (homepage) layouts/index.html изложены на странице [Homepage Template](https://gohugo.io/templates/homepage/). Там же приведен пример
-
-Особенности его разработки
+Особенности его разработки шаблона главной страницы (homepage) layouts/index.html изложены на странице [Homepage Template](https://gohugo.io/templates/homepage/). Там же приведен пример:
 
 ```html
 <!--
