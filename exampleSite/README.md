@@ -12,39 +12,158 @@
 
 Он отличается, прежде всего, простотой и лаконичностью (без аскетизма), компактностью, гармоничностью и прочими достоинствами.
 
-## Практика применения шаблона в Hugo
+## Практика применения шаблона "Cover" в Hugo
 
 Исходники проекта [размещены на GitHub](https://github.com/vBuresh/Hugo-RFi-bs5-cover). Нужно "форкнуть" проект и найти его в своем репозитории GitHub. Затем, переименовать его, присвоив имя Hugo-RFm-bs5-cover. После этого - клонировать проект в рабочую директорию: `./atom-sites/`
 
 Исходники примера "Cover" - в директории `exampleSite/examples_bs5-cover`. Здесь же находится и файл `cover.html`. Полный путь к нему: `/home/w/vdev/atom-sites/_RFi-cover/exampleSite/examples_bs5-cover/cover.html`. Это полный действующий автономный пример "Cover" (использует интернет-ресурсы, необходимо интернет-подключение!).
 
-Исходный код файла содержит комментарии, которые помогут выделить фрагменты, для помещения в директорию `layouts`:
+Исходный код файла содержит комментарии, которые помогут выделить фрагменты, для шаблонов директории `layouts`:
 
-1.  layouts/default/baseof.html
-2.  layouts/partials/head.html
-3.  layouts/partials/header.html
-4.  layouts/partials/footer.html
-5.  layouts/index.html
-6.  layouts/default/single.html
-
-### первый этап
-
-На первом этапе: - содержимое выбранных фрагментов файла `cover.html` поместить в соответствующие файлы директории `layouts` (в режиме "как есть"):
-
-1.  default/baseof.html (2/5, 4/51)
+1.  default/baseof.html
 2.  partials/head.html
 3.  partials/header.html
 4.  partials/footer.html
-5.  layouts/index.html
-6.  default/single.html
+5.  index.html
 
-После этого провести сборку командой `hugo server`.
+### Первый этап
+
+На первом этапе нужно:
+
+1.  файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с файлом `cover.html`
+
+```html
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
+```
+
+2.  В файлы директории `layouts`:
+
+-   \_default/baseof.html
+-   partials/head.html
+-   partials/header.html
+-   partials/footer.html
+-   index.html
+
+поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (см. комментарии в файле `cover.html`)
+
+Следует обратить внимание, что файл `layouts/index.html` по умолчанию, является шаблоном главной страницы (homepage) создаваемого сайта. Его содержимое должно начинаться с определения: `{{ define "main" }}` (закрывается: `{{ end }}`).
+
+> _Важно:_
+> _Отсутствие определения `define "main"` может исказить отображение главной страницы в браузере._
+
+В завершении нужно командой `hugo server` собрать сайт и посмотреть его в браузере.
 
 Цель - получить такой же внешний вид главной страницы, как на образце.
 
 По выполнении заданий первого этапа следует провести тщательное тестирование. Затем нужно "закоммитить" каждое изменение (stage, commit to muster) и "залить" в удаленный репозиторий GitHub (Push).
 
-### второй этап
+### Второй этап
+
+На этом этапе требуется привести в соответствие с рекомендациями разработчиков Hugo следующие шаблоны:
+
+-   layouts/\_default/baseof.html
+-   layouts/index.html
+-   layouts/\_default/list.html
+-   layouts/\_default/single.html
+
+#### Шаблон `\_default/baseof.html`
+
+Разработчики Hugo рекомендуют при разработке шаблона `\_default/baseof.html` пользоваться следующим примером:
+
+```html
+<!-- Источник: Define the Base Template (https://gohugo.io/templates/base/#define-the-base-template) -->
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <title>{{ block "title" . }}
+          <!-- Blocks may include default content. -->
+          {{ .Site.Title }}
+          {{ end }}</title>
+    </head>
+    <body>
+       <!-- Code that all your templates share, like a header -->
+       {{ block "main" . }}
+       <!-- The part of the page that begins to differ between templates -->
+       {{ end }}
+       {{ block "footer" . }}
+       <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+       {{ end }}
+    </body>
+</html>
+```
+
+#### Шаблон homepage - `layouts/index.html`
+
+Особенности его разработки шаблона главной страницы (homepage) layouts/index.html изложены на странице [Homepage Template](https://gohugo.io/templates/homepage/). Там же приведен пример
+
+Особенности его разработки
+
+```html
+<!--
+Источник: Homepage Template (https://gohugo.io/templates/homepage/)
+ -->
+{{ define "main" }}
+<main aria-role="main">
+  <header class="homepage-header">
+    <h1>{{.Title}}</h1>
+    {{ with .Params.subtitle }}
+    <span class="subtitle">{{.}}</span>
+    {{ end }}
+  </header>
+  <div class="homepage-content">
+  <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+  {{.Content}}
+  </div>
+  <div>
+  {{ range first 10 .Site.RegularPages }}
+  {{ .Render "summary"}}
+  {{ end }}
+  </div>
+</main>
+{{ end }}
+```
+
+#### Шаблон - `layouts/\_default/list.html`
+
+```html
+<!-- Источник: Override the Base Template (https://gohugo.io/templates/base/#override-the-base-template) -->
+{{ define "main" }}
+  <h1>Posts</h1>
+  {{ range .Pages }}
+    <article>
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}
+```
+
+#### Шаблон - `layouts/\_default/single.html`
+
+```html
+<!-- Источник: Override the Base Template (https://gohugo.io/templates/base/#override-the-base-template) -->
+{{ define "title" }}
+  <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+{{ end }}
+```
+
+### Третий этап
 
 На втором этапе:
 
