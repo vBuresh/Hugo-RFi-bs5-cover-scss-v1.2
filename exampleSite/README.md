@@ -18,7 +18,7 @@
 
 Исходники примера "Cover" - в директории `exampleSite/examples_bs5-cover`. Здесь же находится и файл `cover.html`. Полный путь к нему: `/home/w/vdev/atom-sites/_RFi-cover/exampleSite/examples_bs5-cover/cover.html`. Это полный действующий автономный пример "Cover" (использует интернет-ресурсы, необходимо интернет-подключение!).
 
-Исходный код файла содержит комментарии, которые помогут выделить фрагменты, для шаблонов директории `layouts`:
+Исходный код файла `cover.html` содержит комментарии, которые помогут выделить фрагменты, для файлов-шаблонов директории `layouts`:
 
 1.  default/baseof.html
 2.  partials/head.html
@@ -28,9 +28,11 @@
 
 ### Первый этап
 
-На первом этапе нужно:
+На первом этапе нужно заполнить вышеперечисленные файлы.
 
-1.  Файл `default/baseof.html` (теги `<html>`, `<body>`, `<div id="content">`) привести соответствие с примером `cover.html`
+1.  Файл `default/baseof.html`.
+
+Файл `default/baseof.html` поставляется с таким кодом:
 
 ```html
 <!DOCTYPE html>
@@ -46,26 +48,23 @@
 </html>
 ```
 
-2.  В файлы директории `layouts`:
+Требуется привести  теги `<html>`, `<body>`, `<div id="content">` в соответствие с примером `cover.html`
 
-    -   \_default/baseof.html
-    -   partials/head.html
-    -   partials/header.html
-    -   partials/footer.html
-    -   index.html
+2. Поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (согласно комментариям) в файлы:
 
-поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (см. комментарии в файле `cover.html`)
+    -   layouts/partials/head.html
+    -   layouts/partials/header.html
+    -   layouts/partials/footer.html
+    -   layouts/index.html
 
 Следует обратить внимание, что файл `layouts/index.html` по умолчанию, является шаблоном главной страницы (homepage) создаваемого сайта. Его содержимое должно начинаться с определения: `{{ define "main" }}` (закрывается: `{{ end }}`).
 
 > _Важно:_
 > _Отсутствие определения `define "main"` может исказить отображение главной страницы в браузере._
 
-В завершении нужно командой `hugo server` собрать сайт и посмотреть его в браузере.
+В завершении нужно собрать сайт (командой `hugo server`), его в браузере. В другом окне браузера - открыть файл `cover.html`. Сравнить и убедится, что оба файла выглядят абсолютно одинаково. Если тен - найти и устранить причины искажений. Цель - получить такой же внешний вид главной страницы, как на образце.
 
-Цель - получить такой же внешний вид главной страницы, как на образце.
-
-По выполнении заданий первого этапа следует провести тщательное тестирование. Затем нужно "закоммитить" каждое изменение (stage, commit to muster) и "залить" в удаленный репозиторий GitHub (Push).
+После тщательного тестирования "закоммитить" изменения в каждом файле проекта (stage, commit to muster) и "залить" иденения в удаленный репозиторий GitHub (Push).
 
 ### Второй этап
 
@@ -78,7 +77,7 @@
 
 #### Шаблон `\_default/baseof.html`
 
-Разработчики Hugo рекомендуют при разработке шаблона `\_default/baseof.html` пользоваться следующим примером:
+В документации **Hugo** приводится файл `\_default/baseof.html` в таком виде:
 
 ```html
 <!-- Источник: Define the Base Template (https://gohugo.io/templates/base/#define-the-base-template) -->
@@ -102,10 +101,12 @@
     </body>
 </html>
 ```
+В примере показано некоторое содержимое элемента [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head), задача которого — хранить метаданные документа. Интересен и пример автоматизации: `block "title"`, тег `<title>`. В комментариях сказано, что в блок можно поместить постоянное содержимое, кроме того, сюда же автоматически "подтягивается" информация из поля `title:` конфигурационного файла, который содержит глобальные настройки и данные и сведения.
+
 
 #### Шаблон homepage - `layouts/index.html`
 
-Особенности его разработки шаблона главной страницы (homepage) layouts/index.html изложены на странице [Homepage Template](https://gohugo.io/templates/homepage/). Там же приведен пример:
+Особенности разработки шаблона главной страницы (homepage) `layouts/index.html` хорошо изложены на странице [Homepage Template](https://gohugo.io/templates/homepage/). Там же приведен следующий пример:
 
 ```html
 <!--
@@ -149,6 +150,8 @@
 
 #### Шаблон - `layouts/\_default/single.html`
 
+##### Пример 1
+
 ```html
 <!-- Источник: Override the Base Template (https://gohugo.io/templates/base/#override-the-base-template) -->
 {{ define "title" }}
@@ -158,6 +161,56 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
+{{ end }}
+```
+
+##### Пример 2
+
+[Example Single Page Templates](https://gohugo.io/templates/single-page-templates/)
+
+posts/single.html
+This single page template makes use of Hugo base templates, the .Format function for dates, the .WordCount page variable, and ranges through the single content’s specific taxonomies. with is also used to check whether the taxonomies are set in the front matter.
+
+```html
+{{ define "main" }}
+<section id="main">
+  <h1 id="title">{{ .Title }}</h1>
+  <div>
+        <article id="content">
+           {{ .Content }}
+        </article>
+  </div>
+</section>
+<aside id="meta">
+    <div>
+    <section>
+      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+    </section>
+    {{ with .Params.topics }}
+    <ul id="topics">
+      {{ range . }}
+        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ with .Params.tags }}
+    <ul id="tags">
+      {{ range . }}
+        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    </div>
+    <div>
+        {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+</aside>
 {{ end }}
 ```
 
@@ -188,3 +241,26 @@
 5.  автоматизировать [footer](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)
 6.  подключить `dark-mode switcher`
 7.  разработать `config.yaml`
+
+## Разработка `config.yaml`
+
+Настройка оглавления [Table Of Contents](https://gohugo.io/getting-started/configuration-markup#table-of-contents)
+
+```yaml
+markup:
+  goldmark:
+    renderer:
+      unsafe:            true
+  highlight:
+    noClasses:           false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+```
+
+These settings only works for the **Goldmark** renderer:
+
+-   **startLevel** - The heading level, values starting at 1 (h1), to start render the table of contents.
+-   **endLevel** - The heading level, inclusive, to stop render the table of contents.
+-   **ordered** - Whether or not to generate an ordered list instead of an unordered list.
