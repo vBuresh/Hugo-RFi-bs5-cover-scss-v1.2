@@ -2,25 +2,23 @@
 
 **ReFreshing-bs5-cover** is a theme for the [Hugo](https://gohugo.io) - world’s fastest framework for building websites which is based on sleek, intuitive, and powerful front-end framework [Bootstrap 5](https://github.com/twbs/bootstrap). The **ReFreshing-bs5-cover** theme is most suitable for for personal website and magazine like blog template with header, navigation, featured content.
 
-На сайте Bootstrap даются [примеры сайтов](https://getbootstrap.com/docs/5.0/examples/), разработанных командой Bootstrap. Они предназначены для оказания помощи пользователям быстро начать свой проект - от использования частей фреймворка до настраиваемых компонентов `partials` и `layouts`, на основе любого образца.
+> Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
+
+Цель проекта **Hugo-RFi-bs5-cover** - создать тему для популярного генератора статических сайтов **Hugo** с применением [Bootstrap 5](https://github.com/twbs/bootstrap) и шаблона **Cover**, представленного на Bootstrap в качестве одного из [примеров](https://getbootstrap.com/docs/5.0/examples/), разработанных командой фреймворка. Эти примеры хорошо помогают пользователям быстро начать свой проект.
 
 ## Шаблон "Cover"
 
-> Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
-
-Среди примеров по-своему интересен одностраничный шаблон **Cover**, предлагаемый для создания простых и красивых домашних страниц.
-
 > A one-page template for building simple and beautiful home pages
 
-Он отличается, прежде всего, простотой и лаконичностью (без аскетизма), компактностью, гармоничностью и прочими достоинствами.
+Одностраничный шаблон **Cover**  (разработчик: Mark Otto - <a href="https://twitter.com/mdo" class="text-white">@mdo</a>), который предлагается использовать для создания простых и красивых домашних страниц, привлекает своей простотой и лаконичностью (без аскетизма), а также компактностью и гармоничностью. Он обладает и рядом других достоинств.
 
-## Практика применения шаблона "Cover" в Hugo
+## Разработка темы для Hugo на основе "Cover"
 
-Исходники проекта [размещены на GitHub](https://github.com/vBuresh/Hugo-RFi-bs5-cover). Нужно "форкнуть" проект и найти его в своем репозитории GitHub. Затем, переименовать его, присвоив имя Hugo-RFm-bs5-cover. После этого - клонировать проект в рабочую директорию: `./atom-sites/`
+<!-- Исходники проекта [размещены на GitHub](https://github.com/vBuresh/Hugo-RFi-bs5-cover). Нужно "форкнуть" проект и найти его в своем репозитории GitHub. Затем, переименовать его, присвоив имя Hugo-RFm-bs5-cover. После этого - клонировать проект в рабочую директорию: `./atom-sites/`
 
-Исходники примера "Cover" - в директории `exampleSite/examples_bs5-cover`. Здесь же находится и файл `cover.html`. Полный путь к нему: `/home/w/vdev/atom-sites/_RFi-cover/exampleSite/examples_bs5-cover/cover.html`. Это полный действующий автономный пример "Cover" (использует интернет-ресурсы, необходимо интернет-подключение!).
+Исходники примера "Cover" - в директории `exampleSite/examples_bs5-cover`. Здесь же находится и файл `cover.html`. Полный путь к нему: `/home/w/vdev/atom-sites/_RFi-cover/exampleSite/examples_bs5-cover/cover.html`. Это полный действующий автономный пример "Cover" (использует интернет-ресурсы, необходимо интернет-подключение!). -->
 
-Исходный код файла `cover.html` содержит комментарии, которые помогут выделить фрагменты, для файлов-шаблонов директории `layouts`:
+Для начала работы и определения задач и этапов их выполнения необходимо сформировать файл `cover.html`, содержащий исходный код примера. Нужно внимательно изучить его, выделить фрагменты, для формирования файлов-шаблонов в директории `layouts`:
 
 1.  default/baseof.html
 2.  partials/head.html
@@ -28,9 +26,11 @@
 4.  partials/footer.html
 5.  index.html
 
+Каждый фрагмент следует дополнить комментариями, чтобы было ясно - куда его копировать из `cover.html` в соответствующий файл директории `layouts`. При этом важно помнить, что крайне нежелательно дублирование фрагментов.
+
 ### Первый этап
 
-На первом этапе нужно заполнить вышеперечисленные файлы.
+На первом этапе копируются соответствующие фрагменты в вышеперечисленные файлы.
 
 1.  Файл `default/baseof.html`.
 
@@ -59,7 +59,7 @@
     -   layouts/partials/footer.html
     -   layouts/index.html
 
-Следует обратить внимание, что файл `layouts/index.html` по умолчанию, является шаблоном главной страницы (homepage) создаваемого сайта. Его содержимое должно начинаться с определения: `{{ define "main" }}` (закрывается: `{{ end }}`).
+Следует обратить внимание, что файл `layouts/index.html` по умолчанию, содержит шаблон главной страницы (homepage) создаваемого сайта. В начале его кода помещается определение: `{{ define "main" }}`, а в конце - закрывается: `{{ end }}`).
 
 > _Важно:_
 > _Отсутствие определения `define "main"` может исказить отображение главной страницы в браузере._
