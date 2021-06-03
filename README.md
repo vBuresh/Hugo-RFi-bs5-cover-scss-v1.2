@@ -52,7 +52,7 @@
 
 Требуется привести  теги `<html>`, `<body>`, `<div id="content">` в соответствие с примером `cover.html`
 
-2. Поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (согласно комментариям) в файлы:
+2.  Поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (согласно комментариям) в файлы:
 
     -   layouts/partials/head.html
     -   layouts/partials/header.html
@@ -103,10 +103,10 @@
     </body>
 </html>
 ```
+
 Пример демонстрирует содержимое элемента [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head), задача которого — хранить метаданные документа. Интересен и пример автоматизации: `block "title"`, тег `<title>`. В комментариях сообщается, что в блок можно поместить постоянное содержимое, кроме того, сюда же автоматически "подтягивается" информация из поля `title:` конфигурационного файла, который содержит глобальные настройки и данные и сведения.
 
 > Наши "вдохновители" демонстрируют более глубокую разработку `<title>`.
-
 
 #### Шаблон homepage - `layouts/index.html`
 
@@ -222,7 +222,55 @@ This single page template makes use of Hugo base templates, the .Format function
 
 На третьем этапе требуется:
 
-1.  Создать необходимые Gulp задачи и сформировать актуальные "активы" проекта (предварительно следует очистить устаревшие):
+1.  Подключить `sidebar` и автоматизировать его (теги)
+
+См. bs5 Documents: [Offcanvas](https://getbootstrap.com/docs/5.0/components/offcanvas/)
+
+#### Подключение
+
+Создать два файла:
+
+-  `layouts/partials/sidebar-navbtn.html` для кода кнопки управления
+-  `layouts/partials/sidebar.html` для основного кода сайбара.
+
+В файл `layouts/partials/sidebar-navbtn.html` поместить следующий код:
+
+```html
+<!-- прверить: id="offcanvasRFi" -->
+<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
+  <svg id="w-list-nested-bi" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+  </svg>
+</a>
+```
+
+В файл `layouts/partials/sidebar.html` нужно скопировать в  код из примера [Live demo](https://getbootstrap.com/docs/5.0/components/offcanvas/#live-demo) и удалить первые два обзаца с примером кнопок управления (сделана своя!). Затем нужно найти ID, адреса и пр., с префиксом "offcanvasExample" и заменить на "offcanvasRFi" (Find/Replace).
+
+После этого помещаем кнопку в навбар, код которого пока находится в файле `layouts/partials/header.html`. Просто заменяем тег `h3` его содержимое следующим кодом:
+
+```html
+<h3 class="float-md-start mb-0">
+  {{- partial "sidebar-navbtn.html" . -}}
+  Cover
+</h3>
+```
+
+Собираем сайт и проверяем работоспособность сайдбара.
+
+> Внимание!
+>
+> Работа сайдбрара невозможна без подключенных js.
+
+Необходимо убедиться, что в файле примера cover.html после тега `<footer>` есть следующая строка:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+```
+
+Если нет, то необходимо ее добавить в файл примера cover.html, и в файл `layouts/partials/footer.html`
+
+
+2.  Создать необходимые Gulp задачи и сформировать актуальные "активы" проекта (предварительно следует очистить устаревшие):
 
     -   assets/bootstrap/scss
     -   assets/css/cover.css
@@ -232,7 +280,7 @@ This single page template makes use of Hugo base templates, the .Format function
     -   assets/js/dark-mode-switch.js
     -   static/js/bootstrap.bundle.min.js.map
 
-2.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
+3.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
 
     -   разработать и подключить автономные файлы активов:
 
@@ -240,7 +288,6 @@ This single page template makes use of Hugo base templates, the .Format function
         -   layouts/partials/stylesheets.html
         -   layouts/partials/favicons.html
 
-3.  подключить `sidebar` и автоматизировать его (теги),
 4.  автоматизировать `navbar` (автоматическое формирование -по таксономии),
 5.  автоматизировать [footer](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)
 6.  подключить `dark-mode switcher`
