@@ -11,6 +11,8 @@ assets/js
 assets/images
 assets/css
 
+content/about/law
+
 static/images
 static/js/
 static/fonts
@@ -34,6 +36,3 @@ resources/
 
 # Файлы редактора VScode
 .vscode
-
-# Директория выхлопа (по умолчанию - public, изменено в config.yaml: publishDir: "@_site"
-@_site/
