@@ -1,0 +1,113 @@
+.bd-example {
+  background-color: $rfilighter;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem (-$grid-gutter-width / 2) 0;
+  border: solid $rfibrightest;
+  border-width: 1px 0 0;
+  @include clearfix();
+
+  @include media-breakpoint-up(sm) {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    @include border-top-radius(.25rem);
+
+    + .bd-clipboard + .highlight {
+      @include border-bottom-radius(.25rem);
+    }
+  }
+
+  + p {
+    margin-top: 2rem;
+  }
+
+  > .form-control {
+    + .form-control {
+      margin-top: .5rem;
+    }
+  }
+
+  > .nav + .nav,
+  > .alert + .alert,
+  > .navbar + .navbar,
+  > .progress + .progress {
+    margin-top: 1rem;
+  }
+
+  > .dropdown-menu {
+    position: static;
+    display: block;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Images
+  > svg + svg,
+  > img + img {
+    margin-left: .5rem;
+  }
+
+  // Buttons
+  > .btn,
+  > .btn-group {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
+  > .btn-toolbar + .btn-toolbar {
+    margin-top: .5rem;
+  }
+
+  // List groups
+  > .list-group {
+    max-width: 400px;
+  }
+
+  > [class*="list-group-horizontal"] {
+    max-width: 100%;
+  }
+
+  // Navbars
+  .fixed-top,
+  .sticky-top {
+    position: static;
+    margin: -1rem -1rem 1rem;
+  }
+
+  .fixed-bottom {
+    position: static;
+    margin: 1rem -1rem -1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .fixed-top,
+    .sticky-top {
+      margin: -1.5rem -1.5rem 1rem;
+    }
+    .fixed-bottom {
+      margin: 1rem -1.5rem -1.5rem;
+    }
+  }
+
+  // Pagination
+  .pagination {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+}
+
+// Placeholder svg used in the docs.
+//
+
+.bd-placeholder-img {
+  @include font-size(1.125rem);
+  text-anchor: middle;
+  user-select: none;
+}
+
+.bd-placeholder-img-lg {
+  @include font-size(3.5rem);
+}

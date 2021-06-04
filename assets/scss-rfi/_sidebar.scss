@@ -1,0 +1,63 @@
+// SIdebar styles
+
+.sidebar-rfi {
+  .offcanvas {
+    background-color: $navsbg;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  .offcanvas-header {
+    border-bottom: 0;
+
+    .btn-close {
+      color: $rfilightest;
+    }
+  }
+
+  .card-title {
+    color: $secondary;
+    font-family: 'Fira Sans';
+    font-weight: 400;
+    margin: 30px 0 10px;
+    vertical-align: text-bottom;
+
+    a {
+      color: $secondary;
+    }
+  }
+
+  .card-body {
+    background-color: $darkbg;
+    padding: 0 0 12px 12px;
+  }
+
+  a {
+    color: $rfilightest;
+    text-decoration: none;
+  }
+
+  .list-group-item {
+    background-color: $darkbg;
+    background-image: url("../images/svg/w-box-sidebar.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-left: 4px;
+    padding-left: 2rem;
+  }
+
+  .badge {
+    background-color: $rfilightest;
+    color: $black;
+  }
+
+  :hover {
+    color: $refreshing;
+  }
+}
+
+#sidebar-botton {
+  left: 0px;
+  position: fixed;
+  top: 6px;
+}
