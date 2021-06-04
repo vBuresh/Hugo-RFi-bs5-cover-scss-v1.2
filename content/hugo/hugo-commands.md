@@ -19,15 +19,24 @@ Hugo does not remove generated files before building. An easy workaround is to u
 
 To start a server that builds draft content (helpful for editing), you can specify a different destination; e.g., a dev/ directory:
 
-```
+```bash
 hugo server -wDs ~/Code/hugo/docs -d dev
 ```
+
 When the content is ready for publishing, use the default public/ dir:
 
-```
+```bash
 hugo -s ~/Code/hugo/docs
 ```
 
 This prevents draft content from accidentally becoming available.
 
+```bash
 hugo new cite
+```
+
+To create a new website in Hugo, you can use the following command:
+
+```bash
+hugo new site hugo-RFi-bs5cover --format yaml
+```

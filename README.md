@@ -226,14 +226,14 @@ This single page template makes use of Hugo base templates, the .Format function
 
 См. bs5 Documents: [Offcanvas](https://getbootstrap.com/docs/5.0/components/offcanvas/)
 
-#### Подключение
+#### Подключение сайдбара
 
-Создать два файла:
+Для подключения сайдбара потребуется создать два файла:
 
--  `layouts/partials/sidebar-navbtn.html` для кода кнопки управления
--  `layouts/partials/sidebar.html` для основного кода сайбара.
+-  `layouts/partials/sidebar-navbtn.html` - для кода кнопки управления
+-  `layouts/partials/sidebar.html` - для основного кода сайдбара.
 
-В файл `layouts/partials/sidebar-navbtn.html` поместить следующий код:
+Начнем с малого - в файл `layouts/partials/sidebar-navbtn.html` поместим следующий код:
 
 ```html
 <!-- прверить: id="offcanvasRFi" -->
@@ -244,9 +244,9 @@ This single page template makes use of Hugo base templates, the .Format function
 </a>
 ```
 
-В файл `layouts/partials/sidebar.html` нужно скопировать в  код из примера [Live demo](https://getbootstrap.com/docs/5.0/components/offcanvas/#live-demo) и удалить первые два обзаца с примером кнопок управления (сделана своя!). Затем нужно найти ID, адреса и пр., с префиксом "offcanvasExample" и заменить на "offcanvasRFi" (Find/Replace).
+После этого в файл `layouts/partials/sidebar.html` скопируем код из примера [Live demo](https://getbootstrap.com/docs/5.0/components/offcanvas/#live-demo). Первые два aбзаца с примером кнопок управления нужно удалить, так как ранее эта кнопка уже была сделана. Затем нужно найти ID, адреса и пр., с префиксом "offcanvasExample" и заменить на "offcanvasRFi" (Find/Replace).
 
-После этого помещаем кнопку в навбар, код которого пока находится в файле `layouts/partials/header.html`. Просто заменяем тег `h3` его содержимое следующим кодом:
+После этого помещаем кнопку в navbar, код которого пока находится в файле `layouts/partials/header.html`. Просто заменяем тег `h3` его содержимое следующим кодом:
 
 ```html
 <h3 class="float-md-start mb-0">
@@ -267,10 +267,27 @@ This single page template makes use of Hugo base templates, the .Format function
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 ```
 
-Если нет, то необходимо ее добавить в файл примера cover.html, и в файл `layouts/partials/footer.html`
+Если нет, то необходимо ее добавить в файл примера cover.html, и в файл `layouts/partials/footer.html`.
 
+При проверке работоспособности сайдбара следует обратить внимание на его открытие кнопкой, вставленной нами в навбар, а также на закрытие - щелчком мыши вне его или нажатием кнопки `[ X ]` в шапке сайдбара. Эту кнопку можно заменить на такую же как мы вставили в навбар. Похоже, это будет более понятно пользователю: "Чем открыли - тем и закрываем. И никаких крестов!". Для этого нужно только заменить в строке 5 файла `_hugo-RFi-bs5-cover/layouts/partials/sidebar.html` содержимое тега `<button>` на:
 
-2.  Создать необходимые Gulp задачи и сформировать актуальные "активы" проекта (предварительно следует очистить устаревшие):
+```html
+<!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+      {{- partial "sidebar-navbtn.html" . -}}
+```
+
+Снова проверяем работоспособность сайбара и действие кнопок. Также убеждаемся в целесобразности замены "креста на кнопку". Затем - следующая задача.
+
+2. Сформировать "активы" проекта (scss, css, js, icons, images):
+
+#### Автоматизация компонентов
+
+Для активов проекта предназначены директории:
+
+- `assets` - содержит активы, подлежащие обработке Hugo (по умолчанию - отсутствует).
+- `static` - хранит активы, которые не требуют обработки Hugo и будут загружены в соответствуюшие директории готового сайта "как есть".
+
+Для работы сайта требуется следующие активы:
 
     -   assets/bootstrap/scss
     -   assets/css/cover.css
@@ -279,6 +296,8 @@ This single page template makes use of Hugo base templates, the .Format function
     -   assets/js/bootstrap.bundle.min.js
     -   assets/js/dark-mode-switch.js
     -   static/js/bootstrap.bundle.min.js.map
+
+Из можно загрузить вручную, но это "не наши методы". Нужно автоматизировать задачу при помощи Gulp или WebPack. 
 
 3.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
 
