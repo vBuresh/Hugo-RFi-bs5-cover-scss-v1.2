@@ -11,6 +11,25 @@ assets/js
 assets/images
 assets/css
 
+# assets/scss-rfi/_bs-example.scss
+# assets/scss-rfi/core.scss
+# assets/scss-rfi/_fonts.scss
+assets/scss-rfi/_footer.scss
+assets/scss-rfi/_homepage-rfi.scss
+assets/scss-rfi/_hugolist.scss
+assets/scss-rfi/_layouts-list.scss
+assets/scss-rfi/_layouts-single.scss
+assets/scss-rfi/_navbar.scss
+assets/scss-rfi/_placeholder-img.scss
+assets/scss-rfi/_refreshing.scss
+# assets/scss-rfi/_sidebar.scss
+# assets/scss-rfi/_syntax-monokai.scss
+assets/scss-rfi/_syntax-monokailight.scss
+# assets/scss-rfi/_variables.scss
+
+
+
+
 content/about/law
 
 static/images
