@@ -230,16 +230,17 @@ This single page template makes use of Hugo base templates, the .Format function
 
 Для подключения сайдбара потребуется создать два файла:
 
--  `layouts/partials/sidebar-navbtn.html` - для кода кнопки управления
+-  `layouts/partials/sidebar-btn-inset.html` - для кода кнопки управления
 -  `layouts/partials/sidebar.html` - для основного кода сайдбара.
 
-Начнем с малого - в файл `layouts/partials/sidebar-navbtn.html` поместим следующий код:
+Начнем с малого - в файл `layouts/partials/sidebar-btn-inset.html` поместим следующий код [из комплекта Icons](https://icons.getbootstrap.com/icons/layout-sidebar-inset/):
 
 ```html
 <!-- прверить: id="offcanvasRFi" -->
-<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
-  <svg id="w-list-nested-bi" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+<a class="btn pt-3" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
+  <svg id="layout-sidebar-inset" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+    <path d="M3 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
   </svg>
 </a>
 ```
@@ -250,7 +251,7 @@ This single page template makes use of Hugo base templates, the .Format function
 
 ```html
 <h3 class="float-md-start mb-0">
-  {{- partial "sidebar-navbtn.html" . -}}
+  {{- partial "sidebar-btn-inset.html" . -}}
   Cover
 </h3>
 ```
@@ -267,16 +268,39 @@ This single page template makes use of Hugo base templates, the .Format function
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 ```
 
-Если нет, то необходимо ее добавить в файл примера cover.html, и в файл `layouts/partials/footer.html`.
+Если такой строки нет, то ее необходимо добавить в файл примера cover.html, и в файл `layouts/partials/footer.html`.
 
-При проверке работоспособности сайдбара следует обратить внимание на его открытие кнопкой, вставленной нами в навбар, а также на закрытие - щелчком мыши вне его или нажатием кнопки `[ X ]` в шапке сайдбара. Эту кнопку можно заменить на такую же как мы вставили в навбар. Похоже, это будет более понятно пользователю: "Чем открыли - тем и закрываем. И никаких крестов!". Для этого нужно только заменить в строке 5 файла `_hugo-RFi-bs5-cover/layouts/partials/sidebar.html` содержимое тега `<button>` на:
+При проверке работоспособности сайдбара следует обратить внимание на его открытие кнопкой, вставленной нами в `navbar`, а также на закрытие - щелчком мыши вне его или нажатием кнопки `[ X ]` в шапке сайдбара. Эту кнопку можно заменить на парную той, что мы вставили в `navbar`. Вероятно, для пользователей так будет понятнее пользователю: "Чем открыли - тем и закрываем. И никаких крестов!". Для этого нужно создать еще один файл - `layouts/partials/sidebar-btn-inset.html`
+
+Содержимое файла `layouts/partials/sidebar-btn-inset-reverse.html` - layout-sidebar-inset [из комплекта Icons](https://icons.getbootstrap.com/icons/layout-sidebar-inset-reverse/):
+
+```html
+<!-- id="offcanvasRFi" -->
+<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
+  <svg id="sidebar-inset-reverse" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12z"/>
+  <path d="M13 4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V4z"/>
+  </svg>
+</a>
+```
+
+Осталось только заменить в строке 5 файла `_hugo-RFi-bs5-cover/layouts/partials/sidebar.html` содержимое тега `<button>` на:
 
 ```html
 <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-      {{- partial "sidebar-navbtn.html" . -}}
+      {{- partial "sidebar-btn-reverse.html" . -}}
 ```
 
-Снова проверяем работоспособность сайбара и действие кнопок. Также убеждаемся в целесобразности замены "креста на кнопку". Затем - следующая задача.
+Снова проверяем работоспособность сайбара и действие кнопок. При этом обратим внимание на его кнопку в `navbar`. Она вписывается, точнее, "вторгается" в логотип. С таким решением могут не согласиться некоторые пользователи, Так как обычно особое внимание придается всякого рода "брендам". Поэтому эту кнопку вынести к левой границе экрана.
+для этого удаляем в строку 5 файла `_hugo-RFi-bs5-cover/layouts/partials/sidebar.html` и переносим ее содержимое `{{- partial "sidebar-btn.html" . -}}` в файл `layouts/_default/baseof.html`, сразу после открывающего  тега `<body>`:
+
+```html
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    {{- partial "sidebar-btn-inset.html" . -}}
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+```
+
+Вновь проверяем работоспособность сайбара и действие кнопок. Также убеждаемся в целесообразности замены "креста на кнопку". Затем - следующая задача.
 
 2. Сформировать "активы" проекта (scss, css, js, icons, images):
 
@@ -297,7 +321,7 @@ This single page template makes use of Hugo base templates, the .Format function
     -   assets/js/dark-mode-switch.js
     -   static/js/bootstrap.bundle.min.js.map
 
-Из можно загрузить вручную, но это "не наши методы". Нужно автоматизировать задачу при помощи Gulp или WebPack. 
+Из можно загрузить вручную, но это "не наши методы". Нужно автоматизировать задачу при помощи Gulp или WebPack.
 
 3.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
 
