@@ -32,7 +32,7 @@ assets/scss-rfi/_syntax-monokailight.scss
 
 content/about/law
 
-static/images
+# static/images
 static/js/
 static/fonts
 static/css

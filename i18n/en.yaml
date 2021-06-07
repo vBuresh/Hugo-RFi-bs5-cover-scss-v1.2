@@ -1,0 +1,50 @@
+- id: cover
+  translation: "Cover"
+- id: hugo
+  translation: "Hugo"
+- id: author
+  translation: "Author"
+- id: readMore
+  translation: "Read more"
+- id: moreDetails
+  translation: "Details..."
+- id: mainMenu
+  translation: "Menu"
+- id: menuHugo
+  translation: "Фреймворк Hugo"
+- id: menuwDev
+  translation: "wwwDev"
+- id: allTags
+  translation: "Все рубрики"
+- id: newPublications
+  translation: "New publications"
+- id: categories
+  translation: "Categories"
+- id: tags
+  translation: "Tags"
+- id: postedOn
+  translation: "Posted on"
+- id: posts
+  translation: "Posts"
+- id: lastModified
+  translation: "Last modified"
+# FIXME - id: readingTime
+#   translation: "Reading Time {{.Count}} min."
+- id: words
+  translation: "words"
+- id: website
+  translation: "Website"
+- id: credits
+  translation: "Credits"
+- id: copyright
+  translation: "Copyright"
+- id: contacts
+  translation: "Contacts"
+- id: homepage
+  translation: "Homepage"
+- id: aboutProject
+  translation: "About project"
+- id: editorialPolicy
+  translation: "Editorial policy"
+- id: pageTOC
+  translation: "Table Of Contents"

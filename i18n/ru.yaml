@@ -1,0 +1,50 @@
+- id: cover
+  translation: "Cover"
+- id: hugo
+  translation: "Hugo"
+- id: author
+  translation: "Автор"
+- id: readMore
+  translation: "Читать »"
+- id: moreDetails
+  translation: "Подробнее..."
+- id: mainMenu
+  translation: "Меню"
+- id: menuHugo
+  translation: "Framework Hugo"
+- id: menuwDev
+  translation: "wwwDev"
+- id: allTags
+  translation: "Все рубрики"
+- id: newPublications
+  translation: "Новые публикации"
+- id: categories
+  translation: "Категории"
+- id: tags
+  translation: "Рубрики"
+- id: postedOn
+  translation: "Опубликовано"
+- id: posts
+  translation: "Публикации"
+- id: lastModified
+  translation: "Последние изменения - от "
+# FIXME: - id: readingTime
+#   translation: "Чтение займет до {{.Count}} мин."
+- id: words
+  translation: "Количество слов"
+- id: website
+  translation: "Hugo ReFreshing"
+- id: credits
+  translation: "Благодарим"
+- id: copyright
+  translation: "Права и лицензии"
+- id: contacts
+  translation: "Контакты"
+- id: homepage
+  translation: "Главная страница"
+- id: aboutProject
+  translation: "О проекте"
+- id: editorialPolicy
+  translation: "Редполитика"
+- id: pageTOC
+  translation: "Оглавление"
