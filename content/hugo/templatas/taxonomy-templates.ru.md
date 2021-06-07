@@ -4,28 +4,30 @@ title: "Таксономия - шаблоны"
 date: 2021-06-05T08:36:12+03:00
 Lastmod: 2021-06-05T08:36:12+03:00
 draft: false
-# description: "- дополнение к заголовку (подзаголовок)"
+description: Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates.
 # summary: краткое изложение - зачем читать сие
 # summaryImage: images/
 author:
 #  given_name: Vladimir
 #  family_name: Buresh
-  display_name: [Hugo Authors, wBuresh]
-categories:
-  - hugo
-tags:
-  - example
+  display_name: ['Hugo Authors', 'wBuresh']
+categories: ['управление контентом']
+tags: ['hugo', 'фронт-енд', 'таксономия']
 toc: true
 ---
 
-Весь код Hugo и документации, а также тем, предлагаемых сообществом разработчиков документация Так как пользователю придется работать с кодом на англлийском языке Основные термины приведены на языке оригинала, без перевода.  
+Шаблоны таксономии включают:
+-   страницы со списком таксономий,
+-   страницы терминов таксономии,
+-   использование таксономий в одностраничных шаблонах.
 
 <!-- NOTE! Check on https://github.com/gohugoio/hugo/issues/2826 for shifting of terms' pages to .Data.Pages AND
 https://discourse.gohugo.io/t/how-to-specify-category-slug/4856/15 for original discussion.-->
 
-Hugo includes support for user-defined groupings of content called **taxonomies**. Taxonomies are classifications that demonstrate logical relationships between content. See [Taxonomies under Content Management](/content-management/taxonomies) if you are unfamiliar with how Hugo leverages this powerful feature.
+Hugo includes support for user-defined groupings of content called **taxonomies**. Taxonomies are classifications that demonstrate logical relationships between content.
 
-Hugo поддерживает группы контента, определяемые пользовалелем, именуемые **taxonomies** (таксономии).
+Hugo поддерживает группы контента, определяемые пользователем, именуемые **taxonomies** (таксономии).
+**taxonomies** - это классификации, демонстрирующие логические отношения между контентом. См. [Taxonomies under Content Management](https://gohugo.io/content-management/taxonomies) if you are unfamiliar with how Hugo leverages this powerful feature.
 
 Hugo provides multiple ways to use taxonomies throughout your project templates:
 

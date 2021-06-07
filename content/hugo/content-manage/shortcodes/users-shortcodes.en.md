@@ -4,8 +4,12 @@ date: 2020-07-20T09:24:46+03:00
 draft: false
 # summary:
 # summaryImage: images/
-tags: 
-- Hugo
+categories:
+  - webDev
+tags:
+  - content management
+  - shortcodes
+toc: true
 ---
 
 Hugo comes with a set of shortcodes that facilitate development by allowing the author to focus only on the content. It is easy to achieve the desired markdown purity with them.

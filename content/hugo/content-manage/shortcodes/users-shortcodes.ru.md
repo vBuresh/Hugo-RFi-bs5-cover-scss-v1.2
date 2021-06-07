@@ -1,15 +1,19 @@
 ---
-title: Users Shortcodes
+title: Shirtcodes пользователя
 date: 2020-07-20T09:24:46+03:00
+Lastmod: 2021-06-07T12:19:37+03:00
 draft: false
 # summary:
 # summaryImage: images/
+categories:
+  - webDev
 tags:
-- Hugo
-- templating
+  - Управление контентом
+  - shortcodes
+toc: true
 ---
 
-Hugo поставляется с набором shortcodes, которые облегчают разработку, позволя автору сосредоточиться только на содержимом. С ними легко достичь желаемой чистоты Markdown.
+Hugo поставляется с набором shortcodes, которые облегчают разработку, позволяя автору сосредоточиться только на содержимом. С ними легко достичь желаемой чистоты Markdown.
 
 
 ## Shortcodes в Markdown
@@ -22,16 +26,16 @@ Hugo поставляется с набором shortcodes, которые об�
 Символ `<` указывает на то, что контент shortcode’s нуждается в дальнейшей обработке. Обычно это встречается в shortcodes, не содержащих markdown, а  только HTML:
 
 {{< highlight go-html-template >}}
-❴❴< /myshortcode >❵❵
+❴❴< myshortcode >❵❵
 <button type="button" class="btn btn-outline-info">Info</button>
 <button type="button" class="btn btn-outline-light">Light</button>
 <button type="button" class="btn btn-outline-dark">Dark</button>
 ❴❴< /myshortcode >❵❵
 {{< /highlight >}}
 
-С демонстрацией
+Подсветка кода html
 
-{{< example >}}
+{{< highlight html >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -54,25 +58,25 @@ Hugo поставляется с набором shortcodes, которые об�
     </div>
   </div>
 </nav>
-{{< /example >}}
+{{< /highlight >}}
 
 
 With options
 
-{{< example >}}
+{{< highlight html >}}
 <div class="card" style="width: 22rem;">
-  {< placeholder width="100%" height="180" class="card-img-top" background="#00d1b2" color="#d1001f" text="Image cap" >}
+  <img src="svg/rfi-plaseholder.svg" class="img-thumbnail" alt="rfi-plaseholder">
   <div class="card-body bg-light">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{{< /example >}}
+{{< /highlight >}}
 
 Вот еще один пример. На сей раз с SVG
 
-{{< example svg >}}
+{{< highlight svg >}}
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" heith="333"
   viewBox="0 0 1000 667" >
   <title>rfi-placeholder</title>
@@ -83,18 +87,17 @@ With options
     <circle cx="500" cy="333" r="270" fill="none" stroke="#00D1B2" stroke-width="3" />
     <use xlink:href="#bi-grid-1x2-fill" transform="translate(250, 170) scale(.5)" fill="#e0f2f1" />
 </svg>
-{{< /example >}}
-
+{{< /highlight >}}
 
 With rfi SVG
 
-{{< example >}}
+{{< highlight html >}}
 <div class="card" style="width: 21rem;">
-  <!-- img -->
+  <img src="svg/rfi-plaseholder.svg" class="img-thumbnail" alt="rfi-plaseholder">
   <div class="card-body bg-light">
     <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Some quick highlight text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{{< /example >}}
+{{< /highlight >}}

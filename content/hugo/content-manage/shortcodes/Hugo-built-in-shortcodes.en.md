@@ -2,7 +2,12 @@
 title: Hugo’s Built-in Shortcodes
 date: "2020-07-06T13:10:04+03:00"
 draft: false
-tags: ["Hugo"]
+categories:
+  - webDev
+tags:
+  - content management
+  - shortcodes
+toc: true
 ---
 
 Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.

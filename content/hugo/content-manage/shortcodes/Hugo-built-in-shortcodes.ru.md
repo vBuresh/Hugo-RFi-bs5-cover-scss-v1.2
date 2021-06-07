@@ -1,8 +1,14 @@
 ---
 title: Встроенные Hugo шорткоды
-date: "2020-07-06T13:10:04+03:00"
+date: 2020-07-06T13:10:04+03:00
+Lastmod: 2021-06-07T12:19:37+03:00
 draft: false
-tags: ["Hugo"]
+categories:
+  - webDev
+tags:
+  - Управление контентом
+  - Hugo шорткоды
+toc: true
 ---
 
 
@@ -11,10 +17,10 @@ Hugo поставляется с набором предопределенных
 
 ## Встроенный Hugo шорткод - `❴❴< highlight >❵❵`
 
-Само название этого очень интересного и нужного шорткода говорит его назначении. Некоторые материалы по особенностям и практике применения этого шорткода изложены в статье [Подсветка синтаксиса]({{< ref "/hugo/themes/highlighting/index" >}}).
+Само название этого очень интересного и нужного шорткода говорит его назначении. Некоторые материалы по особенностям и практике применения этого шорткода изложены в статье [Подсветка синтаксиса]({{< relref "/code-highlighting" >}}).
 
 
-figure - это расширение синтаксиса изображения в markdown, которое не обеспечивает сокращение для более семантического HTML5-элемента <figure>.
+**figure** - это расширение синтаксиса изображения в markdown, которое не обеспечивает сокращение для более семантического HTML5-элемента <figure>.
 
 Шорткод рисунка может использовать следующие именованные параметры:
 
@@ -54,6 +60,12 @@ figure-input-example.md
 {{< figure src="/images/screenshot-o-b.png" class="figure-img float-left pr-5" width="610px" title="Hugo-ReFresing - главная страница (темная)" >}}
 {{< figure src="/images/screenshot-o-w.png" class="figure-img" width="610px" title="Тема Hugo-ReFresing - главная страница (светлая)" >}}
 
+{{< highlight html>}}
+2{< figure src="/images/screenshot-o-b.png" class="figure-img float-left pr-5" width="610px" title="Hugo-ReFresing - главная страница (темная)" >}2
+2{< figure src="/images/screenshot-o-w.png" class="figure-img" width="610px" title="Тема Hugo-ReFresing - главная страница (светлая)" >}2
+{{< /highlight>}}
+
+{{< figure src="/svg/rfi-plaseholder.svg" >}}
 
 Пример фигуры Output
 figure-output-example.html
