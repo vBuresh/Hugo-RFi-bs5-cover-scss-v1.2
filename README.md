@@ -230,8 +230,8 @@ This single page template makes use of Hugo base templates, the .Format function
 
 Для подключения сайдбара потребуется создать два файла:
 
--  `layouts/partials/sidebar-btn-inset.html` - для кода кнопки управления
--  `layouts/partials/sidebar.html` - для основного кода сайдбара.
+-   `layouts/partials/sidebar-btn-inset.html` - для кода кнопки управления
+-   `layouts/partials/sidebar.html` - для основного кода сайдбара.
 
 Начнем с малого - в файл `layouts/partials/sidebar-btn-inset.html` поместим следующий код [из комплекта Icons](https://icons.getbootstrap.com/icons/layout-sidebar-inset/):
 
@@ -302,14 +302,14 @@ This single page template makes use of Hugo base templates, the .Format function
 
 Вновь проверяем работоспособность сайбара и действие кнопок. Также убеждаемся в целесообразности замены "креста на кнопку". Затем - следующая задача.
 
-2. Сформировать "активы" проекта (scss, css, js, icons, images):
+2.  Сформировать "активы" проекта (scss, css, js, icons, images):
 
 #### Автоматизация компонентов
 
 Для активов проекта предназначены директории:
 
-- `assets` - содержит активы, подлежащие обработке Hugo (по умолчанию - отсутствует).
-- `static` - хранит активы, которые не требуют обработки Hugo и будут загружены в соответствуюшие директории готового сайта "как есть".
+-   `assets` - содержит активы, подлежащие обработке Hugo (по умолчанию - отсутствует).
+-   `static` - хранит активы, которые не требуют обработки Hugo и будут загружены в соответствуюшие директории готового сайта "как есть".
 
 Для работы сайта требуется следующие активы:
 
@@ -330,6 +330,18 @@ This single page template makes use of Hugo base templates, the .Format function
         -   layouts/partials/scripts.html
         -   layouts/partials/stylesheets.html
         -   layouts/partials/favicons.html
+
+##### Таксономия
+
+Это одна из интереснейших возможностей Hugo, которую нужно грамотно реализовать. Значит в очередной раз придается изучить и понять следующие страница руководства Hugo:
+
+1.  [taxonomies](<https://gohugo.io/content-management/1. taxonomies>)
+2.  Taxonomy Templates
+3.  Archetypes
+4.  Lists of Content in Hugo
+5.  Taxonomy Variables
+6.  Front Matter
+
 
 4.  автоматизировать `navbar` (автоматическое формирование -по таксономии),
 5.  автоматизировать [footer](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)

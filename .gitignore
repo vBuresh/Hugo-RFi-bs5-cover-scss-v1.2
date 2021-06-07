@@ -47,11 +47,12 @@ public/
 
 wMedia/
 
-# Вспомогательные файлы
+# Вспомогательные директории и файлы
 *.log*
 node_modules/
-wREADME.md
 resources/
+vDevs/
+wREADME.md
 
 # Файлы редактора VScode
 .vscode

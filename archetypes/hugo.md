@@ -8,18 +8,10 @@ draft: false
 # summary: краткое изложение - зачем читать сие
 # summaryImage: images/
 author:
-  given_name: Vladimir
-  family_name: Buresh
-  display_name: wBuresh
-categories:
-  - Hugo
-  - front-end
-  - example
-tags:
-  - example
-  - bootstrap
-  - styles
-  - hugo
-  - blog
+  # given_name: Vladimir
+  # family_name: Buresh
+  display_name: ['Hugo Authors', 'wBuresh']
+categories: ['управление конткнтом', 'примеры']
+tags: ['hugo', 'фронт-енд']
 toc: true
 ---
