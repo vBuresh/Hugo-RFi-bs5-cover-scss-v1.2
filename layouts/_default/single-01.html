@@ -7,6 +7,18 @@
         </article>
   </div>
 </section>
+
+<section>
+    {{ $taxo := "tags" }}
+<ul class="{{ $taxo }}">
+  {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+      {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+      {{ end }}
+  {{ end }}
+</ul>
+</section>
+
 <aside id="meta">
     <div>
     <section>

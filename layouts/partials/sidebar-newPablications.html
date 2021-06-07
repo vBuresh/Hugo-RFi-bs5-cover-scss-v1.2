@@ -1,0 +1,14 @@
+<div class="card border-0">
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ i18n "newPublications" }}
+    </h5>
+    <div class="list-group list-group-flush">
+      <!-- range first 7 -->
+      {{ range first 5 .Site.RegularPages }}
+      <a href="{{.Permalink}}" class="list-group-item list-group-item-action">{{ .Title }}</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<br>

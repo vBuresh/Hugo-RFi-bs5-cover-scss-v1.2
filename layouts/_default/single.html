@@ -5,15 +5,5 @@
 <main class="px-3 text-start pt-3">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-  <section>
-      {{ $taxo := "tags" }}
-<ul class="{{ $taxo }}">
-    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-        {{ range .Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
-        {{ end }}
-    {{ end }}
-</ul>
-  </section>
 </main>
 {{ end }}
