@@ -3,10 +3,13 @@ baseURL: https://cybmir.ru/
 languageCode: en-us
 title: Hugo ReFreshing Theme
 
+enableInlineShortcodes:  true
+
 Taxonomies:
   category:              "categories"
   tag:                   "tags"
 
+# DefaultContentLanguage: en
 DefaultContentLanguage: ru
 
 languages:

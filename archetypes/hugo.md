@@ -1,17 +1,16 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-# subtitle: continuer of the title in a two words
+# description: - дополнение к заголовку (подзаголовок)
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 draft: false
-# description: "- дополнение к заголовку (подзаголовок)"
 # summary: краткое изложение - зачем читать сие
 # summaryImage: images/
 author:
   # given_name: Vladimir
   # family_name: Buresh
   display_name: ['Hugo Authors', 'wBuresh']
-categories: ['управление конткнтом', 'примеры']
+categories: ['управление контентом', 'примеры']
 tags: ['hugo', 'фронт-енд']
 toc: true
 ---
