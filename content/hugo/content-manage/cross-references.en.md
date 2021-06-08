@@ -7,9 +7,9 @@ draft: false
 description: "Shortcodes for creating links to documents."
 # summaryImage: images/
 author:
-  given_name: Vladimir
-  family_name: Buresh
-  display_name: wBuresh
+  # given_name: Vladimir
+  # family_name: Buresh
+display_name: ['Hugo Authors', 'wBuresh']
 categories: ['content management', 'examples']
 tags: ['hugo', 'front-end']
 toc: true
