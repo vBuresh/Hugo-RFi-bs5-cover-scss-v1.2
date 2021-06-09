@@ -313,23 +313,54 @@ This single page template makes use of Hugo base templates, the .Format function
 
 Для работы сайта требуется следующие активы:
 
-    -   assets/bootstrap/scss
-    -   assets/css/cover.css
-    -   assets/css/dark-mode.css
-    -   assets/css/refreshing.css
-    -   assets/js/bootstrap.bundle.min.js
-    -   assets/js/dark-mode-switch.js
-    -   static/js/bootstrap.bundle.min.js.map
+-   assets/bootstrap/scss
+-   assets/css/cover.css
+-   assets/css/dark-mode.css
+-   assets/css/refreshing.css
+-   assets/js/bootstrap.bundle.min.js
+-   assets/js/dark-mode-switch.js
+-   static/js/bootstrap.bundle.min.js.map
 
 Из можно загрузить вручную, но это "не наши методы". Нужно автоматизировать задачу при помощи Gulp или WebPack.
 
 3.  автоматизировать формирование метаданных в элементе [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head):
 
-    -   разработать и подключить автономные файлы активов:
+Сначала необходимо разработать и подключить автономные файлы активов:
 
-        -   layouts/partials/scripts.html
-        -   layouts/partials/stylesheets.html
-        -   layouts/partials/favicons.html
+1.  layouts/partials/stylesheets.html
+1.  layouts/partials/scripts.html
+
+Наполнение - см. первоначальную  разработку.
+
+В файл конфигурации добавляем настройки обработки активов:
+
+``` yaml
+params:
+
+  # option to specify the favicon image of the site
+  # the path is relative to the folder "assetDir" of this configuration
+  favicon: "/images/favicon-rfi.svg"
+
+  # parameter used to specify if you want to minify the imported js
+  jsMinify: false
+  # parameter used to specify if you want to minify the imported css
+  cssMinify: false
+  # parameter used to specify if you want to calculate the css integrity
+  cssIntegrity: true
+  # parameter used to specify if you want to calculate the js integrity
+  jsIntegrity: true
+  # option to specify the main colour of the theme
+  mainColour: "#F39200"
+```
+
+Для подключения favicons предусмотрен файл:  `layouts/partials/favicons.html`. Его наполнение рассмотрим в конце разработки. Сейчас в конфигурации определено: `favicon: "/images/favicon-rfi.svg"`).
+
+- Местоположение: ./assets/images/favicon-rfi.svg
+- Допустимо:      ./static/images/favicon-rfi.svg
+
+среда, 9 июня 2021 г., 12:42
+
+Подробно об изменениях см. в коммитах.
 
 ##### Таксономия
 
