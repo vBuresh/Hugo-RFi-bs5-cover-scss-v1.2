@@ -10,12 +10,9 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
+categories: ['примеры']
+tags: ['hugo', 'SVG']
 toc: true
-categories:
-  - webDev
-tags:
-  - Hugo
-  - SVG
 ---
 
 

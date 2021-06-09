@@ -4,7 +4,7 @@ title: "Таксономия - шаблоны"
 date: 2021-06-05T08:36:12+03:00
 Lastmod: 2021-06-05T08:36:12+03:00
 draft: false
-description: Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates.
+description: Шаблоны таксономии включают страницы со списком таксономий, страницы терминов таксономии и использование таксономий в одностраничных шаблонах.
 # summary: краткое изложение - зачем читать сие
 # summaryImage: images/
 author:
@@ -15,6 +15,7 @@ categories: ['управление контентом']
 tags: ['hugo', 'фронт-енд', 'таксономия']
 toc: true
 ---
+
 
 Шаблоны таксономии включают:
 -   страницы со списком таксономий,

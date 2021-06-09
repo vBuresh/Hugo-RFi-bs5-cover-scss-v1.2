@@ -4,16 +4,16 @@ title: Base Templates and Blocks
 date: 2021-06-05T08:36:12+03:00
 Lastmod: 2021-06-05T08:36:12+03:00
 draft: false
-description: Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates.
+description: The base and block constructs allow you to define the outer shell of your master templates (i.e., the chrome of the page).
 # summary: краткое изложение - зачем читать сие
 # summaryImage: images/
 author:
   display_name: [Hugo Authors]
-categories:
-  - hugo
-tags:
-  - example
+categories: [examples']
+tags: [hugo, templates]
 toc: true
 ---
 
-[Base Templates and Blocks](https://gohugo.io/templates/base/)
+The `block` keyword allows you to define the outer shell of your pages' one or more master template(s) and then fill in or override portions as necessary. Read more: [Base Templates and Blocks](https://gohugo.io/templates/base/)
+
+{{< youtube id="QVOMCYitLEc" title="Hugo - Base Templates and Blocks" >}}
