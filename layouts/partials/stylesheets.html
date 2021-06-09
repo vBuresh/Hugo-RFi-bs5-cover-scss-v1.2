@@ -1,0 +1,43 @@
+{{- $sass      := "style.sass" -}}
+{{- $scss      := "style.scss" -}}
+{{- $cssTarget := "css/style.css" -}}
+
+{{- $cssOpts   := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") -}}
+
+{{- $css  := resources.Get $sass | resources.ExecuteAsTemplate $scss . | toCSS $cssOpts -}}
+{{- $css1 := resources.Get "css/dark-mode.css" -}}
+{{- $css2 := resources.Get "css/cover.css" -}}
+{{- $css3 := resources.Get "css/refreshing.css" -}}
+
+{{- if .Site.Params.cssMinify -}}
+
+{{- $css  = $css  | resources.Minify -}}
+{{- $css1 = $css1 | resources.Minify -}}
+{{- $css2 = $css2 | resources.Minify -}}
+{{- $css3 = $css3 | resources.Minify -}}
+
+{{- end -}}
+
+{{- if .Site.Params.cssIntegrity -}}
+
+{{- $css  = $css  | resources.Fingerprint -}}
+{{- $css1 = $css1 | resources.Fingerprint -}}
+{{- $css2 = $css2 | resources.Fingerprint -}}
+{{- $css3 = $css3 | resources.Fingerprint -}}
+
+{{- end -}}
+
+{{- if .Site.Params.cssIntegrity -}}
+
+<link rel="stylesheet" type="text/css" href="{{- $css.Permalink  | relURL -}}" integrity="{{- $css.Data.Integrity -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css1.Permalink | relURL -}}" integrity="{{- $css1.Data.Integrity -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css2.Permalink | relURL -}}" integrity="{{- $css2.Data.Integrity -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css3.Permalink | relURL -}}" integrity="{{- $css3.Data.Integrity -}}">
+
+{{- else -}}
+
+<link rel="stylesheet" type="text/css" href="{{- $css.Permalink  | relURL -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css1.Permalink | relURL -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css2.Permalink | relURL -}}">
+<link rel="stylesheet" type="text/css" href="{{- $css3.Permalink | relURL -}}">
+{{- end -}}
