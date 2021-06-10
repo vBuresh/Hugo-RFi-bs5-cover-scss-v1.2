@@ -1,0 +1,8 @@
+{{- $out  := "favicon.svg" -}}
+{{- $icon := .Site.Params.favicon -}}
+{{- $type    := lower (substr $icon (sub (len $icon) 3) (len $icon)) -}}
+{{- $img  := resources.Get $icon -}}
+{{- if eq $type "svg" -}}
+{{- $img    = $img | resources.ExecuteAsTemplate $out . }}
+{{- end -}}
+<link rel="icon" href="{{- $img.Permalink | relURL -}}">
