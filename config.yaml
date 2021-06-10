@@ -1,7 +1,11 @@
 # Configure Hugo: https://gohugo.io/getting-started/configuration/#configuration-file
 baseURL: https://cybmir.ru/
-languageCode: en-us
+languageCode: ru
 title: Hugo ReFreshing Theme
+
+DefaultContentLanguage:  ru
+# DefaultContentLanguage: en
+disableLanguages: en
 
 enableInlineShortcodes:  true
 publishDir:              "@_site"
@@ -21,13 +25,11 @@ markup:
     startLevel:          2
     endLevel:            4
 
-DefaultContentLanguage:  ru
-# DefaultContentLanguage: en
 
 params:
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
-  favicon: "/images/favicon-rfi.svg"
+  favicon: "/images/favicon.svg"
   # parameter used to specify if you want to minify the imported js
   jsMinify: false
   # parameter used to specify if you want to minify the imported css
@@ -40,14 +42,15 @@ params:
   # mainColour: "#F39200"
   mainColour: "#00d1b2"
 
-
-
-
-
+## multilanguage support options
+####################################
 languages:
   en:
     languageName:       English
-    weight:             2
+    weight:            2
+    title: In English
   ru:
     languageName:       Russian
+    title: На Русском
     weight:             1
+      # Some sub-parameters of the "Homepage" and "footer" parameter
