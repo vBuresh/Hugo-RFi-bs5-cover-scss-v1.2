@@ -1,20 +1,17 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-# subtitle: continuer of the title in a two words
+# description: подзаголовок - «в двух словах»
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 draft: false
-# description: "- дополнение к заголовку (подзаголовок)"
-# summary: краткое изложение - зачем читать сие
+# summary: ответ на вопрос - «зачем читать я буду это?»
 # summaryImage: images/
 author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories:
-  - "webDev"
-tags:
-  - Gulp
-  - SVG
+categories: [веб-разработка]
+# categories: ['web development']
+tags: [SVG, favicons, icons]
 toc: true
 ---

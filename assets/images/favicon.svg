@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M11 11.084h223.034v489.832H11z" fill="{{ .Site.Params.mainColour }}"/>
+  <rect fill="#00d1b2" x="281.345" y="240" rx="24.961" ry="27.816" width="219.655" height="260.916"/>
+  <ellipse fill="#bf2e09" cx="390.53" cy="111.479" rx="89" ry="100"/>
+</svg>

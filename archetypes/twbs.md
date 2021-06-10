@@ -1,21 +1,17 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-# subtitle: continuer of the title in a two words
+# description: подзаголовок - «в двух словах»
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 draft: false
-# description: "- дополнение к заголовку (подзаголовок)"
-# summary: краткое изложение - зачем читать сие
-# summaryImage: images/
+# summary: ответ на вопрос - «зачем читать я буду это?»
 author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories:
-  - front-end
-  - example
-tags:
-  - example
-  - bootstrap
+categories: ['управление контентом']
+tags: [bootstrap, примеры]
+# categories: ['content-management']
+# tags: ['bootstrap', 'examples']
 toc: true
 ---
