@@ -1,7 +1,7 @@
 ---
-title: "Gulp on Debian "
+title: Gulp для Debian
 date: 2021-05-22T13:42:03+03:00
-draft: true
+draft: false
 description: "исходный код в ваших примерах - безупречен"
 summary:  "Великолепные возможности Hugo удачно дополняются задачами Gulp в части подготовки и включения в проект стилей (SASS, SCSS, CSS), JS и изображений, а также их своевременного обновления"
 summaryImage: /images/highligth.png
@@ -17,7 +17,7 @@ tags:
   - Gulp
 ---
 
-## gulp в репозитории Debian
+## gulp из репозитории Debian
 
 В репозитории Debian можно найти пакет gulp и ряд расширений, в том числе:
 

@@ -9,8 +9,8 @@ description: Taxonomy templating includes taxonomy list pages, taxonomy terms pa
 # summaryImage: images/
 author:
   display_name: [Hugo Authors]
-  categories: ['examples']
-  tags: ['hugo', 'taxonomy']
+  categories: ['content-management']
+  tags: ['hugo', 'templates', 'taxonomy']
 toc: true
 ---
 

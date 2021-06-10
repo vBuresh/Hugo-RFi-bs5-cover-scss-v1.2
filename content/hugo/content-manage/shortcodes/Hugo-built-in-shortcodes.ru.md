@@ -6,8 +6,8 @@ draft: false
 categories:
   - webDev
 tags:
-  - Управление контентом
-  - Hugo шорткоды
+categories: ['управление контентом']
+tags: [hugo, шорткоды]
 toc: true
 ---
 

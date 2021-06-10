@@ -12,7 +12,7 @@ author:
 #  family_name: Buresh
   display_name: ['Hugo Authors', 'wBuresh']
 categories: ['управление контентом']
-tags: ['hugo', 'фронт-енд', 'таксономия']
+tags: ['hugo', 'шаблоны', 'таксономия']
 toc: true
 ---
 

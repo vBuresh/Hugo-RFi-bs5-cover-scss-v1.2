@@ -19,6 +19,14 @@ tags:
 
 ## Gulp плагины для текуших задач
 
+Что уже установлено
+
+-   "gulp": "^4.0.1",
+-   "gulp-favicons": "^3.0.0",
+-   "gulp-image": "^4.0.0",
+-   "gulp-size": "^3.0.0",
+-   "gulp-svgstore": "^7.0.1"
+
 `Gulp`
 
 ### gulp-favicons
@@ -85,6 +93,7 @@ gulp
 | manifest.json                           | manifest.webapp                         | mstile-70x70.png                        |
 | mstile-144x144.png                      | mstile-150x150.png                      | mstile-310x150.png                      |
 | mstile-310x310.png                      | yandex-browser-50x50.png                | yandex-browser-manifest.json            |
+
 | favicon-rfi.svg
 
 Похоже, список исчерпывающий. Конечно, не все файлы потребуются, но выбрать есть из чего. Да, вручную такое выполнить непросто.
@@ -142,6 +151,7 @@ gulp
 <meta name="msapplication-config" content="favicons/browserconfig.xml">
 <link rel="yandex-tableau-widget" href="favicons/yandex-browser-manifest.json">
 ```
+
 Как видно, в нем все метатеги и подключения для всех сгенерированных файлов.
 
 ### gulp-image
@@ -211,7 +221,6 @@ gulp.task('image', () => {
 
 `.pipe(size())`
 
-
 ```js
 const gulp = require('gulp');
 const size = require('gulp-size');
@@ -221,7 +230,6 @@ exports.default = () => (
 		.pipe(size())
 		.pipe(gulp.dest('dist'))
 );
-
 ```
 
 ### gulp-markdown-pdf

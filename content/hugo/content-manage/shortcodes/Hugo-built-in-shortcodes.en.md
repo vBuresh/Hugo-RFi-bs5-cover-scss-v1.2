@@ -5,8 +5,8 @@ draft: false
 categories:
   - webDev
 tags:
-  - content management
-  - shortcodes
+categories: [content-management]
+tags: [hugo, shortcodes]
 toc: true
 ---
 

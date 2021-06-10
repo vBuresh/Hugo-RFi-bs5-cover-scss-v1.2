@@ -1,12 +1,11 @@
 ---
 title: Colors
 date: 2020-07-21T12:41:45+03:00
-draft: true
+draft: false
 # summary:
 summaryImage: images/colors.png
-tags:
-- webDew
-- Искусство
+categories: ['веб-разработка']
+tags: ['bootstrap', 'шрифт и цвет']
 ---
 
 
@@ -45,22 +44,17 @@ tags:
 Colorize text with color utilities. If you want to colorize links, you can use the helper classes which have `:hover` and `:focus` states.
 
 
-{{< example >}}
+{{< highlight go-html-template >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <a href="#" class="link-{{ .name }}">{{ .name | title }} link</a>
 {{- end -}}
 {{< /colored-links.inline >}}
-{{< /example >}}
+{{< /highlight >}}
 
+Пример
 
-
-
-
-
-
-
-{{< example >}}
+{{< highlight go-html-template >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <p class="text-{{ .name }}{{ if or (eq .name "light") (eq .name "warning") (eq .name "info") }} bg-dark{{ end }}">.text-{{ .name }}</p>
@@ -71,13 +65,13 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 <p class="text-white bg-dark">.text-white</p>
 <p class="text-black-50">.text-black-50</p>
 <p class="text-white-50 bg-dark">.text-white-50</p>
-{{< /example >}}
+{{< /highlight >}}
 
 ## Background color
 
 Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
 
-{{< example >}}
+{{< highlight go-html-template >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="p-3 mb-2 bg-{{ .name }} {{ if or (eq .name "light") (eq .name "warning") }}text-dark{{ else if (eq .name "info") }}text-body{{ else }}text-white{{ end }}">.bg-{{ .name }}</div>
@@ -85,7 +79,7 @@ Similar to the contextual text color classes, easily set the background of an el
 {{< /colors.inline >}}
 <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
-{{< /example >}}
+{{< /highlight >}}
 
 ## Background gradient
 
@@ -93,10 +87,10 @@ By adding a `.bg-gradient` class, a linear gradient is added as background image
 
 Do you need a gradient in your custom CSS? Just add `background-image: var(--bs-gradient);`.
 
-{{< markdown >}}
+{{< highlight  go-html-template >}}
 {{< colors.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="p-3 mb-2 bg-{{ .name }} bg-gradient {{ if or (eq .name "light") (eq .name "warning") }}text-dark{{ else }}text-white{{ end }}">.bg-{{ .name }}.bg-gradient</div>
 {{- end -}}
 {{< /colors.inline >}}
-{{< /markdown >}}
+{{< /highlight >}}
