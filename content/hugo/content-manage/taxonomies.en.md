@@ -11,8 +11,8 @@ author:
   # given_name: Vladimir
   # family_name: Buresh
   display_name: ['Hugo Authors', 'wBuresh']
-  categories: ['content management']
-  tags: ['hugo', 'front-end', 'Taxonomy']
+categories: [content-management]
+tags: [hugo, templates, taxonomy]
 toc: true
 ---
 

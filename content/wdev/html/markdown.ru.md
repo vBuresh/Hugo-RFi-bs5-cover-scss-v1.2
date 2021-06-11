@@ -38,6 +38,11 @@ Markdown создан Джоном Грубером [John Gruber](https://daring
 
 ### "Диалект" GitHub Flavored Markdown (GFM)
 
+
+source.coffee, text.plain, text.html.basic
+source.markdown, text.html.basic, source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar, source.rst, text.restructuredtext
+
+
 Markdown - это дружественный синтаксис для форматирования обычного текста. Документация GitHub написана на GFM - адаптированной версии Markdown, применяемой по всему GitHub.
 
 is a human-friendly syntax for formatting plain text. Our documentation is written with GitHub Flavored Markdown, a custom version of Markdown used across GitHub.
