@@ -11,8 +11,9 @@ author:
   family_name: Buresh
   display_name: wBuresh
 categories: [веб-разработка]
+tags: ['Atom', 'проверка орфографии']
 # categories: ['web development']
-tags: [Atom, spell-check]
+# tags: ['Atom', spell-check]
 toc: true
 ---
 
@@ -37,7 +38,10 @@ spell-check
 
 ### Применение
 
-При включенной проверке, слова с ошибкой выделяются красной линией. Достаточно подвести курсор к отмеченному слову и комбинацией клавиш - `cmd-shift-:` для **Mac** либо `ctrl-shift-:` для **Windows** и **Linux** вызвать список слов, предлагаемых для замены ошибочного.
+При включенной проверке, слова с ошибкой выделяются красной линией. Чтобы вызвать список слов, предлагаемых вместо ошибочного нужно подвести курсор к отмеченному слову воспользоваться комбинацией клавиш:
+
+- в **Mac**                 : `cmd-shift-:`
+- в **Windows** и **Linux** : `ctrl-shift-:`
 
 ### Языки для проверки
 
@@ -68,7 +72,7 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 
 {{< figure src="/images/spell-check-settings.png" width="100%" >}}
 
-Приступая к работе необходимо убедиться, что язык, на котором ведется разработка, указан в списке проверяемых. В [руководстве явно указано](https://github.com/atom/spell-check), что по умолчанию проверка орфографии включена только для:
+Приступая к работе, важно убедиться, что язык, на котором будет написан документ, есть в списке проверяемых. В [руководстве явно указано](https://github.com/atom/spell-check), что по умолчанию проверка орфографии включена только для:
 
 -   Plain Text
 -   GitHub Markdown
@@ -76,13 +80,15 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 -   AsciiDoc
 -   reStructuredText
 
-То есть определено:
+То есть, машинным языком определено:
 
 ``` bash
 source.asciidoc, source.gfm, text.git-commit,
 text.plain, text.plain.null-grammar,
 source.rst, text.restructuredtext
 ```
+
+См. также [Writing in Atom/Spell Checking](https://flight-manual.atom.io/using-atom/sections/writing-in-atom/#spell-checking)
 
 Если предполагаются разработки на других языках, например Markdown (не GFM) и HTML, то для них потребуется подключение проверки орфографии:
 
@@ -112,18 +118,53 @@ HUGO
 
 GFM
 
-## linter-spell {#linterSpell}
+### Плагины
 
-linter-spell
-: Multilingual grammar-specific spell checking using Ispell-interface such as Aspell or Hunspell.
+Заслушивает упоминания плагин **spell-check-urls**, который разработал опытный программист и активный участник сообщества Атом [Dylan R. E. Moonfire (dmoonfire)](https://github.com/dmoonfire).
 
-Разработка команды AtomLinter, установок: 91 480 (на 11 июня 2021)
+This is a small spell-check plugin that marks various URLS as correct so they don't show up as spelling errors.
 
- долго не подключалась. Что только не предпринималось. Зате
+To use, just add the package in Atom and it will automatically hook up to spell-check.
+
+There is no configuration.
+
+### Предложения
 
 Related to #365, spell-check's "Add to known words" option will save all these words, regardless of the current locale, somewhere — and the user has access to this flat list in spell-check's settings. But if you work with multiple languages, it would be far better (and in sync with hunspell practices) to add each exception to the personal dictionary for the given language.
 
 Is this something that could be achieved? I would be most grateful for any pointers.
+
+## linter-spell {#linterSpell}
+
+Этот пакет разработан командой AtomLinter. Него около 100 000 установок: 91 480 (на 11 июня 2021).
+
+Исходники пакета размещены на GitHub - [linter-spell](https://github.com/AtomLinter/linter-spell) в подзаголовочном тексте, отмечается, что пакет:
+
+linter-spell
+: Multilingual grammar-specific spell checking using Ispell-interface such as Aspell or Hunspell.
+
+linter-spell
+: Многоязычная грамматическая проверка орфографии с использованием интерфейса Ispell, такого как Aspell или Hunspell
+
+### Особенности linter-spell
+
+В отличии от **spell-check**, проверку орфографии **linter-spell** выполняет при сохранении документа с обнаруженными ошибками. Слова с ошибками и неизвестные слова помечаются  линтером подчеркиванием желтыми линиями. Орфографические ошибки можно исправить или добавить в личный словарь, либо в словарь языка с помощью базового пакета [intentions](https://atom.io/packages/intentions). Вызов - комбинацией клавиш:
+
+-   в OSX              : ctrl + enter
+-   в Linux и Windows  : alt + enter
+
+Grammar and Dictionary Providers
+
+Spell checking plain text, Markdown, or AsciiDoc documents is included in the package. To spell check other document types use a linter-spell-grammar provider. To use additional dictionaries use linter-spell-dictionary provider. Current providers are listed in the table below (D=Dictionary, G=Grammar, D/G=Dictionary/Grammar).
+
+### Грамматика и словари
+
+Проверка орфографии в виде обычного текста (plain text), документов Markdown или AsciiDoc включена в пакет по умолчанию. Для проверки орфографии других форматов применяются словари других поставщиков. Все они перечислены в таблице с указанием назначения, пакета и зависимостей, а также гиперссылок на ресурсы каждого разработчика. [Подробнее...](https://github.com/AtomLinter/linter-spell#grammar-and-dictionary-providers)
+
+Кроме того, приведены подробные примеры создания новых [словарей](https://github.com/AtomLinter/linter-spell#create-new-dictionary-providers) и новых [грамматик](https://github.com/AtomLinter/linter-spell#creating-new-grammar-providers)
+
+
+Таким образом, Атом обеспечивает пользователей достаточно надежными инструментами проверки орфографии, которые очень хорошо дополняют друг друга, несмотря на отсутствие возможности совместной работы. Но для этого есть возможность быстрого отключения и включения установленных пакетов.
 
 Связанный с # 365, опция проверки орфографии «Добавить к известным словам» сохранит все эти слова, независимо от текущей локали, где-то - и у пользователя есть доступ к этому плоскому списку в настройках проверки орфографии. Но если вы работаете с несколькими языками, было бы намного лучше (и синхронно с практикой hunspell) добавлять каждое исключение в личный словарь для данного языка.
 
