@@ -1,9 +1,12 @@
 {{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
 <main class="px-3 text-start pt-3">
   <h1>{{ .Title }}</h1>
+  <p class="toc-collapse">
+    {{- partial "toc-collapse.html" . -}}
+  </p>
   {{ .Content }}
 </main>
 {{ end }}
