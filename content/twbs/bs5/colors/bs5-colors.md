@@ -1,6 +1,7 @@
 ---
 title: Colors
 date: 2020-07-21T12:41:45+03:00
+Lastmod: 2021-06-13T10:31:45+03:00
 draft: false
 # summary:
 summaryImage: images/colors.png
@@ -8,9 +9,9 @@ categories: ['веб-разработка']
 tags: ['bootstrap', 'шрифт и цвет']
 ---
 
+[colors](https://getbootstrap.com/docs/5.0/customize/color/#all-colors)
 
-
-{{< highlight css >}}
+{{< highlight YAML>}}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

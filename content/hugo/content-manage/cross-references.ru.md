@@ -160,10 +160,6 @@ Bjørn Erik Pedersen
 </footer>
 {{< /bQuote >}}
 
-
-
-
-
 ## From hugo-links-and-urls
 
 See example of use [here](https://rjordaney.is/code_exercises/staircase_n_steps/)

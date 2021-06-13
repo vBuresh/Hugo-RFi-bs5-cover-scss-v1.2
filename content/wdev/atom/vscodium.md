@@ -1,7 +1,7 @@
 +++
 title="Свободный VSCodium"
 date="2020-03-02T10:58:50+03:00"
-draft=false
+draft=true
 toc=true
 pygmentsUseClasses=true
 navvvPravo=true
@@ -39,7 +39,7 @@ sudo apt install codium
 1. Atom's iconic [One Dark theme](https://github.com/Binaryify/OneDark-Pro) for Visual Studio Code (id - zhuangtongfa.material-theme)
 2. [Atom Keymap for VS Code](https://github.com/Microsoft/vscode-atom-keybindings)
 
-Предлагаемая подсветка синтаксиса всех html, js, sass, md пока полностью меня устраивает.  
+Предлагаемая подсветка синтаксиса всех html, js, sass, md пока полностью меня устраивает.
 Правда для md и Hugo пришлось подгружать плагины:
 
 ### Общесистемные плагины

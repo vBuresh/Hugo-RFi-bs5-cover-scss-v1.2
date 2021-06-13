@@ -5,15 +5,18 @@ Lastmod: 2021-06-07T12:19:37+03:00
 draft: false
 # summary:
 # summaryImage: images/
-categories:
-  - webDev
-tags:
-  - Управление контентом
-  - shortcodes
+author:
+  # given_name: Vladimir
+  # family_name: Buresh
+  display_name: ['Hugo Authors', 'wBuresh']
+categories: ['управление контентом']
+tags: [hugo, шаблоны]
+# categories: [content-management]
+# tags: [hugo, templates, taxonomy]
 toc: true
 ---
 
-Hugo поставляется с набором shortcodes, которые облегчают разработку, позволяя автору сосредоточиться только на содержимом. С ними легко достичь желаемой чистоты Markdown.
+Hugo поставляется с набором шорткодов (shortcodes), которые облегчают разработку, позволяя автору сосредоточиться только на содержимом. С ними легко достичь желаемой чистоты Markdown.
 
 
 ## Shortcodes в Markdown

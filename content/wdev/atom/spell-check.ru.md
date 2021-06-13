@@ -1,10 +1,11 @@
 ---
 title: Spell Check
-# description: подзаголовок - «в двух словах»
 date: 2020-03-04T10:43:01+03:00
-Lastmod: 2021-06-11T11:29:01+03:00
+Lastmod: 2021-06-13T11:29:01+03:00
+subtitle: подзаголовок - «в двух словах»
+description: Проверка орфографии Atom, поставляемая по умолчанию. Неизвестные слова отмечаются подчеркиванием (красным). Есть возможность добавлять новые известные слова и изменять список проверяемых языков.
+# summary: очень краткое «в двух словах» (для карточек)
 draft: false
-# summary: ответ на вопрос - «зачем читать я буду это?»
 # summaryImage: images/
 author:
   given_name: Vladimir
@@ -80,7 +81,7 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 -   AsciiDoc
 -   reStructuredText
 
-То есть, машинным языком определено:
+То есть, "машинным" языком определено:
 
 ``` bash
 source.asciidoc, source.gfm, text.git-commit,
@@ -104,19 +105,26 @@ text.md, code.raw.markup.md,
 text.html.basic, source.html, comment.block.html,
 ```
 
+- hugo
+
+<!--  -->
+
+``` bash
+text.html.hugo,
+punctuation.section.embedded.end.gotemplate,
+```
+
 Типы используемых файлов можно определить в консоли `Ctrl + Shift + P`, вызываемой из редактируемого файла. В ней нужно ввести: `Editor: Log Cursor Scope` и выбрать этот пункт. В уведомлении будет выведен список типов документа.
 
-{{< figure src="/images/LogCursorScope_HTML.png" width="100%" >}}
-
 HTML
-
-{{< figure src="/images/LogCursorScope_HUGO.png" width="100%" >}}
+{{< figure src="/images/LogCursorScope_HTML.png" width="100%" caption="Типы файлов - HTML"class="text-muted" >}}
 
 HUGO
-
-{{< figure src="/images/LogCursorScope_GFM.png" width="100%" >}}
+{{< figure src="/images/LogCursorScope_HUGO.png" width="100%" caption="Типы файлов - HUGO" >}}
 
 GFM
+{{< figure src="/images/LogCursorScope_GFM.png" width="100%" caption="Типы файлов - GFM" >}}
+
 
 ### Плагины
 
@@ -130,9 +138,24 @@ There is no configuration.
 
 ### Предложения
 
+
+
+
+
+
+
 Related to #365, spell-check's "Add to known words" option will save all these words, regardless of the current locale, somewhere — and the user has access to this flat list in spell-check's settings. But if you work with multiple languages, it would be far better (and in sync with hunspell practices) to add each exception to the personal dictionary for the given language.
 
 Is this something that could be achieved? I would be most grateful for any pointers.
+
+
+### ©b^ Предложение - spell-check Known Words config.cson
+
+Так в настройках spell-check Known Words:
+
+
+
+{{< figure src="/images/spell-checkKnownWords.png" width="100%" caption="Рис. 4. настройка spell-check / Known Words">}}
 
 ## linter-spell {#linterSpell}
 
