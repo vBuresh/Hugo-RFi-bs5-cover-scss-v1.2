@@ -1,10 +1,10 @@
-<section class="page-toc d-grid gap-2 d-md-flex justify-content-md-end">
+<section class="pt-2">
   {{ if and (gt .WordCount 400 ) (.Params.toc) }}
-  <a style="color: {{ .Site.Params.mainColour }};" class="h6 dropdown-toggle" data-bs-toggle="collapse" href="#collapseTOC" role="button" aria-expanded="false" aria-controls="collapseTOC">
+  <a class="btn btn-lg dropdown-toggle" style="color: {{ .Site.Params.mainColour }};" data-bs-toggle="collapse" href="#collapseTOC" role="button" aria-expanded="false" aria-controls="collapseTOC">
     {{ i18n "pageTOC" }}
   </a>
   <div class="collapse" id="collapseTOC">
-    <div class="card card-body bg-dark">
+    <div class="author card card-body">
       {{.TableOfContents}}
     </div>
   </div>

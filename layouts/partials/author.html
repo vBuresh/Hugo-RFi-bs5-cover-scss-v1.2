@@ -1,0 +1,18 @@
+<section class="author-public-u">
+  {{- if .Params.author -}}
+  <ul class="list-inline">
+    <li class="list-inline-item">{{ i18n "author" }}:
+      {{ $.Param "author.display_name" }}.
+    </li>
+    <li class="list-inline-item">
+      <!-- Post-specific stats -->
+      {{ i18n "postedOn" }}:
+      {{ dateFormat "2006.01.02 15:04 MST" .Date.Local }}
+    </li>
+    <li class="list-inline-item">
+      {{ i18n "lastModified" }}:
+      {{ dateFormat "2006.01.02 15:04 MST" .Date.Local }}
+    </li>
+  </ul>
+  {{- end -}}
+</section>

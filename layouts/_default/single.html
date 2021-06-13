@@ -2,11 +2,20 @@
 {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-<main class="px-3 text-start pt-3">
-  <h1>{{ .Title }}</h1>
-  <p class="toc-collapse">
+<main class="text-start">
+  <header class="mt-5 mb-3">
+    <h1>{{ .Title }}
+      <small class="text-muted">
+        {{ .Page.Params.subtitle }}
+      </small>
+    </h1>
+    <div class="divider" style="background:{{ .Site.Params.mainColour }};"></div>
+    <section>
+      {{- partial "author.html" . -}}
+      {{ .Description }}
+    </section>
     {{- partial "toc-collapse.html" . -}}
-  </p>
+  </header>
   {{ .Content }}
 </main>
 {{ end }}

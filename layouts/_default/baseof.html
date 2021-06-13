@@ -3,6 +3,11 @@
 
   <head>
     {{- partial "meta.html" . -}}
+
+    <title>{{- block "title" . -}}
+      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+      {{- end -}}</title>
+
     {{- partial "stylesheets.html" . -}}
     {{- partial "favicons.html" . -}}
   </head>
@@ -10,7 +15,7 @@
   <body class="d-flex h-100 text-center text-white bg-dark">
     {{- partial "sidebar-btn-inset.html" . -}}
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      {{- partial "header.html" . -}}
+      {{- partial "navbar.html" . -}}
       <div id="content">
         {{- block "main" . }}{{- end }}
       </div>
