@@ -52,7 +52,7 @@
 
 Требуется привести  теги `<html>`, `<body>`, `<div id="content">` в соответствие с примером `cover.html`
 
-2.  Поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (согласно комментариям) в файлы:
+2.  Поместить (в режиме "как есть" - copy/paste) содержимое соответствующих фрагментов файла `cover.html` (согласно комментариям) в следующие файлы:
 
     -   layouts/partials/head.html
     -   layouts/partials/header.html
@@ -79,7 +79,7 @@
 
 #### Шаблон `\_default/baseof.html`
 
-В документации **Hugo** приводится файл `\_default/baseof.html` в таком виде:
+В [документации](https://gohugo.io/templates/base/#define-the-base-template) **Hugo** приводится файл `\_default/baseof.html` в таком виде:
 
 ```html
 <!-- Источник: Define the Base Template (https://gohugo.io/templates/base/#define-the-base-template) -->
@@ -106,7 +106,7 @@
 
 Пример демонстрирует содержимое элемента [`<head>`](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head), задача которого — хранить метаданные документа. Интересен и пример автоматизации: `block "title"`, тег `<title>`. В комментариях сообщается, что в блок можно поместить постоянное содержимое, кроме того, сюда же автоматически "подтягивается" информация из поля `title:` конфигурационного файла, который содержит глобальные настройки и данные и сведения.
 
-> Наши "вдохновители" демонстрируют более глубокую разработку `<title>`.
+> Наши "вдохновители" демонстрируют более интересную разработку `<title>`.
 
 #### Шаблон homepage - `layouts/index.html`
 
@@ -156,8 +156,9 @@
 
 ##### Пример 1
 
+См. [Example: Override the Base Template](https://gohugo.io/templates/base/#override-the-base-template)
+
 ```html
-<!-- Источник: Override the Base Template (https://gohugo.io/templates/base/#override-the-base-template) -->
 {{ define "title" }}
   <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
   {{ .Title }} &ndash; {{ .Site.Title }}
@@ -170,7 +171,7 @@
 
 ##### Пример 2
 
-[Example Single Page Templates](https://gohugo.io/templates/single-page-templates/)
+См. [Example Single Page Templates](https://gohugo.io/templates/single-page-templates/)
 
 posts/single.html
 This single page template makes use of Hugo base templates, the .Format function for dates, the .WordCount page variable, and ranges through the single content’s specific taxonomies. with is also used to check whether the taxonomies are set in the front matter.

@@ -1,7 +1,7 @@
 # Configure Hugo: https://gohugo.io/getting-started/configuration/#configuration-file
 baseURL: https://cybmir.ru/
 languageCode: ru
-title: Hugo ReFreshing Theme
+title: ReFreshing - the best site
 
 DefaultContentLanguage:  ru
 # DefaultContentLanguage: en
@@ -25,8 +25,10 @@ markup:
     startLevel:          2
     endLevel:            4
 
-
 params:
+  description: "The most popular HTML, CSS, and JS library in the world."
+  authors: "Vladimir Buresh, Fandor"
+  site_version: 20210612rfi
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
   favicon: "/images/favicon.svg"
@@ -42,15 +44,32 @@ params:
   # mainColour: "#F39200"
   mainColour: "#00d1b2"
 
+# homepage options
+  homepage:
+    # this options let you specify if you want a link to the homepage
+    # it can be: "none", "menu", "footer" or "menu+footer"
+    # linkPosition: "footer"
+    # this options let you specify the text of the link to the homepage
+    # linkText: "Homepage"
+    # option to specify the title in the homepage
+    title: Julia The White
+    # option to specify the subtitle in the homepage
+    subtitle: Personal website and blog
+
 ## multilanguage support options
 ####################################
 languages:
   en:
     languageName:       English
     weight:            2
-    title: In English
+    # title: In English
   ru:
     languageName:       Russian
-    title: На Русском
+    # title: На Русском
     weight:             1
       # Some sub-parameters of the "Homepage" and "footer" parameter
+
+    params:
+      homepage:
+        title: Julia белая краска
+        subtitle: Персональный сайт и блог

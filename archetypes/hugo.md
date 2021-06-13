@@ -1,6 +1,6 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-# description: подзаголовок - «в двух словах»
+# description: A short description of this page, «в двух словах»
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 draft: false
