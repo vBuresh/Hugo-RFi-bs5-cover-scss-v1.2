@@ -135,15 +135,49 @@ GFM
 Таким образом, чтобы орфография проверялась во всем GFM документе, включая зону `front-matter` (с любыми кавычками и без них), нужно в поле **Grammar** добавить следующее (через запятую):
 
 ```
-front-matter.yaml.gfm
-string.unquoted.yaml
-string.quoted.single.yaml
-string.quoted.double.yaml
+front-matter.yaml.gfm,
+string.unquoted.yaml,
+string.quoted.single.yaml,
+string.quoted.double.yaml,
 ```
 
-YAMA
+YAML - формат конфигурационных файлов. Расширенная версия распространенного формата JSON.
 
-{{< figure src="/images/logcursorscope_yaml.png" width="100%" caption="Scopes at Cursor - HUGO" >}}
+[YAML Ain’t Markup Language (YAML™) Version 1.2](https://yaml.org/spec/1.2/spec.html)
+
+См. также: fat32elena [Yaml vs. Json — что круче?](https://habr.com/ru/company/rambler_and_co/blog/525498/) 17.11.2020
+
+{{< figure src="/images/logcursorscope_yaml.png" width="100%" caption="YAML: курсор - в файле конфигурации config.yaml." >}}
+
+Для проверки орфографии в файлах конфигурации YAML, в том числе в директориях i18n и data, нужно подключить только `source.yaml`, так как для проверки `front-matter` уже рекомендовалось подключить `string.unquoted.yaml, string.quoted.single.yaml, string.quoted.double.yaml,`
+
+Таким образом,
+
+по умолчанию:
+
+```
+source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar, source.rst, text.restructuredtext
+```
+
+добавлено:
+
+```
+text.md, code.raw.markup.md, text.html.basic, source.html, comment.block.html,
+```
+
+Надо:
+
+исключить: `code.raw.markup.md,`
+
+Добавить (к "по умолчанию"):
+
+```
+text.md, source.yaml, front-matter.yaml.gfm, string.unquoted.yaml, string.quoted.single.yaml, string.quoted.double.yaml,
+```
+
+
+
+<!--
 
 HUGO
 {{< figure src="/images/LogCursorScope_HUGO.png" width="100%" caption="Scopes at Cursor - HUGO" >}}
@@ -155,12 +189,12 @@ punctuation.section.embedded.end.gotemplate,
 
 - Markdown
 
-``` bash
-
+```
 text.md
 fenced.code.md
 source.embedded.shell
 ```
+
 ```
 text.md, code.raw.markup.md,
 
@@ -172,7 +206,7 @@ text.md, code.raw.markup.md,
 text.xml.svg
 meta.tag.xml
 punctuation.definition.tag.xml,
-```
+``` -->
 
 
 
@@ -192,11 +226,11 @@ There is no configuration.
 
 ### сделать пользовательский словарь
 
-Где отражаются
+#### Где сейчас отражаются
 
 {{< figure src="/images/spell-checkKnownWords.png"  width="100%" class="text-muted h4" caption="Известные слова" alt="spell-check" >}}
 
-Где хранятся
+#### Где хранятся
 
 {{< figure src="/images/spell-check-config_cson.png" class="text-muted h4" caption="Известные слова" alt="spell-check" >}}
 
