@@ -10,11 +10,11 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories:
-  - webDev"
-tags:
-  - Code
-  - Hugo
+  display_name: ['Hugo Authors', 'wBuresh']
+categories: ['управление контентом']
+tags: [hugo, code]
+# categories: [content-management]
+# tags: [hugo, templates, taxonomy]
 toc: true
 ---
 
@@ -325,7 +325,7 @@ See [the full list of Chroma lexers and their aliases](https://gohugo.io/content
 |     | _Без подсветки_    |                                                                             |     | _Часто цитируемые_     |
 |  1. | **plaintext**      | no-highlight, plain, text, txt                                              | 13. | **Go**                 | go, golang                           |
 |     | _Командная строка_ |                                                                             | 14. | **Go HTML Template**   | go-html-template                     |
-|  2. | **Bash**           | bash, bashrc, ebui1ld, eclass, exheres-0, exlib, ksh, sh, shell, zsh, zshrc | 15. | **Go Text Template**   | go-text-template                     |
+    |  2. | **Bash**           | bash, bashrc, ebui1ld, eclass, exheres-0, exlib, ksh, sh, shell, zsh, zshrc | 15. | **Go Text Template**   | go-text-template                     |
 |     | _Стили_            |                                                                             | 16. | **Kotlin**             | kotlin, kt                           |
 |  3. | **CSS**            | css                                                                         | 17. | **JavaScript**         | javascript, js, jsm                  |
 |  4. | **SCSS**           | scss                                                                        | 18. | **Java**               | java                                 |

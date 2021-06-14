@@ -1,4 +1,4 @@
----
+*---
 title: 'Front Metter'
 subtitle: 'gives Hugo its strength'
 # description: подзаголовок - «в двух словах»

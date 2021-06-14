@@ -1,10 +1,10 @@
 ---
-title: Spell Check
+title: 'Spell Check'
+subtitle: '- орфография в Atom'
 date: 2020-03-04T10:43:01+03:00
 Lastmod: 2021-06-13T11:29:01+03:00
-subtitle: подзаголовок - «в двух словах»
-description: Проверка орфографии Atom, поставляемая по умолчанию. Неизвестные слова отмечаются подчеркиванием (красным). Есть возможность добавлять новые известные слова и изменять список проверяемых языков.
-# summary: очень краткое «в двух словах» (для карточек)
+description: В текстовом редакторе Atom проверку орфографии обеспечивает по умолчанию плагин Spell Check, входящий с состав ядра. Найденные неизвестные слова отмечаются подчеркиванием. Ошибку легко исправить. Также можно заменить слово с ошибкой, выбрав правильный вариант из предложенного списка, либо добавить в словарь новое известное слово. Пользователи имеют возможность подключать словари разных языков и изменять список проверяемых языков.
+# summary: очень краткое описание «в двух словах» - для карточек.
 draft: false
 # summaryImage: images/
 author:
@@ -18,16 +18,16 @@ tags: ['Atom', 'проверка орфографии']
 toc: true
 ---
 
-В Атоме традиционно было туговато с проверкой орфографии, несмотря на наличие двух альтернативных пакетов:
+Для проверки орфографии в текстовом редакторе Atom предусмотрены следующие пакеты:
 
 -   [spell-check](#spellCheck)
 -   [linter-spell](#linterSpell)
 
-Эти пакеты сильно отличаются, и имеют свои достоинства и недостатки. При этом они не могут «жить вместе». Каждый требует отключения собрата, если он был ранее подключен.
+Эти пакеты заметно отличаются, и имеют свои достоинства и недостатки. При этом они не могут «жить вместе. Каждый требует отключения своего «альтернативного собрата», если он был ранее подключен.
 
 ## spell-check {#spellCheck}
 
-Пакет входит в поставку Atom. На 11 июня 2021. имеет почти полмиллиона установок: 401 231.
+Пакет входит в ядро Atom. На 13 июня 2021 года имеет почти полмиллиона установок: 401 237.
 
 На странице GitHub [Spell Check package](https://github.com/atom/spell-check) разработчики скромно заявляют, что пакет:
 
@@ -69,17 +69,22 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 
 Если в списке нужных словарей не окажется, их можно установить, следуя рекомендациям разработчиков [Подробнее...](https://github.com/atom/spell-check#missing-languages)
 
-Если все подключено правильно, следует еще раз обратить внимание на настройки.
+Если все подключено правильно, следует еще раз обратить внимание на настройки:
+`ctrl-,` » Packages » Core Packages » Spell Check » Settins » **Grammars**
 
 {{< figure src="/images/spell-check-settings.png" width="100%" >}}
 
-Приступая к работе, важно убедиться, что язык, на котором будет написан документ, есть в списке проверяемых. В [руководстве явно указано](https://github.com/atom/spell-check), что по умолчанию проверка орфографии включена только для:
+Приступая к работе, важно убедиться, что язык, на котором будет написан документ, есть в списке проверяемых.
 
--   Plain Text
--   GitHub Markdown
--   Git Commit Message
--   AsciiDoc
--   reStructuredText
+В [руководстве явно указано](https://github.com/atom/spell-check), что по умолчанию проверка орфографии включена только для:
+
+Files | Scopes
+---|---
+Plain Text | text.plain
+GitHub Markdown | source.gfm
+Git Commit Message | text.git-commit
+AsciiDoc | source.asciidoc
+reStructuredText | source.rst, text.restructuredtext
 
 То есть, "машинным" языком определено:
 
@@ -91,39 +96,84 @@ source.rst, text.restructuredtext
 
 См. также [Writing in Atom/Spell Checking](https://flight-manual.atom.io/using-atom/sections/writing-in-atom/#spell-checking)
 
-Если предполагаются разработки на других языках, например Markdown (не GFM) и HTML, то для них потребуется подключение проверки орфографии:
+Если в работе применяются другие языки, например HTML, Markdown (не GFM) и пр., то их нужно добавить в настройках (поле **Grammars**).
 
-- Markdown
+Что именно добавлять, - определяется командой: `Editor: Log Cursor Scope`, выполняемой в консоли: `Ctrl + Shift + P`. По мере ввода команды, выводится список, соответствующий введенной части команды. При появлении -`Editor: Log Cursor Scope` и выборе этой позиции, - будет выведено уведомление со списком используемых типов документа.
 
-``` bash
-text.md, code.raw.markup.md,
+{{< note >}}
+<p>В списке отражены только те типы документов, которые соответствуют "области действия курсора", а не всему документу. При этом учитываются кавычки и их тип (двойные или одиночные), а также, комментарии и пр.</p>
+{{< /note >}}
+
+HTML
+
+{{< figure src="/images/logcursorscope_html.png" width="100%" caption="HTML: курсор в теге `<p>`" class="text-muted" >}}
+
+При смене области действия курсора, например, при перемещении его в закомментированный фрагмент `<!-- вот | так -->`
+
+{{< figure src="/images/logcursorscope_html-comment.png" width="100%" caption="HTML: курсор в `<!-- комментарии -->`" class="text-muted" >}}
+
+Таким образом, чтобы орфография проверялась во всем HTML документе, включая закомментированные фрагменты, нужно в поле **Grammar** добавить следующее:
+
 ```
-
-- html
-
-``` bash
 text.html.basic, source.html, comment.block.html,
 ```
 
-- hugo
+GFM
 
-<!--  -->
+Это язык включен в ядро Atom "как родной". См. настройки пакета: Packages  »  Language Gfm.
+
+{{< figure src="/images/logcursorscope_gfm.png" width="100%" caption="GFM: курсор - в абзаце документа GitHub Markdown" >}}
+
+Однако, если установить курсор в область `front-matter`, то определится следующее:
+
+{{< figure src="/images/logcursorscope_gfm-front.png" width="100%" caption="GFM: курсор - в зоне `front-matter` GitHub Markdown" >}}
+
+На рисунке видно, что в документе MD `front-matter` - на языке YAML, причем текст в области курсора - в одинарных кавычках `string.quoted.single.yaml`.
+
+Если кавычки заменить на двойные, то строка сообщения будет такой: `string.quoted.double.yaml`. А если из совсем убрать, - то последняя строка изменится: `string.unquoted.yaml`. или
+
+Таким образом, чтобы орфография проверялась во всем GFM документе, включая зону `front-matter` (с любыми кавычками и без них), нужно в поле **Grammar** добавить следующее (через запятую):
+
+```
+front-matter.yaml.gfm
+string.unquoted.yaml
+string.quoted.single.yaml
+string.quoted.double.yaml
+```
+
+YAMA
+
+{{< figure src="/images/logcursorscope_yaml.png" width="100%" caption="Scopes at Cursor - HUGO" >}}
+
+HUGO
+{{< figure src="/images/LogCursorScope_HUGO.png" width="100%" caption="Scopes at Cursor - HUGO" >}}
 
 ``` bash
 text.html.hugo,
 punctuation.section.embedded.end.gotemplate,
 ```
 
-Типы используемых файлов можно определить в консоли `Ctrl + Shift + P`, вызываемой из редактируемого файла. В ней нужно ввести: `Editor: Log Cursor Scope` и выбрать этот пункт. В уведомлении будет выведен список типов документа.
+- Markdown
 
-HTML
-{{< figure src="/images/LogCursorScope_HTML.png" width="100%" caption="Типы файлов - HTML"class="text-muted" >}}
+``` bash
 
-HUGO
-{{< figure src="/images/LogCursorScope_HUGO.png" width="100%" caption="Типы файлов - HUGO" >}}
+text.md
+fenced.code.md
+source.embedded.shell
+```
+```
+text.md, code.raw.markup.md,
 
-GFM
-{{< figure src="/images/LogCursorScope_GFM.png" width="100%" caption="Типы файлов - GFM" >}}
+```
+- SVG
+
+``` bash
+
+text.xml.svg
+meta.tag.xml
+punctuation.definition.tag.xml,
+```
+
 
 
 ### Плагины
@@ -138,16 +188,24 @@ There is no configuration.
 
 ### Предложения
 
+Сейчас все хранится в одном файле общих настроек Atom `config.cson` /spell-check (linter-spell - там же). Нужно
 
+### сделать пользовательский словарь
 
+Где отражаются
 
+{{< figure src="/images/spell-checkKnownWords.png"  width="100%" class="text-muted h4" caption="Известные слова" alt="spell-check" >}}
 
+Где хранятся
+
+{{< figure src="/images/spell-check-config_cson.png" class="text-muted h4" caption="Известные слова" alt="spell-check" >}}
+
+Предложение сделать файл .spellcheckusersdic
 
 
 Related to #365, spell-check's "Add to known words" option will save all these words, regardless of the current locale, somewhere — and the user has access to this flat list in spell-check's settings. But if you work with multiple languages, it would be far better (and in sync with hunspell practices) to add each exception to the personal dictionary for the given language.
 
 Is this something that could be achieved? I would be most grateful for any pointers.
-
 
 ### ©b^ Предложение - spell-check Known Words config.cson
 
@@ -185,7 +243,6 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the pa
 Проверка орфографии в виде обычного текста (plain text), документов Markdown или AsciiDoc включена в пакет по умолчанию. Для проверки орфографии других форматов применяются словари других поставщиков. Все они перечислены в таблице с указанием назначения, пакета и зависимостей, а также гиперссылок на ресурсы каждого разработчика. [Подробнее...](https://github.com/AtomLinter/linter-spell#grammar-and-dictionary-providers)
 
 Кроме того, приведены подробные примеры создания новых [словарей](https://github.com/AtomLinter/linter-spell#create-new-dictionary-providers) и новых [грамматик](https://github.com/AtomLinter/linter-spell#creating-new-grammar-providers)
-
 
 Таким образом, Атом обеспечивает пользователей достаточно надежными инструментами проверки орфографии, которые очень хорошо дополняют друг друга, несмотря на отсутствие возможности совместной работы. Но для этого есть возможность быстрого отключения и включения установленных пакетов.
 
