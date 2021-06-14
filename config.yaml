@@ -56,7 +56,7 @@ params:
     # option to specify the subtitle in the homepage
     subtitle: Personal website and blog
 
-## multilanguage support options
+## multi language support options
 ####################################
 languages:
   en:
