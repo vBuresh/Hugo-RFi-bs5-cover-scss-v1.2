@@ -26,8 +26,8 @@ markup:
     endLevel:            4
 
 params:
-  description: "The most popular HTML, CSS, and JS library in the world."
-  authors: "Vladimir Buresh, Fandor"
+  description: Hugo ReFreshing theme - It's refreshing to see a site that's so glorious.
+  authors: "Vladimir Buresh, Eric Fandor"
   site_version: 20210612rfi
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration

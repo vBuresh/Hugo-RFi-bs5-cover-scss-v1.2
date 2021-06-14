@@ -5,9 +5,11 @@
 <main class="text-start">
   <header class="mt-5 mb-3">
     <h1>{{ .Title }}
+      {{ if .Page.Params.subtitle }}
       <small class="text-muted">
         {{ .Page.Params.subtitle }}
       </small>
+      {{ end }}
     </h1>
     <div class="divider" style="background:{{ .Site.Params.mainColour }};"></div>
     <section>
