@@ -2,8 +2,8 @@
 title: Partial Svgs
 date: "2020-07-07T06:52:15+03:00"
 draft: false
-tags:
-- graphics
+categories: ['примеры']
+tags: ['hugo', 'SVG']
 ---
 
 Using dict to pass multiple values to a partial

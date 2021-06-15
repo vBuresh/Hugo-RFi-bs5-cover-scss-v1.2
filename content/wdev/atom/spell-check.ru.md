@@ -78,13 +78,14 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 
 В [руководстве явно указано](https://github.com/atom/spell-check), что по умолчанию проверка орфографии включена только для:
 
-Files | Scopes
----|---
-Plain Text | text.plain
-GitHub Markdown | source.gfm
-Git Commit Message | text.git-commit
-AsciiDoc | source.asciidoc
-reStructuredText | source.rst, text.restructuredtext
+| Files               | Scopes                         |
+| :-------------------|:-------------------------------|
+| Plain Text          | text.plain                    |
+| GitHub Markdown     | source.gfm                     |
+| Git Commit Message  | text.git-commit                |
+| AsciiDoc            | source.asciidoc                |
+| reStructuredText    | source.rst, text.restructuredtext |
+
 
 То есть, "машинным" языком определено:
 
@@ -98,7 +99,19 @@ source.rst, text.restructuredtext
 
 Если в работе применяются другие языки, например HTML, Markdown (не GFM) и пр., то их нужно добавить в настройках (поле **Grammars**).
 
-Что именно добавлять, - определяется командой: `Editor: Log Cursor Scope`, выполняемой в консоли: `Ctrl + Shift + P`. По мере ввода команды, выводится список, соответствующий введенной части команды. При появлении -`Editor: Log Cursor Scope` и выборе этой позиции, - будет выведено уведомление со списком используемых типов документа.
+## Опреде имени языковой зоны
+
+Finding a Language's Scope Name
+
+[Finding a Language's Scope Name](https://flight-manual.atom.io/using-atom/sections/basic-customization/#finding-a-languages-scope-name)
+
+overrides, you'll need to know the scope name for the language. We've already done this for finding a scope for writing a snippet in Snippet Format, but we can quickly cover it again.
+
+The scope name is shown in the settings view for each language. Click on "Packages" in the navigation on the left, search for the language of your choice, select it, and you should see the scope name under the language name heading:
+
+![the language name heading](https://flight-manual.atom.io/using-atom/images/python-grammar.png)
+
+Кроме того "языковая зона" (the scope name for the language), - определяется командой: `Editor: Log Cursor Scope`, выполняемой в консоли: `Ctrl + Shift + P`. По мере ввода команды, выводится список, соответствующий введенной части команды. При появлении -`Editor: Log Cursor Scope` и выборе этой позиции, - будет выведено уведомление со списком используемых типов документа.
 
 {{< note >}}
 <p>В списке отражены только те типы документов, которые соответствуют "области действия курсора", а не всему документу. При этом учитываются кавычки и их тип (двойные или одиночные), а также, комментарии и пр.</p>
@@ -115,7 +128,10 @@ HTML
 Таким образом, чтобы орфография проверялась во всем HTML документе, включая закомментированные фрагменты, нужно в поле **Grammar** добавить следующее:
 
 ```
-text.html.basic, source.html, comment.block.html,
+text.html.basic,
+
+source.html,
+comment.block.html,
 ```
 
 GFM
@@ -151,31 +167,46 @@ YAML - формат конфигурационных файлов. Расшир�
 
 Для проверки орфографии в файлах конфигурации YAML, в том числе в директориях i18n и data, нужно подключить только `source.yaml`, так как для проверки `front-matter` уже рекомендовалось подключить `string.unquoted.yaml, string.quoted.single.yaml, string.quoted.double.yaml,`
 
-Таким образом,
-
-по умолчанию:
+Таким образом, имеем по умолчанию:
 
 ```
 source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar, source.rst, text.restructuredtext
 ```
 
-добавлено:
+Общий список к добавлению (по `Log Cursor Scope`)
 
 ```
-text.md, code.raw.markup.md, text.html.basic, source.html, comment.block.html,
+text.md, source.yaml, front-matter.yaml.gfm,
+string.unquoted.yaml, string.quoted.single.yaml,
+string.quoted.double.yaml,
 ```
 
-Надо:
-
-исключить: `code.raw.markup.md,`
-
-Добавить (к "по умолчанию"):
+надо добавить:
 
 ```
-text.md, source.yaml, front-matter.yaml.gfm, string.unquoted.yaml, string.quoted.single.yaml, string.quoted.double.yaml,
+text.html.basic, source.yaml, text.html.hugo, text.xml.svg,
 ```
 
 
+В итоге имеем:
+
+```
+text.html.basic, source.yaml, text.html.hugo, text.xml.svg, source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar, source.rst, text.restructuredtext
+```
+
+Потому что
+
+| Пакет Atom    | Языковая зона  | List         |
+| :------------ | :------------- |:------------:|
+| language-gfm  | source.gfm     | core default |
+| language-git  | text.git-commit| core default |
+| language-text | text.plain     | core default |
+| language-html | text.html.basic| core add     |
+| language-yaml | source.yaml    | core add     |
+| language-hugo | text.html.hugo | repo add     |
+| language-svg  | text.xml.svg   | repo add     |
+
+<!-- text.xml.svg -->
 
 <!--
 
@@ -202,10 +233,8 @@ text.md, code.raw.markup.md,
 - SVG
 
 ``` bash
-
 text.xml.svg
-meta.tag.xml
-punctuation.definition.tag.xml,
+
 ``` -->
 
 

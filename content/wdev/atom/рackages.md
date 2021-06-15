@@ -1,7 +1,7 @@
 +++
 title = "Atom Рackages"
 date = "2020-03-04T10:54:20+03:00"
-draft = "false"
+draft = "true"
 toc = "true"
 pygmentsUseClasses = "true"
 navvvPravo = "true"
