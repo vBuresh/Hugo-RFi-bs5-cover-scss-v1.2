@@ -1,25 +1,38 @@
 ---
-title: VScodium
+title: Atom или VSCodium
+subtitle: попытка сравнения
 date: 2020-03-02T10:58:50+03:00
+Lastmod: 2021-06-15T13:38:40+33:00
+description: Общее у этих двух замечательных ре
 draft: false
-toc: true
-#summary="Управление содержимым - важнейшая задача на всех этапах создания, развития и поддержки сайта"
-#description="Page_description"
-# summaryImage="/images/vvv-1920x864.jpg"
-tags: [Atom, VScodium]
+author:
+  given_name: Vladimir
+  family_name: Buresh
+  display_name: wBuresh
+categories: [веб-разработка]
+tags: ['Atom', 'VSCodium']
 ---
 
-Free/Libre Open Source Software Binaries of VS Code
+---
+title: 'Spell Check'
+subtitle: '- орфография в Atom'
+date: 2020-03-04T10:43:01+03:00
+Lastmod: 2021-06-13T11:29:01+03:00
+description: В текстовом редакторе Atom проверку орфографии обеспечивает по умолчанию плагин Spell Check, входящий с состав ядра. Найденные неизвестные слова отмечаются подчеркиванием. Ошибку легко исправить. Также можно заменить слово с ошибкой, выбрав правильный вариант из предложенного списка, либо добавить в словарь новое известное слово. Пользователи имеют возможность подключать словари разных языков и изменять список проверяемых языков.
+# summary: очень краткое описание «в двух словах» - для карточек.
+draft: false
+# summaryImage: images/
+author:
+  given_name: Vladimir
+  family_name: Buresh
+  display_name: wBuresh
+categories: [веб-разработка]
+tags: ['Atom', 'проверка орфографии']
+# categories: ['web development']
+# tags: ['Atom', spell-check]
+toc: true
+---
 
-{{< figure src="https://raw.githubusercontent.com/VSCodium/vscodium/master/src/resources/linux/code.png" heith="64px" width="64px" caption="VSCodium" class="text-muted" >}}
-
-This is not a fork. This is a repository of scripts to automatically build Microsoft's vscode repository into freely-licensed binaries with a community-driven default configuration.
-
-Свободные, с открытым исходным кодом софтверные бинарники VS Code
-
-Это не вилка форк (fork), а репозиторий скриптов для автоматического встраивания репозитория Microsoft VScode в свободно лицензируемые двоичные файлы с конфигурацией по умолчанию, управляемой сообществом.
-
-[vscodium](https://github.com/VSCodium/vscodium)
 
 
 To install it follow this guide:
@@ -28,7 +41,7 @@ To install it follow this guide:
 
 [Debian Wiki - Подробнее](https://wiki.debian.org/VisualStudioCode)
 
-Что сказать? Установил **VSCodium** и полегчало. Кажется, что это именно то, на что нужно потратить время.
+Что сказать? Установил **VSCodium** и полегчало. Кажется, что это именно то, на что можно потратить время. [Делаем страничку «VSCodium»]({{< ref "vscodium" >}})
 
 How to install for Debian/Ubuntu/Linux Mint
 

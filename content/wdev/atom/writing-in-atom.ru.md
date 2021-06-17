@@ -1,7 +1,6 @@
 ---
 title: Writing in Atom
-subtitle: the best editor
-description: подзаголовок - «в двух словах»
+# description: подзаголовок - «в двух словах»
 date: 2021-06-10T13:51:54+03:00
 Lastmod: 2021-06-10T13:51:54+03:00
 draft: false
@@ -11,9 +10,9 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories: [web development]
+categories: [веб-разработка]
 # categories: ['web development']
-tags: [atom, writing]
+tags: [atom, письмо]
 toc: true
 ---
 

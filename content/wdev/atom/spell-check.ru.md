@@ -12,7 +12,7 @@ author:
   family_name: Buresh
   display_name: wBuresh
 categories: [веб-разработка]
-tags: ['Atom', 'проверка орфографии']
+tags: ['Atom', 'проверка орфографии', 'письмо']
 # categories: ['web development']
 # tags: ['Atom', spell-check]
 toc: true
@@ -87,7 +87,7 @@ AVAILABLE DICTIONARIES (path is not mandatory for -d option):
 | reStructuredText    | source.rst, text.restructuredtext |
 
 
-То есть, "машинным" языком определено:
+То есть, "машинным" языком  определено:
 
 ``` bash
 source.asciidoc, source.gfm, text.git-commit,
@@ -99,8 +99,9 @@ source.rst, text.restructuredtext
 
 Если в работе применяются другие языки, например HTML, Markdown (не GFM) и пр., то их нужно добавить в настройках (поле **Grammars**).
 
-## Опреде имени языковой зоны
+## Имя языковой зоны
 
+Определение имени языковой зоны (language's scope)
 Finding a Language's Scope Name
 
 [Finding a Language's Scope Name](https://flight-manual.atom.io/using-atom/sections/basic-customization/#finding-a-languages-scope-name)

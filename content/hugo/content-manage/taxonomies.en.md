@@ -2,7 +2,7 @@
 title: Taxonomies
 # subtitle: continuer of the title in a two words
 date: 2021-06-05T10:42:20+03:00
-Lastmod: 2021-06-05T10:42:20+03:00
+Lastmod: 2021-06-16T10:42:20+03:00
 draft: false
 # description: "- дополнение к заголовку (подзаголовок)"
 # summary: краткое изложение - зачем читать сие
