@@ -12,9 +12,9 @@ family_name: Fandorin
 display_name: erfandor, wBuresh
 categories: [interface]
 categories: [интерфейс]
-tags: ['bootstrap', 'темы оформления', ночной режим']
+tags: ['bootstrap', 'темы оформления', 'ночной режим']
 # tags: ['bootstrap', 'themes', dark mode']
-tags: ['bootstrap', 'themes', ночной режим']
+tags: ['bootstrap', 'themes', 'ночной режим']
 ---
 
 <!-- типа вступление -->
@@ -70,20 +70,24 @@ tags: ['bootstrap', 'themes', ночной режим']
 <script src="dark-mode-switch.min.js"></script>
 ```
 
-## Проверку работоспособности
+## Проверка работоспособности
 
 После этого можно провести проверку работоспособности переключателя режимов **Dark Mode Switch**
 
 При правильном подключении все должно отображаться без искажений и корректно работать (в режимах "включен/выключен") во всех браузерах, [поддерживаюших Bootstrap v5.0](https://getbootstrap.com/docs/5.0/getting-started/browsers-devices/#supported-browsers)
 
-## как же это работает
+## Как это работает
 
-Переключение в темный режим приведет в тег `body` - `data-theme="dark"`. You can use CSS to target the elements on the page like so:
+При переключении в темный режим, в тег `body` добавляется следующий код - `data-theme="dark"`. Кроме того можно направить CSS на элементы страницы. Это делается следующим образом:
 
+{{< highlight css >}}
 [data-theme="dark"] {
   background-color: #111 !important;
   color: #eee;
 }
+{{< /highlight >}}
+
+
 ## Кастомизация
 
 Bootstrap - есть выбор: `text-dark bg-light` - `text-white bg-dark`. См. assets/bootstrap/scss/_variables.scss
@@ -129,7 +133,7 @@ _form-check.scss:110
 {{< /highlight >}}
 
 
-``` css
+{{< highlight css>}}
 /* _form-check.scss:110 */
 .form-switch .form-check-input
 width: 2em;
@@ -138,8 +142,8 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 background-position: left center;
 border-radius: 2em;
 transition: background-position 0.15s ease-in-out;
+{{< /highlight >}}
 
-```
 
 
 #### строка 751
