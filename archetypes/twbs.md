@@ -1,9 +1,10 @@
 ---
 title: {{ replace .Name "-" " " | title }}
-# description: подзаголовок - «в двух словах»
+# subtitle: continuer of the title in a two words
 date: {{ .Date }}
 Lastmod: {{ .Date }}
 draft: false
+# description: A short description of this page, «в двух словах»
 # summary: ответ на вопрос - «зачем читать я буду это?»
 author:
   given_name: Vladimir
