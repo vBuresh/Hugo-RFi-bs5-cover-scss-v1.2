@@ -1,6 +1,7 @@
 {{ define "main" }}
 <section id="main">
   <h1 id="title">{{ .Title }}</h1>
+    <div class="divider" style="background:{{ .Site.Params.mainColour }};"></div>
   <div>
         <article id="content">
            {{ .Content }}

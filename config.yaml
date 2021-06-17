@@ -41,8 +41,8 @@ params:
   # parameter used to specify if you want to calculate the js integrity
   jsIntegrity: false
   # option to specify the main colour of the theme
-  # mainColour: "#F39200"
-  mainColour: "#00d1b2"
+  mainColour: "#F39200"
+  # mainColour: "#00d1b2"
 
 # homepage options
   homepage:

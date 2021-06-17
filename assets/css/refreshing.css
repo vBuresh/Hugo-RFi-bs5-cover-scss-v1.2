@@ -1,12 +1,17 @@
 /*
  * Globals
  */
+
+/* ./cover.css */
+
+
 /* class="d-flex h-100 text-center text-white bg-dark" */
 .divider {
   border-radius: 50px;
   height: 4px;
   margin-bottom: 1.5rem;
   width: 68px;
+  background: #adb5bd;
 
   &.text-center {
     margin: 0 auto;
@@ -18,6 +23,7 @@
 }
 
 /* v^ syntax monokai  */
+
 /* _reboot.scss 275 */
 pre, code, kbd, samp {
   /* unicode-bidi: bidi-override; */

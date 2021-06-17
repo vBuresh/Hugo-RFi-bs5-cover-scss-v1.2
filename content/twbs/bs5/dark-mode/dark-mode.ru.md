@@ -70,12 +70,20 @@ tags: ['bootstrap', 'themes', ночной режим']
 <script src="dark-mode-switch.min.js"></script>
 ```
 
-## Примечание
+## Проверку работоспособности
 
 После этого можно провести проверку работоспособности переключателя режимов **Dark Mode Switch**
 
 При правильном подключении все должно отображаться без искажений и корректно работать (в режимах "включен/выключен") во всех браузерах, [поддерживаюших Bootstrap v5.0](https://getbootstrap.com/docs/5.0/getting-started/browsers-devices/#supported-browsers)
 
+## как же это работает
+
+Переключение в темный режим приведет в тег `body` - `data-theme="dark"`. You can use CSS to target the elements on the page like so:
+
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
 ## Кастомизация
 
 Bootstrap - есть выбор: `text-dark bg-light` - `text-white bg-dark`. См. assets/bootstrap/scss/_variables.scss
