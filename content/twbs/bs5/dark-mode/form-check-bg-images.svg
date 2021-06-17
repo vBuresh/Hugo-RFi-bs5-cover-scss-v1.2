@@ -1,0 +1,39 @@
+<!-- строка 751 `$form-check-input-checked-bg-image`.
+#{$form-check-input-checked-color}
+-->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='red' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/>
+</svg>
+```
+<!-- строка 752 $form-check-radio-checked-bg-image:
+#{$form-check-input-checked-color}
+-->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/>
+</svg>
+
+<!-- строка 757 $form-check-input-indeterminate-bg-image:
+#{$form-check-input-indeterminate-color}
+ -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='cyan' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>
+
+<!-- строка 770 $form-switch-bg-image:
+#{$form-switch-color}
+-->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>
+
+<!-- строка 775 $form-switch-focus-bg-image: -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/>
+</svg>
+
+<!-- строка 807 $form-select-indicator:
+#{$form-select-indicator-color}
+ -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='red' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>
+
+<!-- 882 -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>
+
+<!-- 884 -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>
+
+<!-- 971 -->
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>
