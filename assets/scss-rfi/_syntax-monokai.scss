@@ -374,3 +374,17 @@
   // TextWhitespace
   //.w {}
 }
+
+/* v^20210617  _reboot.scss 287 */
+pre {
+  /* font-size: 0.875em; */
+  /* margin-top: 0; */
+  padding: 1rem;
+  /* margin-top: 1rem; */
+  font-size: 1em;
+
+  .chroma {
+    /* background-color: #212529; */
+    background-color: #282c34;
+  }
+}
