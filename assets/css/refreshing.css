@@ -1,0 +1,39 @@
+/*
+ * Globals
+ */
+/* class="d-flex h-100 text-center text-white bg-dark" */
+.divider {
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1.5rem;
+  width: 68px;
+
+  &.text-center {
+    margin: 0 auto;
+  }
+}
+
+.author {
+  background-color: #343a40;
+}
+
+/* v^ syntax monokai  */
+/* _reboot.scss 275 */
+pre, code, kbd, samp {
+  /* unicode-bidi: bidi-override; */
+  unicode-bidi: normal;
+}
+
+/* _reboot.scss 287 */
+pre {
+  /* font-size: 0.875em; */
+  /* margin-top: 0; */
+  padding: 1rem;
+  /* margin-top: 1rem; */
+  font-size: 1em;
+
+  .chroma {
+    /* background-color: #212529; */
+    background-color: #282c34;
+  }
+}

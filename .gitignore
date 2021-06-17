@@ -8,7 +8,8 @@ themes/
 # assets/
 assets/bootstrap/
 assets/js
-assets/css
+assets/css/cover.css
+assets/css/dark-mode.css
 
 # assets/scss-rfi/_bs-example.scss
 # assets/scss-rfi/core.scss
