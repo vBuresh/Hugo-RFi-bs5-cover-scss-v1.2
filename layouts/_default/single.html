@@ -2,7 +2,7 @@
 {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-<main class="text-start">
+<section class="text-start">
   <header class="mt-5 mb-3">
     <h1>{{ .Title }}
       {{ if .Page.Params.subtitle }}
@@ -19,5 +19,5 @@
     {{- partial "toc-collapse.html" . -}}
   </header>
   {{ .Content }}
-</main>
+</section>
 {{ end }}

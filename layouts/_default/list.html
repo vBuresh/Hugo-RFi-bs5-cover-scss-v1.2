@@ -1,10 +1,10 @@
 {{ define "main" }}
-<main class="px-3 text-start pt-3">
+<section class="px-3 text-start pt-3">
   <header class="listpage-title">
     <h1>{{.Title}}</h1>
   </header>
   <div class="divider" style="background: {{ .Site.Params.mainColour }}"></div>
-  <section>
+  <div>
     {{.Content}}
     <ul>
       <!-- Ranges through content -->
@@ -14,6 +14,6 @@
       </li>
       {{ end }}
     </ul>
-  </section>
-</main>
+  </div>
+</section>
 {{ end }}
