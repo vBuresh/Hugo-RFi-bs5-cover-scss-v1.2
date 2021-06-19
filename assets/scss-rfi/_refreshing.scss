@@ -1,0 +1,47 @@
+// 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
+// body {
+//   padding-top: 76px;
+// }
+//
+// footer {
+//   padding: 52px 0;
+// }
+
+
+.divider {
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1.5rem;
+  width: 68px;
+  background: #adb5bd;
+
+  &.text-center {
+    margin: 0 auto;
+  }
+}
+
+.author {
+  background-color: #343a40;
+}
+
+// darkMode
+
+#mode {
+  margin-right: 1.25rem;
+}
+
+body .toggle-dark {
+  display: block;
+}
+
+body .toggle-light {
+  display: none;
+}
+
+body.dark .toggle-light {
+  display: block;
+}
+
+body.dark .toggle-dark {
+  display: none;
+}
