@@ -1,4 +1,4 @@
-/** Theme variables */
+// Theme variables
 
 // Source: https://material.io/design/color/dark-theme.html
 
@@ -311,6 +311,35 @@ body.dark .card {
 body.dark .card.bg-light {
   background: $body-overlay-dark !important;
 }
+
+// @b^
+body.dark .list-group-item {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .list-group-item.bg-light {
+  background: $body-overlay-dark !important;
+}
+
+body.dark .offcanvas-body {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .offcanvas-body.bg-light {
+  background: $body-overlay-dark !important;
+}
+
+body.dark .offcanvas-header {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .offcanvas-header.bg-light {
+  background: $body-overlay-dark !important;
+}
+// ./ @b^
 
 body.dark .navbar .menu-icon .navicon {
   background: $navbar-dark-color;
