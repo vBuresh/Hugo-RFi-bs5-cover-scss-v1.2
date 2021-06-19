@@ -1,7 +1,8 @@
 # Configure Hugo: https://gohugo.io/getting-started/configuration/#configuration-file
-baseURL: https://cybmir.ru/
+# baseURL: "https://cybmir.ru/"
+baseURL: "/"
 languageCode: ru
-title: ReFreshing - the best site
+title: Hugo-RFi-Cover
 
 DefaultContentLanguage:  ru
 # DefaultContentLanguage: en
@@ -11,7 +12,8 @@ enableInlineShortcodes:  true
 publishDir:              "@_site"
 enableRobotsTXT:         false
 
-# применяются относительные ссылки. Тo turn relative URLs into absolute use # canonifyURLs: true.
+# применяются относительные ссылки. Тo turn relative URLs into absolute use
+# canonifyURLs: true.
 canonifyURLs:            false
 
 # bd5
@@ -26,8 +28,10 @@ markup:
     endLevel:            4
 
 params:
-  description: Hugo ReFreshing theme - It's refreshing to see a site that's so glorious.
-  authors: "Vladimir Buresh, Eric Fandor"
+  #  в navbar
+  title: Cover
+  description: A one-page template for building simple and beautiful home pages.
+  authors: "@mdo, wBuresh, Eric Fandor"
   site_version: 20210612rfi
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
@@ -43,7 +47,7 @@ params:
   # option to specify the main colour of the theme
   mainColour: "#F39200"
   # mainColour: "#00d1b2"
-
+  darkMode: true
 # homepage options
   homepage:
     # this options let you specify if you want a link to the homepage
@@ -52,9 +56,9 @@ params:
     # this options let you specify the text of the link to the homepage
     # linkText: "Homepage"
     # option to specify the title in the homepage
-    title: Julia The White
+    title: Cover your page
     # option to specify the subtitle in the homepage
-    subtitle: Personal website and blog
+    subtitle: Cover is a one-page template for building simple and beautiful home pages.
 
 ## multi language support options
 ####################################
@@ -71,5 +75,5 @@ languages:
 
     params:
       homepage:
-        title: Julia белая краска
-        subtitle: Персональный сайт и блог
+        title: Cover для вашего сайта
+        subtitle: одностраничный шаблон для создания простой и красивой главной страницы.

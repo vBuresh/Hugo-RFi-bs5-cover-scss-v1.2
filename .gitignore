@@ -1,13 +1,15 @@
-vv/
+©b^
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
 themes/
 
-# assets/
-assets/bootstrap/
-assets/js
+# Folders and files to ignore
+node_modules/*
+
+assets/bootstrap/*
+assets/js/*
 assets/css/cover.css
 assets/css/dark-mode.css
 
@@ -36,10 +38,7 @@ static/css
 
 bootstrap.bundle.min.js.map
 
-exampleSite/vLayouts
-exampleSite/zzOutdate
-exampleSite/samples
-
+example_*
 public/
 @_site/
 
