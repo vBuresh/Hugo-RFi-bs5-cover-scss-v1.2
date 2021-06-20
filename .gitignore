@@ -1,4 +1,3 @@
-©b^
 .sass-cache/
 *.css.map
 *.sass.map
@@ -23,7 +22,7 @@ assets/scss-rfi/_layouts-list.scss
 assets/scss-rfi/_layouts-single.scss
 assets/scss-rfi/_navbar.scss
 assets/scss-rfi/_placeholder-img.scss
-assets/scss-rfi/_refreshing.scss
+# assets/scss-rfi/_refreshing.scss
 # assets/scss-rfi/_sidebar.scss
 assets/scss-rfi/_syntax-monokai.scss
 # assets/scss-rfi/_syntax-monokailight.scss
