@@ -1,3 +1,4 @@
+
 $font-family-sans-serif: 'Fira Sans';
 // bs $black   #000
 // bs $white:  #fff
@@ -12,9 +13,9 @@ $darkcyan:     #133737; // cyans 900
 $rfidarkest:   #205d5d; // cyans 800
 $rfidarker:    #008571; // cyans 700 rgb(0,133,113)
 $rfidark:      #009e87; // cyans 600
+// переменная $mainColour объявлена в assets/style.sass
 $bg-maincolour: $mainColour; //#ba00f3 RF #F39200 bs5 #0d6efd
-$secondary: $mainColour; //#ba00f3 // #F39200
-$refreshing:   #00d1b2; // cyans 500 Strong cyan
+$rficolor:   #00d1b2; // cyans 500 Strong cyan
 $rfibright:    #1fffde; // cyans 400 lighten(saturate($refreshing, 5%), 15%)
 $rfibrighter:  #6cffe9; // cyans 300
 $rfibrightest: #b9fff4; // cyans 200 lighten(saturate($refreshing, 5%), 45%)
@@ -22,7 +23,7 @@ $rfilight:     #d1fff8; // cyans 100 Very pale cyan
 $rfilighter:   #ebfffc; // Very pale (mostly white) cyan
 $rfilightest:  #f2faf9; // Light grayish cyan.
 $cukinovar: #bf2e09;
-$rerfesh: #f39200; // Congig.yaml - mainColour: "#F39200"
+//$rerfesh: #f39200; // Congig.yaml - mainColour: "#F39200"
 //== Analogous color (3):
 // #00d1b2 - refreshing Strong cyan
 $rfilink: #0088d1; // Strong blue

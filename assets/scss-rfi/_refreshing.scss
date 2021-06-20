@@ -11,7 +11,7 @@
 .divider {
   border-radius: 50px;
   height: 4px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   width: 68px;
   background: #adb5bd;
 
@@ -24,7 +24,7 @@
   background-color: #343a40;
 }
 
-// darkMode
+//B^ darkMode
 
 #mode {
   margin-right: 1.25rem;
@@ -44,4 +44,10 @@ body.dark .toggle-light {
 
 body.dark .toggle-dark {
   display: none;
+}
+
+//B^ mainColour
+
+.bage-rfi {
+  background-color: $mainColour;
 }
