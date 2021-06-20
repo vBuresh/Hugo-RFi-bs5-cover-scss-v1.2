@@ -15,7 +15,7 @@
 - id: menuwDev
   translation: "wwwDev"
 - id: allTags
-  translation: "Все рубрики"
+  translation: "Все теги"
 - id: newPublications
   translation: "Новые публикации"
 - id: categories
@@ -23,11 +23,11 @@
 - id: tags
   translation: "Рубрики"
 - id: postedOn
-  translation: "Опубликовано"
+  translation: "Публикация от"
 - id: posts
   translation: "Публикации"
 - id: lastModified
-  translation: "Последние изменения - от "
+  translation: "в редакции от"
 # FIXME: - id: readingTime
 #   translation: "Чтение займет до {{.Count}} мин."
 - id: words
@@ -47,4 +47,4 @@
 - id: editorialPolicy
   translation: "Редполитика"
 - id: pageTOC
-  translation: "Что на этой странице"
+  translation: "Оглавление"
