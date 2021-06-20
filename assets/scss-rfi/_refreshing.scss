@@ -48,6 +48,18 @@ body.dark .toggle-dark {
 
 //B^ mainColour
 
-.bage-rfi {
+body.dark .maincolour-bg {
+  color: $mainColour;
+}
+
+body.dark .maincolour-color {
+  color: $mainColour;
+}
+
+.maincolour-bg {
   background-color: $mainColour;
+}
+
+.maincolour-color {
+  color: $mainColour;
 }
