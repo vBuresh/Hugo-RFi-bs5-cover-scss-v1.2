@@ -1,23 +1,29 @@
 <!-- id="offcanvasRFi" -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRFi" aria-labelledby="offcanvasRFiLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRFiLabel">Offcanvas</h5>
+    <h5 class="offcanvas-title" id="offcanvasRFiLabel">{{ i18n "tags" }}</h5>
     <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-      {{- partial "sidebar-btn-reverse.html" . -}}
+    {{- partial "sidebar-btn-reverse.html" . -}}
   </div>
   <div class="offcanvas-body text-start">
     {{- partial "sidebar-newPablications.html" . -}}
-    <p class="h5"> List All Site Tags <small>
-        <a href="https://gohugo.io/templates/taxonomy-templates/#example-list-all-site-tags"> Hugo Example... </a> </small> </p>
-
-    <ul>
+    <p class="h5">Содержание <small>(по тегам сайта)</small>
+      <br>List All Site Tags</p>
+    <p class="small">
+      <a class="text-muted" href="https://gohugo.io/templates/taxonomy-templates/#example-list-all-site-tags">Пример: Hugo Example... </a> </p>
+      
+    <section class="list-group">
       {{ range .Site.Taxonomies.tags }}
-      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+      <div class="d-flex justify-content-between align-items-start">
+        <a href="{{ .Page.Permalink }}" class="list-group-item list-group-item-action">
+        <span class="badge bage-rfi rounded-pill float-end">{{ .Count }}</span>
+        {{ .Page.Title }}</a>
+      </div>
       {{ end }}
-    </ul>
-    <p class="h5"> List All Taxonomies, Terms, and Assigned Content <small>
+    </section>
+    <p class="h5 pt-5"> List All Taxonomies, Terms, and Assigned Content <small>
         <a href="https://gohugo.io/templates/taxonomy-templates/#example-list-all-taxonomies-terms-and-assigned-content"> Hugo Example... </a> </small> </p>
-        <p>layouts/partials/all-taxonomies.html </p>
+    <p>layouts/partials/all-taxonomies.html </p>
 
     {{- partial "all-taxonomies.html" . -}}
 
