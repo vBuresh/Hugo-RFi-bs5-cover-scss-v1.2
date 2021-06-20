@@ -16,13 +16,13 @@ tags: [atom, письмо]
 toc: true
 ---
 
-### Writing in Atom
+## Writing in Atom
 
 Though it is probably most common to use Atom to write software code, Atom can also be used to write prose quite effectively. Most often this is done in some sort of markup language such as Asciidoc or [Markdown](https://help.github.com/articles/about-writing-and-formatting-on-github/) (in which this manual is written). Here we'll quickly cover a few of the tools Atom provides for helping you write prose.
 
 In these docs, we'll concentrate on writing in Markdown; however, other prose markup languages like Asciidoc have packages that provide similar functionality.
 
-#### Spell Checking
+### Spell Checking
 
 If you're working in text (which includes plain text files, GitHub markdown, and Git commit messages by default), Atom will automatically try to check your spelling.
 
@@ -36,7 +36,7 @@ The default grammars to spell check are `text.plain`, `source.gfm`, `text.git-co
 
 The spell checking is implemented in the [spell-check](https://github.com/atom/spell-check) package.
 
-#### Previews
+### Previews
 
 When writing prose in a markup language, it's often very useful to get an idea of what the content will look like when it's rendered. Atom ships with a package for previewing Markdown by default.
 
@@ -50,7 +50,7 @@ You can also copy the rendered HTML from the preview pane into your system clipb
 
 Markdown preview is implemented in the [markdown-preview](https://github.com/atom/markdown-preview) package.
 
-#### Snippets
+### Snippets
 
 There are also a number of great snippets available for writing Markdown quickly.
 
