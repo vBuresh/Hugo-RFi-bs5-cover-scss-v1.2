@@ -7,7 +7,6 @@
 //   padding: 52px 0;
 // }
 
-
 .divider {
   border-radius: 50px;
   height: 4px;
@@ -23,7 +22,6 @@
 .author {
   background-color: #343a40;
 }
-
 //B^ darkMode
 
 #mode {
@@ -46,8 +44,14 @@ body.dark .toggle-dark {
   display: none;
 }
 
+body.dark .navbar-brand {
+    color: $mainColour;
+}
+//B^ bs castomisation
+.navbar-brand {
+  font-size: 1.25rem;
+}
 //B^ mainColour
-
 // body.dark .maincolour-bg {
 //   color: $mainColour;
 // }
