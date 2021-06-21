@@ -10,8 +10,8 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: 'Hugo Authors, wBuresh'
-categories: ['управление контентом']
-tags: [hugo, code]
+categories: ['Управление контентом']
+tags: [Hugo, Сode]
 # categories: [content-management]
 # tags: [hugo, templates, taxonomy]
 toc: true
@@ -240,14 +240,11 @@ highlight INPUT LANG OPTIONS
 - [Long snippets](https://xyproto.github.io/splash/docs/longer/all.html)
 
 
-## Простая подсветка синтаксиса с нумерацией
+## Простая и умная подсветка синтаксиса
 
-Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода.
+Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода, но с добавлением,  уже известных нам параметров: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`. Подробнее См. [Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences).
 
-
-, и добавления: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`
-
-[Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences)
+Вот как это работает:
 
 ``` html {linenos=table,hl_lines=[1,"4-5"],linenostart=2}
 <!-- As a link -->

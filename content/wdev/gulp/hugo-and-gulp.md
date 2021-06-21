@@ -1,23 +1,19 @@
 ---
-title: "Hugo прямо с Gulp-ом"
+title: "Hugo с Gulp-ом"
+subtitle: "- почти «залпом"
 date: 2019-11-27T04:53:05+03:00
-Lastmod: 2021-05-20T12:17:21+03
+Lastmod: 2021-06-21T12:17:21+03
 draft: false
-description: "исходный код в ваших примерах - безупречен"
-summary:  "Великолепные возможности Hugo удачно дополняются задачами Gulp в части подготовки и включения в проект стилей (SASS, SCSS, CSS), JS и изображений, а также их своевременного обновления"
-summaryImage: /images/highligth.png
+description: "Очень интересное сочетание двух замечательных программ."
+summary:  "Великолепные возможности Hugo удачно дополняются задачами Gulp в части подготовки и включения в проект стилей (SASS, SCSS, CSS), JS, изображений, аудио- и видео-материалов а также их своевременного обновления."
 author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
+categories: [Веб-разработка]
+# categories: ['web development']
+tags: [Hugo, Gulp]
 toc: true
-categories:
-- webDev
-tags:
-  - example
-  - Code
-  - Hugo
-  - Gulp
 ---
 
 # Building a production website with Hugo and GulpJS
@@ -52,13 +48,8 @@ tags:
 
 `mkdir -p src/{scss,js,images}`
 
-```html
-<nav class="nav nav-pills nav-fill" role="navbar" aria-label="Псалмы">
-  <div class="pl-0 pr-3">
-    <a href="ps_slava#ml_start" title="Молитвы перед началом чтения Псалтири" role="navigation">
-      <img src="../media/svg/candle.svg" width="auto" height="30px" alt="Молитвы предначинательные">
-    </a>
-  </div>
+``` html
+
 ```
 
 `npm install --save-dev gulp`

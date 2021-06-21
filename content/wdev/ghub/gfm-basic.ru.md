@@ -10,9 +10,9 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories: [веб-разработка]
+categories: [Bеб-разработка]
 # categories: ['web development']
-tags: [HTML, markdown, code]
+tags: [HTML, markdown, GFM]
 toc: true
 ---
 
