@@ -1,7 +1,7 @@
 ---
 title: Подсветка синтаксиса
 date: 2020-07-29T07:24:21+03:00
-Lastmod: 2020-08-14T13:09:21+03:00
+Lastmod: 2021-06-21T13:09:21+03:00
 draft: false
 description: "исходный код в ваших примерах - безупречен"
 summary: Подсветка синтаксиса в Hugo отличается скоростью, простой настройкой и большим набором обрабатываемых языков. По умолчанию подключена красивая и многим полюбившаяся темная тема «monokai»
@@ -9,8 +9,7 @@ summaryImage: /images/highligth.png
 author:
   given_name: Vladimir
   family_name: Buresh
-  display_name: wBuresh
-  display_name: ['Hugo Authors', 'wBuresh']
+  display_name: 'Hugo Authors, wBuresh'
 categories: ['управление контентом']
 tags: [hugo, code]
 # categories: [content-management]
@@ -56,8 +55,7 @@ markup:
 
 ## Подсветка синтаксиса. Базовый Markdown
 
-Некоторые пользователи могут ограничиться применением базовых возможностей Markdown. В настройках HUgo параметр `codeFences: true` включен по умолчанию (в нашем примере - строка 30 тоже выделена). Все просто. Достаточно одной табуляции или отступа в строках на четыре пробела и можно показать код или форматированный текст. Однако подсветки синтаксиса не будет. Чтобы она появилась нужно заключить код в три обратные кавычки (backquote, backtick) - &#96;&#96;&#96; и указать язык, синтаксис которого требуется подсветить. Это наглядно показано на простых примерах.
-
+Некоторые пользователи могут ограничиться применением базовых возможностей Markdown. В настройках Hugo параметр `codeFences: true` включен по умолчанию (в нашем примере - строка 30 тоже выделена). Все просто. Достаточно одной табуляции или отступа в строках на четыре пробела и можно показать код или форматированный текст. Однако подсветки синтаксиса не будет. Чтобы она появилась нужно заключить код в три обратные кавычки (backquote, backtick) - &#96;&#96;&#96; и указать язык, синтаксис которого требуется подсветить. Это наглядно показано на простых примерах.
 
 Язык в примере кода не указан
 
@@ -84,9 +82,10 @@ markup:
 
 ```
 
-При указании языка, в нашем примере - JSON
+При указании языка, в нашем примере - JSON:
 
-```json
+
+``` json
 &#96;&#96;&#96;json
 ❴
   "firstName": "Hugo",
@@ -98,7 +97,7 @@ markup:
 
 Визуализированный вывод с подсветкой синтаксиса (по умолчанию - тема **monokai**) выглядит так:
 
-```json
+``` json
 {
   "firstName": "Hugo",
   "lastName": "Chroma",
@@ -120,7 +119,7 @@ highlight INPUT LANG OPTIONS
 1. Для правильной подсветки, необходимо явно указать демонстрируемый язык (или его alias - псевдоним).
 1. Если содержимое не требует подсветки нужно указать **plaintext** (либо один из псевдонимов: _no-highlight, plain, text или txt_).
 
-Кроме того, нелишне обратить внимание, что **highlight** не применяется для подсветки JavaScript на стороне клиента.
+Кроме того, нелишне обратить внимание, что **highlight** не применяется для подсветки `JavaScript` на стороне клиента.
 
 См. [краткий список]() часто цитируемых языков.
 
@@ -235,51 +234,38 @@ highlight INPUT LANG OPTIONS
 >
 >Следует обратить внимание, что только [Goldmark](https://gohugo.io/getting-started/configuration-markup/#goldmark)   поддерживает передаваемые атрибуты, такие как `hl_lines` и пр. Также важно, помнить что между параметрами при их   перечислении (через запятую) пробелы НЕДОПУСТИМЫ!.
 
-
 Для просмотра стилей, подготовлены эти галереи:
 
 - [Short snippets](https://xyproto.github.io/splash/docs/all.html)
 - [Long snippets](https://xyproto.github.io/splash/docs/longer/all.html)
 
 
-## Подсветка синтаксиса с действующими примерами
+## Простая подсветка синтаксиса с нумерацией
 
-При демонстрации кода часто необходимо и вполне достаточно, только показать исходный текст и исключить его срабатывание. Мало кто не столкнулся с проблемами демонстрации html кода на `.html` и да и `.md` страницах. Однако нередко возникает необходимость продемонстировать код, но, как говорят, "здесь и сейчас" показать его в действии. Пример виртуозного решения этой задачи можно увидеть на страницах документации известного фреймворка [Bootstrap](https://v5.getbootstrap.com), например, в разделе [components/navbar](https://v5.getbootstrap.com/docs/5.0/components/navbar/).
+Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода.
 
-Для этого разработчики применили свой (пользовательский) shortcode `❴❴< example >❵❵`
 
-{< example svg >}
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" heith="333"
-  viewBox="0 0 1000 667" >
-  <title>rfi-placeholder</title>
-<symbol id="bi-grid-1x2-fill" viewBox="0 0 16 16">
-    <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z"/>
-</symbol>
-    <rect width="1000" height="667" fill="#0a1922" stroke="none"  />
-    <circle cx="500" cy="333" r="270" fill="none" stroke="#00D1B2" stroke-width="3" />
-    <use xlink:href="#bi-grid-1x2-fill" transform="translate(250, 170) scale(.5)" fill="#e0f2f1" />
-</svg>
-{< /example >}
+, и добавления: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`
 
-В примере приведен исходный код графического объекта  SVG - inline, c одновременным выводом изображения. Отлично получилось. Спасибо специалистам команды Bootstrap. Прекрасная работа! К стати, разработка страниц своей документации Bootstrap переносится с Jekyll на [**Hugo**](https://blog.getbootstrap.com/#docs).
+[Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences)
 
-Вот еще один пример из [публикации о navbar](/post/frontend/bs5/navbar/index), предлагаемых фреймворком Bootstrap.
-
-{< example >}
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
+``` html {linenos=table,hl_lines=[1,"4-5"],linenostart=2}
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
   </div>
 </nav>
-{< /example >}
+
+<!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </div>
+</nav>
+
+```
+
 
 ## Генерация стилей подсветки синтаксиса (css)
 

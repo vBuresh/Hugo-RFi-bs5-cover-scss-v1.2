@@ -2,7 +2,7 @@
 title: 'Spell Check'
 subtitle: '- орфография в Atom'
 date: 2020-03-04T10:43:01+03:00
-Lastmod: 2021-06-13T11:29:01+03:00
+Lastmod: 2021-06-21T11:29:01+03:00
 description: 'В текстовом редакторе Atom проверку орфографии по умолчанию обеспечивает плагин Spell Check. Он входит в состав ядра Atom. Найденные при проверке неизвестные слова отмечаются подчеркиванием. Ошибку легко исправить или заменить всё слово, выбрав правильный вариант из предложенного списка. Также можно добавить в словарь новое известное слово. Кроме того, пользователи могут подключать словари разных языков и редактировать список проверяемых языков.'
 # summary: очень краткое описание «в двух словах» - для карточек.
 draft: false
@@ -188,12 +188,14 @@ string.quoted.double.yaml,
 text.html.basic, source.yaml, text.html.hugo, text.xml.svg,
 ```
 
-
 В итоге имеем:
 
 ```
 text.html.basic, source.yaml, text.html.hugo, text.xml.svg, source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar, source.rst, text.restructuredtext
 ```
+и еще:
+
+`css, css.erb, sass, sass.erb,`
 
 Потому что
 
