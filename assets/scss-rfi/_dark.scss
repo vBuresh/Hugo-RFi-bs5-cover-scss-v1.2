@@ -16,7 +16,7 @@ $navbar-dark-color:                 $body-color-dark;
 $navbar-dark-hover-color:           $link-color-dark;
 $navbar-dark-active-color:          $link-color-dark;
 
-// Theme styles 
+// Theme styles
 
 body.dark {
   background: $body-bg-dark;
@@ -232,19 +232,20 @@ body.dark pre code::-webkit-scrollbar-thumb {
   background: $gray-400;
 }
 
-body.dark code:not(.hljs) {
-  background: $body-overlay-dark;
-  color: $body-color-dark;
-}
-
-body.dark pre code:hover {
-  scrollbar-width: thin;
-  scrollbar-color: $border-dark transparent;
-}
-
-body.dark pre code::-webkit-scrollbar-thumb:hover {
-  background: $gray-500;
-}
+//B^
+// body.dark code:not(.hljs) {
+//   background: $body-overlay-dark;
+//   color: $body-color-dark;
+// }
+//
+// body.dark pre code:hover {
+//   scrollbar-width: thin;
+//   scrollbar-color: $border-dark transparent;
+// }
+//
+// body.dark pre code::-webkit-scrollbar-thumb:hover {
+//   background: $gray-500;
+// }
 
 body.dark blockquote {
   border-left: 3px solid $border-dark;
