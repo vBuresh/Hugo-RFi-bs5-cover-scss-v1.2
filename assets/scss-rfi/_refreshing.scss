@@ -7,21 +7,31 @@
 //   padding: 52px 0;
 // }
 
+// highlight
+//@B^20210617  _reboot.scss 287
+pre {
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1em;
+  background-color: $precode;
+}
+// _syntax-monokai.scss 3
+
+
 .divider {
   border-radius: 50px;
   height: 4px;
   margin-bottom: 1rem;
   width: 68px;
-  background: #adb5bd;
+  background: $gray-500;
 
   &.text-center {
     margin: 0 auto;
   }
 }
 
-.author {
-  background-color: #343a40;
-}
+// .author {
+//   background-color: $precode;
+// }
 //B^ darkMode
 
 #mode {
