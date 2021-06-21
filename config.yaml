@@ -28,14 +28,18 @@ markup:
     endLevel:            4
 
 params:
-  #  в navbar
+  logo: "/images/logo-cover.svg"
   title: Cover
   description: A one-page template for building simple and beautiful home pages.
   authors: "@mdo, wBuresh, Eric Fandor"
-  site_version: 20210612rfi
+  site_version: 20210621rfi
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
   favicon: "/images/favicon.svg"
+
+  darkMode: true
+  # darkMode: false
+
   # parameter used to specify if you want to minify the imported js
   jsMinify: false
   # parameter used to specify if you want to minify the imported css
@@ -46,9 +50,10 @@ params:
   jsIntegrity: false
   # option to specify the main colour of the theme
   # mainColour: "#F39200"
-  mainColour: "#00d1b2"
-  darkMode: true
-  # darkMode: false
+  # mainColour: "#00d1b2"
+  mainColour: "#0d6efd"
+  # mainColour: "#6c757d"
+
 
 # homepage options
   homepage:
