@@ -11,6 +11,8 @@ disableLanguages: en
 enableInlineShortcodes:  true
 publishDir:              "@_site"
 enableRobotsTXT:         false
+# Syntax Highlighting
+pygmentsUseClasses: true
 
 # применяются относительные ссылки. Тo turn relative URLs into absolute use
 # canonifyURLs: true.
@@ -51,8 +53,9 @@ params:
   # option to specify the main colour of the theme
   # mainColour: "#F39200"
   # mainColour: "#00d1b2"
-  mainColour: "#0d6efd"
+  # mainColour: "#0d6efd"
   # mainColour: "#6c757d"
+  mainColour: "#fd9c0d"
 
 
 # homepage options
