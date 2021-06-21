@@ -10,7 +10,7 @@ node_modules/*
 assets/bootstrap/*
 assets/js/*
 assets/css/cover.css
-assets/css/dark-mode.css
+assets/css/dark.css
 
 # assets/scss-rfi/_bs-example.scss
 # assets/scss-rfi/core.scss
