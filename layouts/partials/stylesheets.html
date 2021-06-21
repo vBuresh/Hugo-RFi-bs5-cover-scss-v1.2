@@ -5,8 +5,8 @@
 {{- $cssOpts   := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") -}}
 
 {{- $css  := resources.Get $sass | resources.ExecuteAsTemplate $scss . | toCSS $cssOpts -}}
-{{- $css1 := resources.Get "css/dark.css" -}}
-{{- $css2 := resources.Get "css/cover.css" -}}
+{{- $css1 := resources.Get "css/cover.css" -}}
+{{- $css2 := resources.Get "css/dark.css" -}}
 {{- $css3 := resources.Get "css/refreshing.css" -}}
 
 {{- if .Site.Params.cssMinify -}}
