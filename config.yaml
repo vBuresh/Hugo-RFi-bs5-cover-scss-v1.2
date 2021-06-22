@@ -1,89 +1,105 @@
-# Configure Hugo: https://gohugo.io/getting-started/configuration/#configuration-file
-# baseURL: "https://cybmir.ru/"
-baseURL: "/"
-languageCode: ru
-title: Hugo-RFi-Cover
+# Configure Hugo:       https://gohugo.io/getting-started/configuration/#configuration-file
+title:                  Hugo-RFi-Cover
+baseURL:                "/"
+# baseURL:              "https://cybmir.ru/"
 
-DefaultContentLanguage:  ru
+languageCode:           ru
+DefaultContentLanguage: ru
+disableLanguages:       en
+# languageCode:           en
 # DefaultContentLanguage: en
-disableLanguages: en
+# disableLanguages:       ru
 
-enableInlineShortcodes:  true
-publishDir:              "@_site"
-enableRobotsTXT:         false
-# Syntax Highlighting
-pygmentsUseClasses: true
+enableInlineShortcodes: true
 
-# применяются относительные ссылки. Тo turn relative URLs into absolute use
-# canonifyURLs: true.
-canonifyURLs:            false
 
 # bd5
 markup:
   goldmark:
     renderer:
-      unsafe:            true
+      unsafe:           true
   highlight:
-    noClasses:           false
+    noClasses:          false
   tableOfContents:
-    startLevel:          2
-    endLevel:            4
+    startLevel:         2
+    endLevel:           4
+
+# Syntax Highlighting
+pygmentsUseClasses:     true
+
+enableRobotsTXT:        false
+publishDir:             "@_site"
+
+# применяются относительные ссылки. Тo turn relative URLs into absolute use
+# canonifyURLs:         true.
+canonifyURLs:           false
+
 
 params:
-  logo: "/images/logo-cover.svg"
-  title: Cover
-  description: A one-page template for building simple and beautiful home pages.
-  authors: "@mdo, wBuresh, Eric Fandor"
-  site_version: 20210621rfi
+# Brand
+  logo:                 "/images/logo-cover.svg"
+  title:                Cover
+  description:          A one-page template for building simple and beautiful home pages.
+# for meta
+  summary: Very nice template
+  authors:              "@mdo, wBuresh, Eric Fandor"
+  site_version:         20210621rfi
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
-  favicon: "/images/favicon.svg"
+  favicon:              "/images/favicon.svg"
 
-  darkMode: true
-  # darkMode: false
+# Оptions
+
+  darkMode:             true
+  # darkMode:           false
 
   # parameter used to specify if you want to minify the imported js
-  jsMinify: false
+  jsMinify:             false
   # parameter used to specify if you want to minify the imported css
-  cssMinify: false
+  cssMinify:            false
   # parameter used to specify if you want to calculate the css integrity
-  cssIntegrity: false
+  cssIntegrity:         false
   # parameter used to specify if you want to calculate the js integrity
-  jsIntegrity: false
+  jsIntegrity:          false
   # option to specify the main colour of the theme
-  # mainColour: "#F39200"
-  # mainColour: "#00d1b2"
-  # mainColour: "#0d6efd"
-  # mainColour: "#6c757d"
-  mainColour: "#fd9c0d"
+  # mainColour:         "#F39200"
+  # mainColour:         "#00d1b2"
 
+  # bs $primary, $secondary, $success, $warning, $light
+  mainColour:         "#0d6efd"
+  # mainColour:         "#6c757d"
+  # mainColour:         "#198754"
+  # mainColour:         "#fd9c0d"
+  # mainColour:         "#f8f9fa"
 
 # homepage options
   homepage:
     # this options let you specify if you want a link to the homepage
-    # it can be: "none", "menu", "footer" or "menu+footer"
-    # linkPosition: "footer"
+    # it can be:        "none", "menu", "footer" or "menu+footer"
+    # linkPosition:     "footer"
     # this options let you specify the text of the link to the homepage
-    # linkText: "Homepage"
+    # linkText:         "Homepage"
     # option to specify the title in the homepage
-    title: Cover your page
+    title:              Cover your page
+    subtitle: Only one-page template for building simple and beautiful home pages.
     # option to specify the subtitle in the homepage
-    subtitle: Cover is a one-page template for building simple and beautiful home pages.
+    summary: Download, edit the text, and add your own fullscreen background photo to make it your own.
 
 ## multi language support options
 ####################################
 languages:
   en:
     languageName:       English
-    weight:            2
-    # title: In English
+    weight:             2
+    # title:            In English
   ru:
     languageName:       Russian
-    # title: На Русском
+    # title:            На Русском
     weight:             1
       # Some sub-parameters of the "Homepage" and "footer" parameter
 
     params:
       homepage:
-        title: Cover для вашего сайта
-        subtitle: одностраничный шаблон для создания простой и красивой главной страницы.
+        title:          Cover для вашего сайта
+        subtitle:       одностраничный шаблон для создания простой и красивой главной страницы.
+        summary: Загрузите, отредактируйте текст и добавьте свою собственную полноэкранную фоновую фотографию, чтобы сделать ее своей собственной.
