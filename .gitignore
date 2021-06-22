@@ -7,8 +7,8 @@ themes/
 # Folders and files to ignore
 node_modules/*
 
-assets/bootstrap/*
-assets/js/*
+assets/bootstrap/scss*
+assets/js/bootstrap.bundle.min.js
 assets/css/cover.css
 assets/css/dark.css
 
@@ -27,6 +27,7 @@ assets/scss-rfi/_placeholder-img.scss
 assets/scss-rfi/_syntax-monokai.scss
 # assets/scss-rfi/_syntax-monokailight.scss
 # assets/scss-rfi/_variables.scss
+
 
 content/about/law
 
