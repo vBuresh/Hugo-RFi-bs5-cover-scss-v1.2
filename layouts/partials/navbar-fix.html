@@ -1,0 +1,48 @@
+<header class="mb-auto">
+  <!-- <h3 class="float-md-start mb-0"> -->
+  <nav class="navbar fixed-top">
+    <div class="container">
+  <div class="float-md-start mb-0">
+    <a class="navbar-brand maincolour-color" aria-current="page" href="{{ "/" | relURL }}">
+      {{- if .Site.Params.logo -}}
+      {{- $out_fo  := "brand.svg" -}}
+      {{- $img_n   := .Site.Params.logo -}}
+      {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+      {{- $img     := resources.Get $img_n -}}
+      {{- if eq $type "svg" -}}
+      {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+      {{- end -}}
+      <img src="{{- $img.Permalink | relURL -}}" width="30" height="30" class="d-inline-block align-top me-2" alt="brand">
+      {{- end -}}
+      <span class="navbar-brand mb-0 h1">
+        {{- if .Site.Params.title -}}
+        {{ .Site.Params.title }}
+      </span>
+      {{- end -}}
+    </a>
+  </div>
+  <div class="nav nav-masthead justify-content-center float-md-end">
+    <a class="nav-link" aria-current="page" href="/wdev/">wwwDev</a>
+    <a class="nav-link" href="/hugo/">Hugo</a>
+    <a class="nav-link" href="/twbs/">Bootstrap</a>
+    {{ if .Site.Params.darkMode -}}
+    <a id="mode" class="nav-link btn btn-link pt-0" role="button" aria-label="Toggle mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ .Site.Params.mainColour }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{ .Site.Params.mainColour }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg></span>
+    </a>
+    {{ end -}}
+  </div>
+</div>
+</header>
