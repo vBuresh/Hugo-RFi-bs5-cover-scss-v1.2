@@ -45,7 +45,6 @@ markup:
 Как видно из приведенного фрагмента параметров конфигурации, по умолчанию, предложена очень красивая и весьма популярная тема **monokai**. Это определено параметром `style:`, в нашем примере  - строка 37 (с выделением).
 
 Важно помнить, что для полной реализации возможностей и преимуществ Hugo Syntax Highlighting необходимо применять встроенный Hugo шорткод - `❴❴< highlight >❵❵`. Однако не лишне уделить должное внимание и базовым возможностям **Markdown**.
-<!-- Для демонстрации примеров был взят, пожалуй, самый трудный для демонстрации язык `go-html-template`. Чтобы все получилось, пришлось фигурные скобки заменить символами unicode &#10100; и &#10101;. Если этого не сделать, то код просто сработает и показать пример не удастся, так как **Hugo** реагирует на содержимое ❴❴ _внутри фигурных скобок_ ❵❵ . Вопреки ожиданиям, даже [шорткод](https://gohugo.io/content-management/shortcodes/) **highlight** не всегда помогает. -->
 
 
 > ##### Примечание:
@@ -298,6 +297,15 @@ hugo gen chromastyles --style=monokai > syntax.css
 Запустите `hugo gen chromastyles -h` для получения дополнительных опций. См. галерею доступных стилей [https://xyproto.github.io/splash/docs/](https://xyproto.github.io/splash/docs/).
 
 При этом следует убедится, что в файле конфигурации config.yaml (config.toml и др.) есть параметр `pygmentsUseClasses: true`
+
+## goldmark-highlighting
+
+См. GitHub [goldmark-highlighting](https://github.com/yuin/goldmark-highlighting)
+
+goldmark-highlighting это расширение для [goldmark](http://github.com/yuin/goldmark) которое добавляет подсветку синтаксиса в выделенных (fenced) блоках кода. Как уже отмечалось, 
+
+Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma).
+
 
 ## List of Chroma Highlighting Languages
 
