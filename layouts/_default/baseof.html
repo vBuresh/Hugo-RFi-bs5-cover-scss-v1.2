@@ -5,7 +5,7 @@
     {{- partial "meta.html" . -}}
 
     <title>{{- block "title" . -}}
-      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
       {{- end -}}</title>
 
     {{- partial "stylesheets.html" . -}}
