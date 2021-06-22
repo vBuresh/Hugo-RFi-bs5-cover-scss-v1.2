@@ -1,0 +1,9 @@
+brand:
+  title: Cover
+  logo: "/images/cmir-logo-icon.svg"
+description: A one-page template for building simple and beautiful home pages.
+authors: "@mdo, wBuresh, Eric Fandor"
+site_version: 20210621rfi
+# option to specify the favicon image of the site
+# the path is relative to the folder "assetDir" of this configuration
+favicon: "/images/favicon.svg"

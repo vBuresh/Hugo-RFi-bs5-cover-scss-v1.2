@@ -1,0 +1,17 @@
+## multi language support options
+####################################
+languages:
+  en:
+    languageName:       English
+    weight:            2
+    # title: In English
+  ru:
+    languageName:       Russian
+    # title: На Русском
+    weight:             1
+      # Some sub-parameters of the "Homepage" and "footer" parameter
+
+    params:
+      homepage:
+        title: Cover для вашего сайта
+        subtitle: одностраничный шаблон для создания простой и красивой главной страницы.
