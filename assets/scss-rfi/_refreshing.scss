@@ -1,21 +1,10 @@
-// 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
-// body {
-//   padding-top: 76px;
-// }
-//
-// footer {
-//   padding: 52px 0;
-// }
-
 // highlight
 //@B^20210617  _reboot.scss 287
 pre {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   font-size: 1em;
   background-color: $precode;
 }
-// _syntax-monokai.scss 3
-
 
 .divider {
   border-radius: 50px;
@@ -32,6 +21,7 @@ pre {
 // .author {
 //   background-color: $precode;
 // }
+
 //B^ darkMode
 
 #mode {
