@@ -1,7 +1,8 @@
 ---
 title: Ссылки и перекрестные ссылки
-# summary: краткое изложение - зачем читать сие
 date: 2021-06-07T14:00:55+03:00
+Lastmod: 2021-06-22T13:09:21+03:00
+# summary: краткое изложение - зачем читать сие
 Lastmod: 2021-06-07T14:00:55+03:00
 draft: false
 description: "Shortcodes for creating links to documents."

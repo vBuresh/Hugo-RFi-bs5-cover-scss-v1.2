@@ -1,11 +1,12 @@
 ---
-title: Подсветка синтаксиса
 date: 2020-07-29T07:24:21+03:00
-Lastmod: 2021-06-21T13:09:21+03:00
-draft: false
-description: "исходный код в ваших примерах - безупречен"
-summary: Подсветка синтаксиса в Hugo отличается скоростью, простой настройкой и большим набором обрабатываемых языков. По умолчанию подключена красивая и многим полюбившаяся темная тема «monokai»
+Lastmod: 2021-06-22T13:09:21+03:00
+title: Подсветка синтаксиса
+subtitle: '- в примерах исходного кода'
+description: Подсветка синтаксиса в Hugo отличается скоростью, простой настройкой и большим набором обрабатываемых языков. По умолчанию подключена красивая и многим полюбившаяся темная тема «monokai»
+summary: "Исходный код в ваших примерах - безупречен"
 summaryImage: /images/highligth.png
+draft: false
 author:
   given_name: Vladimir
   family_name: Buresh
@@ -302,9 +303,9 @@ hugo gen chromastyles --style=monokai > syntax.css
 
 См. GitHub [goldmark-highlighting](https://github.com/yuin/goldmark-highlighting)
 
-goldmark-highlighting это расширение для [goldmark](http://github.com/yuin/goldmark) которое добавляет подсветку синтаксиса в выделенных (fenced) блоках кода. Как уже отмечалось, 
+goldmark-highlighting это расширение для [goldmark](http://github.com/yuin/goldmark) - парсера языка Markdown, написанного на Go. goldmark-highlighting добавляет подсветку синтаксиса в выделенных (fenced) блоках кода. Как уже отмечалось,
 
-Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma).
+Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma). A Markdown parser written in Go.  Easy to extend, standards-compliant, well-structured.
 
 
 ## List of Chroma Highlighting Languages

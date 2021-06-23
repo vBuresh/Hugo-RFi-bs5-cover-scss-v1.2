@@ -1,9 +1,10 @@
 ---
-title: Atom или VSCodium
 subtitle: попытка сравнения
 date: 2020-03-02T10:58:50+03:00
 Lastmod: 2021-06-15T13:38:40+33:00
-description: Общее у этих двух замечательных ре
+title: Atom или VSCodium
+description: Общее у этих двух замечательных редакторов
+summary: three-line summary of the article.
 draft: false
 author:
   given_name: Vladimir
@@ -12,28 +13,6 @@ author:
 categories: [веб-разработка]
 tags: ['Atom', 'VSCodium']
 ---
-
----
-title: 'Spell Check'
-subtitle: '- орфография в Atom'
-date: 2020-03-04T10:43:01+03:00
-Lastmod: 2021-06-13T11:29:01+03:00
-description: В текстовом редакторе Atom проверку орфографии обеспечивает по умолчанию плагин Spell Check, входящий с состав ядра. Найденные неизвестные слова отмечаются подчеркиванием. Ошибку легко исправить. Также можно заменить слово с ошибкой, выбрав правильный вариант из предложенного списка, либо добавить в словарь новое известное слово. Пользователи имеют возможность подключать словари разных языков и изменять список проверяемых языков.
-# summary: очень краткое описание «в двух словах» - для карточек.
-draft: false
-# summaryImage: images/
-author:
-  given_name: Vladimir
-  family_name: Buresh
-  display_name: wBuresh
-categories: [веб-разработка]
-tags: ['Atom', 'проверка орфографии']
-# categories: ['web development']
-# tags: ['Atom', spell-check]
-toc: true
----
-
-
 
 To install it follow this guide:
 
