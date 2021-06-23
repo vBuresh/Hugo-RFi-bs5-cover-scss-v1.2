@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="px-3 text-start pt-3">
+  <header class="listpage-title">
+    <h1>{{.Title}}</h1>
+  </header>
+  <div class="divider" style="background: {{ .Site.Params.mainColour }}"></div>
+  <div>
+    {{.Content}}
+    <ul>
+      <!-- Ranges through content -->
+      {{ range .Pages }}
+      <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

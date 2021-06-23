@@ -6,11 +6,18 @@
   <div class="divider" style="background: {{ .Site.Params.mainColour }}"></div>
   <div>
     {{.Content}}
-    <ul>
-      <!-- Ranges through content -->
-      {{ range .Pages }}
-      <li>
-        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    <ul class="nav flex-column">
+      <!-- orders content according to the "lastmod" field in front matter with .Reverse - https://gohugo.io/templates/lists/#reverse-order -->
+      {{ range sort .Pages.ByLastmod.Reverse }}
+      <li class="nav-item">
+        <a class="nav-link py-0" href="{{.Permalink}}">
+          <span class="fira-mono">
+            {{.Date.Format "2006-01-02"}}
+          </span>
+          <span class="mx-1 ms-0">
+            {{ partial "svg/bi-pencil.svg" (dict "fill" "#6c757d" "width" 12 "height" 12) }}
+          </span>
+          {{.Title}}</a>
       </li>
       {{ end }}
     </ul>
