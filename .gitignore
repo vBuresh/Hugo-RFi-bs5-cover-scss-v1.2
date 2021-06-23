@@ -32,7 +32,6 @@ content/about/law
 
 # static/images
 static/js/
-static/fonts
 static/css
 
 bootstrap.bundle.min.js.map
