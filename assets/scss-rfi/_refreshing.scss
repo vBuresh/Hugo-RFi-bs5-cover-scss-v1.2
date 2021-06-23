@@ -14,6 +14,7 @@ pre {
   padding: 1rem;
   font-size: 1em;
   background-color: $precode;
+  color: $gray-100;
 }
 
 .divider {
@@ -26,6 +27,13 @@ pre {
   &.text-center {
     margin: 0 auto;
   }
+}
+
+//partial/_defoult/list
+
+.fira-mono {
+  font-family: "Fira Mono";
+//    color: $text-muted;
 }
 
 // .author {

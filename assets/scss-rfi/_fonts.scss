@@ -3,7 +3,15 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/FiraSans-Regular.eot'), url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Regular.woff2') format('woff2'), url('../fonts/FiraSans-Regular.woff') format('woff'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
+  src: url('../fonts/FiraSans-Regular.woff2') format('woff2'),
+   url('../fonts/FiraSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/FiraMono-Regular.woff2') format('woff2'),
+   url('../fonts/FiraMono-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Playfair Display';
