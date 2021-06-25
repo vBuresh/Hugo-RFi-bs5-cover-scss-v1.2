@@ -17,13 +17,11 @@ tags: [CSS, Темы]
 toc: true
 ---
 
-Версия v0.84.0, помимо некоторых исправлений и улучшений, дала новые возможности для тем (themes).
-
-This release brings several configuration fixes and improvements that will be especially useful for themes.
+В версии v0.84.0, помимо ряда исправлений и расширения возможностей Hugo, улучшена обработка конфигурации тем (themes).
 
 ## Deep merge of theme Params
 
-One of the most common complaint from Hugo theme owners/users has been about the configuration handling. Hugo has up until now only performed a shallow merge of theme params into the configuration.
+До этого в Hugo выполнялось лишь неглубокое слияние параметров темы в конфигурацию.
 
 With that, given this example from a theme configuration:
 
