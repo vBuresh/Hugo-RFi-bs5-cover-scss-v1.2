@@ -10,9 +10,9 @@ author:
   # given_name: Vladimir
   # family_name: Buresh
   display_name: ['Hugo Authors', 'wBuresh']
-categories: ['управление контентом']
-tags: [hugo, шаблоны]
-# categories: [content-management]
-# tags: [hugo, templates, taxonomy]
+categories: ['Управление контентом']
+tags: [Hugo, Шаблоны]
+# categories: [Сontent-management]
+# tags: [Hugo, Templates, Taxonomy]
 toc: true
 ---

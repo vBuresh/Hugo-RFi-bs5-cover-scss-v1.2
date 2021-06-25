@@ -10,9 +10,9 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories: ['управление контентом']
-tags: [bootstrap, примеры]
-# categories: ['content-management']
-# tags: ['bootstrap', 'examples']
+categories: ['Управление Контентом']
+tags: [Bootstrap, Примеры]
+# categories: ['Content-management']
+# tags: ['Bootstrap', 'Examples']
 toc: true
 ---

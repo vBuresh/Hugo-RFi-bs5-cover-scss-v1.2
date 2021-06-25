@@ -10,8 +10,8 @@ author:
   given_name: Vladimir
   family_name: Buresh
   display_name: wBuresh
-categories: [веб-разработка]
-# categories: ['web development']
-tags: [SVG, favicons, icons]
+categories: [Веб-разработка]
+# categories: ['Web development']
+tags: [SVG, Favicons, Icons]
 toc: true
 ---
