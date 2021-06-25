@@ -2,7 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
-themes/
+/themes/
 
 # Folders and files to ignore
 node_modules/*
@@ -29,6 +29,10 @@ assets/scss-rfi/_syntax-monokai.scss
 # assets/scss-rfi/_variables.scss
 
 content/about/law
+# исключаются только b6_* и.или s8_*.
+#!не распространяется на b6-* и s8-*
+b6_*
+g8_*
 
 # static/images
 static/js/
