@@ -2,6 +2,7 @@
 title:                  Hugo-RFi-Cover
 baseURL:                "/"
 # baseURL:              "https://cybmir.ru/"
+# theme: hugo-rfi-bs5cover
 
 languageCode:           ru
 DefaultContentLanguage: ru
