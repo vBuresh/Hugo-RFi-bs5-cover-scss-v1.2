@@ -21,9 +21,7 @@ toc: true
 
 ## Deep merge of theme Params
 
-До этого в Hugo выполнялось лишь неглубокое слияние параметров темы в конфигурацию.
-
-With that, given this example from a theme configuration:
+До этого в Hugo выполнялось лишь неглубокое слияние параметров темы в конфигурацию:
 
 ``` yaml
 params:
@@ -33,17 +31,18 @@ params:
     red: "#FF3358"
 ```
 
-If you would like to use the above theme, but want a different shade of red, you earlier had to copy the entire block, even the colours you're totally happy with. This was painful even the simplest setup.
+Если вы хотите использовать указанную выше тему, но хотите другого оттенка красного, вам раньше приходилось копировать весь блок, даже те цвета, которые вам полностью нравятся. Это было болезненно даже в самой простой установке.
 
-Now you can just override the params keys you want to change, e.g.:
+Теперь достаточно переопределить ключи параметров, которые нужно изменить, например:
 
 ``` yaml
 params:
   colours:
     red: "#fc0f03"
+```
 
-For more information, and especially about the way you can opt out of the above behaviour, see [Merge Configuration from Themes](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes).
+Для получения дополнительной информации, и особенно о том, как вы можете отказаться от вышеуказанного действия, см. [Merge Configuration from Themes](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes).
 
 ## Themes now support the config directory
 
-Now both the project and themes/modules can store its configuration in both the top level config file (e.g. config.toml) or in the config directory. See [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-directory).
+Теперь и проект, и темы / модули могут хранить свою конфигурацию как в файле конфигурации верхнего уровня (например, config.toml), так и в каталоге конфигурации. См. [Configuration Directory](https://gohugo.io/getting-started/configuration/#configuration-directory).
