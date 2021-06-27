@@ -1,15 +1,9 @@
-// Web Font CSS declaration
+//  Web Font CSS declaration
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
   src: url('../../fonts/FiraSans-Regular.woff2') format('woff2'), url('../fonts/FiraSans-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../../fonts/PlayfairDisplay-Regular.woff2') format('woff2'), url('../../fonts/PlayfairDisplay-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Fira Code';
@@ -18,6 +12,7 @@
   src: url('../../woff2/FiraCode-Regular.woff2') format('woff2'), url('../../woff/FiraCode-Regular.woff') format('woff');
 }
 // font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes
+
 @font-face {
   font-family: 'Fira Code VF';
   font-style: normal;
