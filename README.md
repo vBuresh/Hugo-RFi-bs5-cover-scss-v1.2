@@ -237,8 +237,8 @@ This single page template makes use of Hugo base templates, the .Format function
 Начнем с малого - в файл `layouts/partials/sidebar-btn-inset.html` поместим следующий код [из комплекта Icons](https://icons.getbootstrap.com/icons/layout-sidebar-inset/):
 
 ```html
-<!-- прверить: id="offcanvasRFi" -->
-<a class="btn pt-3" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
+<!-- прверить: id="offcanvasWithBackdrop" -->
+<a class="btn pt-3" data-bs-toggle="offcanvas" href="#offcanvasWithBackdrop" role="button" aria-controls="offcanvasWithBackdrop">
   <svg id="layout-sidebar-inset" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
     <path d="M14 2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
     <path d="M3 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
@@ -246,7 +246,7 @@ This single page template makes use of Hugo base templates, the .Format function
 </a>
 ```
 
-После этого в файл `layouts/partials/sidebar.html` скопируем код из примера [Live demo](https://getbootstrap.com/docs/5.0/components/offcanvas/#live-demo). Первые два aбзаца с примером кнопок управления нужно удалить, так как ранее эта кнопка уже была сделана. Затем нужно найти ID, адреса и пр., с префиксом "offcanvasExample" и заменить на "offcanvasRFi" (Find/Replace).
+После этого в файл `layouts/partials/sidebar.html` скопируем код из примера [Live demo](https://getbootstrap.com/docs/5.0/components/offcanvas/#live-demo). Первые два aбзаца с примером кнопок управления нужно удалить, так как ранее эта кнопка уже была сделана. Затем нужно найти ID, адреса и пр., с префиксом "offcanvasExample" и заменить на "offcanvasWithBackdrop" (Find/Replace).
 
 После этого помещаем кнопку в navbar, код которого пока находится в файле `layouts/partials/header.html`. Просто заменяем тег `h3` его содержимое следующим кодом:
 
@@ -276,8 +276,8 @@ This single page template makes use of Hugo base templates, the .Format function
 Содержимое файла `layouts/partials/sidebar-btn-inset-reverse.html` - layout-sidebar-inset [из комплекта Icons](https://icons.getbootstrap.com/icons/layout-sidebar-inset-reverse/):
 
 ```html
-<!-- id="offcanvasRFi" -->
-<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasRFi" role="button" aria-controls="offcanvasRFi">
+<!-- id="offcanvasWithBackdrop" -->
+<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasWithBackdrop" role="button" aria-controls="offcanvasWithBackdrop">
   <svg id="sidebar-inset-reverse" width="1.5em" height="1.5em" fill="#00D1B2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
     <path d="M2 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12z"/>
   <path d="M13 4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V4z"/>

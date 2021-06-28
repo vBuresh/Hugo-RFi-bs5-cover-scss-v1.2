@@ -13,7 +13,6 @@ disableLanguages:       en
 
 enableInlineShortcodes: true
 
-
 # bd5
 markup:
   goldmark:
