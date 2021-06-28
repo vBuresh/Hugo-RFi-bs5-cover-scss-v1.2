@@ -30,23 +30,25 @@
   font-style: normal;
   font-weight: normal;
   src:
-  url('Golos-Text_Medium.woff2') format('woff2'),
-  url('Golos-Text_Medium.woff') format('woff');
+  url('../fonts/golos/Golos-Text_Medium.woff2') format('woff2'),
+  url('../fonts/golos/Golos-Text_Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'GolosTextWebRegular';
   font-style: normal;
   font-weight: normal;
   src:
-  url('../../Golos-Text_Regular.woff2') format('woff2'),
-  url('../../Golos-Text_Regular.woff') format('woff');
+  url('../fonts/golos/Golos-Text_Regular.woff2') format('woff2'),
+  url('../fonts/golos/Golos-Text_Regular.woff') format('woff');
 }
 // font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes
 @font-face {
   font-family: 'GolosTextWebVF';
   font-style: normal;
   font-weight: 300 700;
-  src: url('../../Golos-Text_VF.woff2') format('woff2'), url('../../Golos-Text_VF.woff') format('woff');
+  src:
+  url('../fonts/golos/Golos-Text_VF.woff2') format('woff2'),
+  url('../fonts/golos/Golos-Text_VF.woff') format('woff');
 }
 // Font Golos UI: Copyright ? ParaType, 2018. All rights reserved.
 @font-face {
@@ -54,24 +56,24 @@
   font-style: normal;
   font-weight: normal;
   src:
-  url('Golos-UI_Bold.woff2') format('woff2'),
-  url('Golos-UI_Bold.woff') format('woff');
+  url('../fonts/golos/Golos-UI_Bold.woff2') format('woff2'),
+  url('../fonts/golos/Golos-UI_Bold.woff') format('woff');
 }
 @font-face {
   font-family: 'GolosUIWebMedium';
   font-style: normal;
   font-weight: normal;
   src:
-  url('Golos-UI_Medium.woff2') format('woff2'),
-  url('Golos-UI_Medium.woff') format('woff');
+  url('../fonts/golos/Golos-UI_Medium.woff2') format('woff2'),
+  url('../fonts/golos/Golos-UI_Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'GolosUIWebRegular';
   font-style: normal;
   font-weight: normal;
   src:
-  url('Golos-UI_Regular.woff2') format('woff2'),
-  url('Golos-UI_Regular.woff') format('woff');
+  url('../fonts/golos/Golos-UI_Regular.woff2') format('woff2'),
+  url('../fonts/golos/Golos-UI_Regular.woff') format('woff');
 }
 // font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes
 @font-face {
@@ -79,6 +81,6 @@
   font-style: normal;
   font-weight: normal;
   src:
-  url('Golos-UI_VF.woff2') format('woff2'),
-  url('Golos-UI_VF.woff') format('woff');
+  url('../fonts/golos/Golos-UI_VF.woff2') format('woff2'),
+  url('../fonts/golos/Golos-UI_VF.woff') format('woff');
 }
