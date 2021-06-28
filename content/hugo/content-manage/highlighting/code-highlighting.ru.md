@@ -2,7 +2,7 @@
 date: 2020-07-29T07:24:21+03:00
 Lastmod: 2021-06-22T13:09:21+03:00
 title: Подсветка синтаксиса
-subtitle: '- в примерах исходного кода'
+subtitle: "- в примерах исходного кода"
 description: Подсветка синтаксиса в Hugo отличается скоростью, простой настройкой и большим набором обрабатываемых языков. По умолчанию подключена красивая и многим полюбившаяся темная тема «monokai»
 summary: "Исходный код в ваших примерах - безупречен"
 summaryImage: /images/highligth.png
@@ -10,8 +10,8 @@ draft: false
 author:
   given_name: Vladimir
   family_name: Buresh
-  display_name: 'Hugo Authors, wBuresh'
-categories: ['Управление контентом']
+  display_name: "Hugo Authors, wBuresh"
+categories: ["Управление контентом"]
 tags: [Hugo, Сode]
 # categories: [content-management]
 # tags: [hugo, templates, taxonomy]
@@ -20,37 +20,45 @@ toc: true
 
 По материалам сайта Hugo [Syntax Highlighting](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
 
-Для всех кто пишет о своих или чьих-либо разработках с открытым исходным кодом, важно чтобы текст содержал не только скриншоты, но фрагменты  исходного кода с простыми и понятными комментариями. Сейчас легко различные подходящие специальные средства, позволяющие представить исходный код, с красивой подсветкой синтаксиса. Например весьма  популярна среди специалистов [highlight.js](https://github.com/highlightjs/highlight.js), написанная на JavaScript. Она надежно работает и просто устанавливается. К стати, ее успешно применяет [Roberto Jordaney](https://rjordaney.is/) в своей великолепной теме [**Hugo ReFresh**](https://themes.gohugo.io/hugo-refresh/).
+Для всех кто пишет о своих или чьих-либо разработках с открытым исходным кодом, важно чтобы текст содержал не только скриншоты, но фрагменты исходного кода с простыми и понятными комментариями. Сейчас легко различные подходящие специальные средства, позволяющие представить исходный код, с красивой подсветкой синтаксиса. Например весьма популярна среди специалистов [highlight.js](https://github.com/highlightjs/highlight.js), написанная на JavaScript. Она надежно работает и просто устанавливается. К стати, ее успешно применяет [Roberto Jordaney](https://rjordaney.is/) в своей великолепной теме [**Hugo ReFresh**](https://themes.gohugo.io/hugo-refresh/).
 
 Однако, Hugo поставляется с очень лаконичной, быстрой и легко настраиваемой подсветкой синтаксиса от [Chroma](https://github.com/alecthomas/chroma). **Chroma**, как и **Hugo**, написана на **Go**, активно развивается и совершенствуется.
 
 По умолчанию, подсветка имеет следующую конфигурацию:
 
 {{< highlight yaml "linenos=true,hl_lines=4 11,linenostart=27" >}}
+
 # Highlighting Language - yaml
+
 markup:
-  highlight:
-    codeFences: true
-    guessSyntax: false
-    hl_Lines: ""
-    lineNoStart: 1
-    lineNos: false
-    lineNumbersInTable: true
-    noClasses: true
-    style: monokai
-    tabWidth: 4
+highlight:
+codeFences: true
+guessSyntax: false
+hl_Lines: ""
+lineNoStart: 1
+lineNos: false
+lineNumbersInTable: true
+noClasses: true
+style: monokai
+tabWidth: 4
 {{< /highlight >}}
 
 То есть, включать в свои статьи примеры исходных кодов с подсветкой синтаксиса различных языков программирования, разметки, или просто структурированного текста пользователи могут сразу после установки **Hugo** с соответствующей темой.
 
-Как видно из приведенного фрагмента параметров конфигурации, по умолчанию, предложена очень красивая и весьма популярная тема **monokai**. Это определено параметром `style:`, в нашем примере  - строка 37 (с выделением).
+Как видно из приведенного фрагмента параметров конфигурации, по умолчанию, предложена очень красивая и весьма популярная тема **monokai**. Это определено параметром `style:`, в нашем примере - строка 37 (с выделением).
 
 Важно помнить, что для полной реализации возможностей и преимуществ Hugo Syntax Highlighting необходимо применять встроенный Hugo шорткод - `❴❴< highlight >❵❵`. Однако не лишне уделить должное внимание и базовым возможностям **Markdown**.
 
-
 > ##### Примечание:
 >
-> Для демонстрации примеров был взят, пожалуй, самый трудный для демонстрации язык `go-html-template`. Чтобы все получилось, пришлось фигурные скобки заменить символами unicode &#10100; и &#10101;. Если этого не сделать, то код просто сработает и показать пример не удастся, так как **Hugo** реагирует на содержимое ❴❴ _внутри фигурных скобок_ ❵❵ . Вопреки ожиданиям, даже [шорткод](https://gohugo.io/content-management/shortcodes/) **highlight** не всегда помогает.
+> Для демонстрации примеров был взят, пожалуй, самый трудный для демонстрации язык `go-html-template`. Чтобы все получилось, пришлось фигурные скобки заменить символами unicode &#10100; и &#10101;. Если этого не сделать, то код просто сработает и показать пример не удастся, так как **Hugo** реагирует на содержимое {{ _внутри фигурных скобок_ }} . Вопреки ожиданиям, даже [шорткод](https://gohugo.io/content-management/shortcodes/) **highlight** не всегда помогает.
+
+<!-- You can call out code or a command within a sentence with single backticks. The text within the backticks will not be formatted.
+
+```markdown
+Use `git status` to list all new or modified files that haven't yet been committed.
+```
+ -->
 
 
 ## Подсветка синтаксиса. Базовый Markdown
@@ -84,8 +92,7 @@ markup:
 
 При указании языка, в нашем примере - JSON:
 
-
-``` json
+```json
 &#96;&#96;&#96;json
 ❴
   "firstName": "Hugo",
@@ -97,7 +104,7 @@ markup:
 
 Визуализированный вывод с подсветкой синтаксиса (по умолчанию - тема **monokai**) выглядит так:
 
-``` json
+```json
 {
   "firstName": "Hugo",
   "lastName": "Chroma",
@@ -116,8 +123,8 @@ highlight INPUT LANG OPTIONS
 Применяя подсветку синтаксиса важно помнить, что:
 
 1. [Встроенный шорткод](https://gohugo.io/content-management/shortcodes/) `❴❴< highlight >❵❵` обязательно должен быть закрыт - `❴❴< /highlight >❵❵`
-1. Для правильной подсветки, необходимо явно указать демонстрируемый язык (или его alias - псевдоним).
-1. Если содержимое не требует подсветки нужно указать **plaintext** (либо один из псевдонимов: _no-highlight, plain, text или txt_).
+2. Для правильной подсветки, необходимо явно указать демонстрируемый язык (или его alias - псевдоним).
+3. Если содержимое не требует подсветки нужно указать **plaintext** (либо один из псевдонимов: _no-highlight, plain, text или txt_).
 
 Кроме того, нелишне обратить внимание, что **highlight** не применяется для подсветки `JavaScript` на стороне клиента.
 
@@ -127,20 +134,21 @@ highlight INPUT LANG OPTIONS
 
 Итак, применяется шорткод довольно просто. Как это делается наглядно показано на следующем примере:
 
-❴❴< highlight html >❵❵
-  <picture>
-    <source srcset="..." type="image/svg+xml">
-    <img src="..." class="img-fluid img-thumbnail" alt="...">
-  </picture>
-❴❴< /highlight >❵❵
+{{< highlight html >}}
+<picture>
+
+<source srcset="..." type="image/svg+xml">
+<img src="..." class="img-fluid img-thumbnail" alt="...">
+</picture>
+{{< /highlight >}}
 
 ## Практика применения встроенного шорткода `❴❴< highlight >❵❵` на примерах
 
-Преимущества применения встроенного шорткода `❴❴< highlight >❵❵` хорошо видны даже на первом нашем примере, посвященном  [конфигурации подсветки Hugo по умолчанию](). Речь идет о возможности использовать параметры, позволяющие выводить подсвеченный код не только с учетом особенностей синтаксиса языка, но и с нумерацией строк, что облегчает комментирование демонстрируемого кода. Кроме того, для повышения наглядности некоторые строки и/или диапазоны строк можно подсветить. Это помогает быстро найти нужное, особенно при чтении больших фрагментов кода. А еще можно установить номер с которого будет начинаться нумерация строк в примере. Это очень нужно при демонстрации и комментировании фрагментов реальных исходных кодов.
+Преимущества применения встроенного шорткода `❴❴< highlight >❵❵` хорошо видны даже на первом нашем примере, посвященном [конфигурации подсветки Hugo по умолчанию](). Речь идет о возможности использовать параметры, позволяющие выводить подсвеченный код не только с учетом особенностей синтаксиса языка, но и с нумерацией строк, что облегчает комментирование демонстрируемого кода. Кроме того, для повышения наглядности некоторые строки и/или диапазоны строк можно подсветить. Это помогает быстро найти нужное, особенно при чтении больших фрагментов кода. А еще можно установить номер с которого будет начинаться нумерация строк в примере. Это очень нужно при демонстрации и комментировании фрагментов реальных исходных кодов.
 
 ### Параметры
 
-Итак, шорткод `❴❴< highlight >❵❵ может применяться с параметрами, позволяющими:
+Итак, шорткод `❴❴< highlight >❵❵` может применяться с параметрами, позволяющими:
 
 1. Вывести номера строк - параметр **`linenos`**. Допустимые значения:
    - **`true`** и **`false`** - управление выводом нумерации строк;
@@ -203,9 +211,10 @@ highlight INPUT LANG OPTIONS
 Наряду с подсветкой синтаксиса выведена нумерация строк.
 
 <!-- ## Пример 3. Подсветка кода с выводом нумерации и выделением строк и диапазонов -->
+
 ## Configure Syntax Highlighter
 
-**Shortcode - `❴❴< highlight go-html-template >❵❵`; options - `"linenos=table,hl_lines=3 7 10-12,linenostart=10"`**
+Shortcode - `❴❴< highlight go-html-template >❵❵`; options - `"linenos=table,hl_lines=3 7 10-12,linenostart=10"`
 
 {{< highlight go-html-template "linenos=table,hl_lines=3 7 10-12,linenostart=10" >}}
 
@@ -229,24 +238,22 @@ highlight INPUT LANG OPTIONS
 
 Наряду с подсветкой синтаксиса выведена нумерация строк. Начало нумерации - со строки 10. Строки 3 и 7, а также диапазон строк 10-12 - выделены, что позволяет обратить особое внимание при их описании.
 
-
->##### Примечание:
+> ##### Примечание:
 >
->Следует обратить внимание, что только [Goldmark](https://gohugo.io/getting-started/configuration-markup/#goldmark)   поддерживает передаваемые атрибуты, такие как `hl_lines` и пр. Также важно, помнить что между параметрами при их   перечислении (через запятую) пробелы НЕДОПУСТИМЫ!.
+> Следует обратить внимание, что только [Goldmark](https://gohugo.io/getting-started/configuration-markup/#goldmark) поддерживает передаваемые атрибуты, такие как `hl_lines` и пр. Также важно, помнить что между параметрами при их перечислении (через запятую) пробелы НЕДОПУСТИМЫ!.
 
 Для просмотра стилей, подготовлены эти галереи:
 
 - [Short snippets](https://xyproto.github.io/splash/docs/all.html)
 - [Long snippets](https://xyproto.github.io/splash/docs/longer/all.html)
 
-
 ## Простая и умная подсветка синтаксиса
 
-Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода, но с добавлением,  уже известных нам параметров: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`. Подробнее См. [Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences).
+Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода, но с добавлением, уже известных нам параметров: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`. Подробнее См. [Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences).
 
 Вот как это работает:
 
-``` html {linenos=table,hl_lines=[1,"4-5"],linenostart=2}
+```html {linenos=table,hl_lines=[1,"4-5"],linenostart=2}
 <!-- As a link -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -260,15 +267,13 @@ highlight INPUT LANG OPTIONS
     <span class="navbar-brand mb-0 h1">Navbar</span>
   </div>
 </nav>
-
 ```
-
 
 ## Генерация стилей подсветки синтаксиса (css)
 
 Generate Syntax Highlighter CSS
 
-По умолчанию _Hugo-Refreshing_ подключена красивая и очень популярная темная тема подсветки синтаксиса «monokai». Для любителей светлых тонов подгружена и добавлена в файл refreshing.scss строка `// @import 'syntax-monokailight';` (предварительно закомментирована!) для импорта стилей светлой темы monokailight. Кроме того, в конфигурационном файле `config.yaml` темы  **ReFreshing** - включен параметр `pygmentsUseClasses: true`.
+По умолчанию _Hugo-Refreshing_ подключена красивая и очень популярная темная тема подсветки синтаксиса «monokai». Для любителей светлых тонов подгружена и добавлена в файл refreshing.scss строка `// @import 'syntax-monokailight';` (предварительно закомментирована!) для импорта стилей светлой темы monokailight. Кроме того, в конфигурационном файле `config.yaml` темы **ReFreshing** - включен параметр `pygmentsUseClasses: true`.
 
 {{< highlight scss "linenos=true,linenostart=5">}}
 // SCSS - themes/hugo-refreshing/assets/style-rfg/refreshing.scss
@@ -277,7 +282,7 @@ Generate Syntax Highlighter CSS
 // @import 'syntax-monokailight';
 {{< /highlight >}}
 
-По желанию, пользователь может легко переключиться на на светлую тему подсветки синтаксиса. Для этого достаточно снять комментарий - ` // ` в строке 6 и закомментировать строку 5. После они должны иметь следующий вид:
+По желанию, пользователь может легко переключиться на на светлую тему подсветки синтаксиса. Для этого достаточно снять комментарий - `//` в строке 6 и закомментировать строку 5. После они должны иметь следующий вид:
 
 {{< highlight scss "linenos=true,linenostart=5">}}
 // SCSS - themes/hugo-refreshing/assets/style-rfg/refreshing.scss
@@ -305,8 +310,7 @@ hugo gen chromastyles --style=monokai > syntax.css
 
 goldmark-highlighting это расширение для [goldmark](http://github.com/yuin/goldmark) - парсера языка Markdown, написанного на Go. goldmark-highlighting добавляет подсветку синтаксиса в выделенных (fenced) блоках кода. Как уже отмечалось,
 
-Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma). A Markdown parser written in Go.  Easy to extend, standards-compliant, well-structured.
-
+Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma). A Markdown parser written in Go. Easy to extend, standards-compliant, well-structured.
 
 ## List of Chroma Highlighting Languages
 
@@ -317,7 +321,7 @@ See [the full list of Chroma lexers and their aliases](https://gohugo.io/content
 |     | _Без подсветки_    |                                                                             |     | _Часто цитируемые_     |
 |  1. | **plaintext**      | no-highlight, plain, text, txt                                              | 13. | **Go**                 | go, golang                           |
 |     | _Командная строка_ |                                                                             | 14. | **Go HTML Template**   | go-html-template                     |
-    |  2. | **Bash**           | bash, bashrc, ebui1ld, eclass, exheres-0, exlib, ksh, sh, shell, zsh, zshrc | 15. | **Go Text Template**   | go-text-template                     |
+|  2. | **Bash**           | bash, bashrc, ebui1ld, eclass, exheres-0, exlib, ksh, sh, shell, zsh, zshrc | 15. | **Go Text Template**   | go-text-template                     |
 |     | _Стили_            |                                                                             | 16. | **Kotlin**             | kotlin, kt                           |
 |  3. | **CSS**            | css                                                                         | 17. | **JavaScript**         | javascript, js, jsm                  |
 |  4. | **SCSS**           | scss                                                                        | 18. | **Java**               | java                                 |

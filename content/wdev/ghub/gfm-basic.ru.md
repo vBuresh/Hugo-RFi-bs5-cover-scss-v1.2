@@ -18,18 +18,16 @@ toc: true
 
 Front Matter
 
-
-
-``` yaml
+```yaml
 title: Basic writing and formatting syntax
 intro: Create sophisticated formatting for your prose and code on GitHub with simple syntax.
 redirect_from:
   - /articles/basic-writing-and-formatting-syntax
   - /github/writing-on-github/basic-writing-and-formatting-syntax
 versions:
-  free-pro-team: '*'
-  enterprise-server: '*'
-  github-ae: '*'
+  free-pro-team: "*"
+  enterprise-server: "*"
+  github-ae: "*"
 ```
 
 ### Headings
@@ -38,7 +36,9 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 
 ```markdown
 # The largest heading
+
 ## The second largest heading
+
 ###### The smallest heading
 ```
 
@@ -48,13 +48,13 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 
 You can indicate emphasis with bold, italic, or strikethrough text in comment fields and `.md` files.
 
-| Style | Syntax | Keyboard shortcut | Example | Output |
-| --- | --- | --- | --- | --- |
-| Bold | `** **` or `__ __` | command/control + b | `**This is bold text**` | **This is bold text** |
-| Italic | `* *` or `_ _` | command/control + i | `*This text is italicized*` | *This text is italicized* |
-| Strikethrough | `~~ ~~` | | `~~This was mistaken text~~` | ~~This was mistaken text~~ |
-| Bold and nested italic | `** **` and `_ _` | | `**This text is _extremely_ important**` | **This text is _extremely_ important** |
-| All bold and italic | `*** ***` | | `***All this text is important***` | ***All this text is important*** |
+| Style                  | Syntax             | Keyboard shortcut   | Example                                  | Output                                 |
+| ---------------------- | ------------------ | ------------------- | ---------------------------------------- | -------------------------------------- |
+| Bold                   | `** **` or `__ __` | command/control + b | `**This is bold text**`                  | **This is bold text**                  |
+| Italic                 | `* *` or `_ _`     | command/control + i | `*This text is italicized*`              | _This text is italicized_              |
+| Strikethrough          | `~~ ~~`            |                     | `~~This was mistaken text~~`             | ~~This was mistaken text~~             |
+| Bold and nested italic | `** **` and `_ _`  |                     | `**This text is _extremely_ important**` | **This text is _extremely_ important** |
+| All bold and italic    | `*** ***`          |                     | `***All this text is important***`       | **_All this text is important_**       |
 
 ### Quoting text
 
@@ -161,7 +161,7 @@ To create a nested list using the web editor on {% data variables.product.produc
 
 To create a nested list in the comment editor on {% data variables.product.product_name %}, which doesn't use a monospaced font, you can look at the list item immediately above the nested list and count the number of characters that appear before the content of the item. Then type that number of space characters in front of the nested list item.
 
-In this example, you could add a nested list item under the list item `100. First list item` by indenting the nested list item a minimum of five spaces, since there are five characters (`100. `) before `First list item`.
+In this example, you could add a nested list item under the list item `100. First list item` by indenting the nested list item a minimum of five spaces, since there are five characters (`100.`) before `First list item`.
 
 ```markdown
 100. First list item
