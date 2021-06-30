@@ -7,7 +7,7 @@
 {{- $css  := resources.Get $sass | resources.ExecuteAsTemplate $scss . | toCSS $cssOpts -}}
 {{- $css1 := resources.Get "css/cover.css" -}}
 {{- $css2 := resources.Get "css/dark.css" -}}
-{{- $css3 := resources.Get "css/refreshing.css" -}}
+{{- $css3 := resources.Get "css/w_styles.css" -}}
 
 {{- if .Site.Params.cssMinify -}}
 
