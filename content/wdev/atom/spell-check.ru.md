@@ -195,7 +195,7 @@ text.html.basic, source.yaml, text.html.hugo, text.xml.svg, source.asciidoc, sou
 ```
 и еще:
 
-`css, css.erb, sass, sass.erb,`
+`css, css.erb, sass, sass.erb, source.js, source.json`
 
 Потому что
 

@@ -501,20 +501,21 @@ dest() может использоваться в середине конвей�
 
 Эта функция может быть полезна, например, для создания минимизированных и неминимизированных файлов с одним и тем же конвейером.
 
-	const { src, dest } = require('gulp');
-	const babel = require('gulp-babel');
-	const uglify = require('gulp-uglify');
-	const rename = require('gulp-rename');
-
-	exports.default = function() {
-		return src('src/*.js')
-			.pipe(babel())
-			.pipe(src('vendor/*.js'))
-			.pipe(dest('output/'))
-			.pipe(uglify())
-			.pipe(rename({ extname: '.min.js' }))
-			.pipe(dest('output/'));
-	}
+``` js
+const { src, dest } = require('gulp');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+exports.default = function() {
+	return src('src/*.js')
+		.pipe(babel())
+		.pipe(src('vendor/*.js'))
+		.pipe(dest('output/'))
+		.pipe(uglify())
+		.pipe(rename({ extname: '.min.js' }))
+		.pipe(dest('output/'));
+}
+```
 
 Режимы: потоковый, буферизованный и пустой
 

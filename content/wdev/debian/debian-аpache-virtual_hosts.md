@@ -1,7 +1,19 @@
 ---
+date: 2019-11-08T18:20:14+03:00
+Lastmod: 2021-06-30T:06:42:01+03:00
 title: Виртуальные хосты Apache на Debian
-date: 2019-11-08T18:20:14.000Z
+subtitle: subtitle of the published article
+description: short description of the article
+summary: three-line summary of the article.
 draft: false
+author:
+  given_name: Vladimir
+  family_name: Buresh
+  display_name: wBuresh
+categories: [Веб-разработка]
+# categories: ['Web development']
+tags: [Debian, Настройки, Хостинг]
+toc: true
 ---
 
 ## Apache Virtual Hosts on Debian
@@ -23,40 +35,40 @@ draft: false
 
 ## **Установка**
 
-<dl>
-  <dt>ssh root@server_ip</dt>
-  <dd class="pl-4 font-italic text-muted">Подключение к серверу по SSH.</dd>
-  <dt>dpkg -l apache2</dt>
-  <dd class="pl-4 font-italic text-muted">Проверка, не установлен ли  Apache ранее.</dd>
-  <dt>sudo apt update<br>apt-get install apache2</dt>
-  <dd class="pl-4 font-italic text-muted">Установка Apache. Возможно: apache2-doc libapache2-mod-php</dd>
-  <dt>systemctl enable apache2</dt>
-  <dd class="pl-4 font-italic text-muted">Включить Apache для запуска автоматически после перезапуска сервера.</dd>
-  <dt>systemctl status apache2</dt>
-  <dd class="pl-4 font-italic text-muted">Проверка состояния службы Apache.</dd>
-</dl>
+ssh root@server_ip
+: Подключение к серверу по SSH
 
-``` bash
-w@deb-del:~$ systemctl status apache2
+dpkg -l apache2
+: Проверка, не установлен ли  Apache ранее
+
+sudo apt update<br>apt-get install apache2
+: Установка Apache. Возможно: apache2-doc libapache2-mod-php
+
+systemctl enable apache2
+: Включить Apache для запуска автоматически после перезапуска сервера
+
+systemctl status apache2
+: Проверка состояния службы Apache
+
+Команда: `systemctl status apache2`
+
+``` bash {linenos=true}
 ● apache2.service - The Apache HTTP Server
-   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset:
-   Active: active (running) since Thu 2019-09-26 05:26:49 MSK; 3h 47min ago
-     Docs: <https://httpd.apache.org/docs/2.4/>
-  Process: 671 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCES
- Main PID: 804 (apache2)
-    Tasks: 7 (limit: 4915)
-   Memory: 25.0M
-   CGroup: /system.slice/apache2.service
-           ├─804 /usr/sbin/apache2 -k start
-           ├─818 /usr/sbin/apache2 -k start
-           ├─819 /usr/sbin/apache2 -k start
-           ├─820 /usr/sbin/apache2 -k start
-           ├─821 /usr/sbin/apache2 -k start
-           ├─822 /usr/sbin/apache2 -k start
-           └─823 /usr/sbin/apache2 -k start
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset>
+     Active: active (running) since Wed 2021-06-30 06:23:39 MSK; 26min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 597 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCC>
+   Main PID: 678 (apache2)
+      Tasks: 56 (limit: 19008)
+     Memory: 26.7M
+        CPU: 168ms
+     CGroup: /system.slice/apache2.service
+             ├─678 /usr/sbin/apache2 -k start
+             ├─679 /usr/sbin/apache2 -k start
+             ├─680 /usr/sbin/apache2 -k start
+             └─681 /usr/sbin/apache2 -k start
 ```
 
-<!--
 ## Виртуальные хосты
 
 Виртуальные хосты **Apache** -- это комплект директив конфигурации, которые обеспечивают размещение неограниченного количества веб-сайтов, используя один веб-сервер **Apache**. То есть, если на сервере есть несколько сайтов, то для корректного отображения всех сайтов необходима настройка (конфигурирование) **Apache**.
@@ -65,17 +77,10 @@ w@deb-del:~$ systemctl status apache2
 
 Веб-сервером **Apache** поддерживаются два типа виртуальных хостов -- на основе **имен** (_name-based virtual hosts_) и на основе **IP** (_IP-based virtual hosts_).
 
-<div>
-  <dl>
-  <dt>Виртуальные хосты на основе имен</dt>
-  <dd class="pl-4 font-italic text-muted">
-      Применяются при размещении несколько веб-сайтов на одном сервере</dd>
-  <dt>Виртуальный хост на основе IP</dt>
-  <dd class="pl-4 font-italic text-muted">
-      Позволяет иметь только один веб-сайт на одном IP-адресе</dd>
- </dl>
-</div>
-
+Виртуальные хосты на основе имен
+: Применяются при размещении несколько веб-сайтов на одном сервере
+Виртуальный хост на основе IP
+: Позволяет иметь только один веб-сайт на одном IP-адресе
 
 Однако, локальный сервер имеет только один IP: **127.0.0.1**, поэтому вариант с привязкой к IP подходит далеко не всегда. В связи с этим, наиболее распространенным является использование виртуальных хостов на базе имен, привязанных к одному IP-адресу. Таким образом, можно хранить множество сайтов на одном IP.
 
@@ -85,23 +90,19 @@ w@deb-del:~$ systemctl status apache2
 
 <!-- wp:list -->
 
-- vblog.ru
-- vvlaw.ru
+- rfm-bsblog.ru
+- rfm-bscover.ru
 
- Для хранения компонентов этих сайтов необходимо создать корневые директории. Обычно их размещают в директории `**/var/www/**`
+Для хранения компонентов этих сайтов необходимо создать корневые директории. Обычно их размещают в директории `**/var/www/**`
 
-
-
- Это легко сделать при помощи команд:
-
-
+Это легко сделать при помощи команд:
 
 ``` bash
-sudo mkdir -p /var/www/vblog.ru/public_html
-sudo mkdir -p /var/www/vvlaw.ru/public_html
+sudo mkdir -p /var/www/rfm-bsblog.ru/public_html
+sudo mkdir -p /var/www/rfm-bscover.ru/public_html
 ```
 
-Важно обратить внимание, что в каждой директории сайты будет создана поддиректория **public_html**, для размещения файлов. Это придаст хостингу необходимую гибкость.
+Важно обратить внимание, что в каждой директории **сайты** будет создана поддиректория **public_html**, для размещения файлов. Это придаст хостингу необходимую гибкость.
 
 
 #### Стартовые страницы
@@ -118,7 +119,7 @@ sudo mkdir -p /var/www/vvlaw.ru/public_html
   </head>
   <body>
     <h1>Привет!</h1>
-    <p>Это новый сайт vblog.ru / vvlaw.ru <!-- соответственно --></p>
+    <p>Это новый сайт rfm-bsblog.ru / rfm-bscover.ru <!-- соответственно --></p>
   </body>
 </html>
 ```
@@ -128,8 +129,8 @@ sudo mkdir -p /var/www/vvlaw.ru/public_html
 Важно обратить внимание , что поддиректории в `/var/www/` созданы с помощью **sudo**, поэтому принадлежат пользователю **root**. Чтобы обычные пользователи могли редактировать файлы в этих директориях, нужно дать им такие права:
 
 ``` bash
-sudo chown -R $USER:$USER /var/www/vblog.ru/public_html
-sudo chown -R $USER:$USER /var/www/vvlaw.ru/public_html
+sudo chown -R $USER:$USER /var/www/rfm-bsblog.ru/public_html
+sudo chown -R $USER:$USER /var/www/rfm-bscover.ru/public_html
 ```
 
 После этого переменная $USER примет имя текущего пользователя и он получит права на поддиректории public_html, в которых будет храниться контент.
@@ -146,22 +147,22 @@ sudo chmod -R 755 /var/www
 
 Теперь следует создать файлы виртуальных хостов (с расширением **`.conf`**). Они задают настройки отдельных сайтов и помогают Apache корректно отвечать на запросы.
 
-Стандартный файл хоста с именем **000-default.conf**, который можно использовать в качестве шаблона, поставляется с Apache и размещается в директории _`/etc/apache2/sites-available/`_. Его нужно скопировать его, чтобы создать виртуальный хост для каждого доменного имени: **vblog.ru** и **vvlaw.ru**.
+Стандартный файл хоста с именем **000-default.conf**, который можно использовать в качестве шаблона, поставляется с Apache и размещается в директории _`/etc/apache2/sites-available/`_. Его нужно скопировать его, чтобы создать виртуальный хост для каждого доменного имени: **rfm-bsblog.ru** и **rfm-bscover.ru**.
 
 ``` bash
-# для vblog.ru
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/vblog.ru.conf
-# для vvlaw.ru.conf
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/vvlaw.ru.conf
+# для rfm-bsblog.ru
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/rfm-bsblog.ru.conf
+# для rfm-bscover.ru.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/rfm-bscover.ru.conf
 ```
 
 Затем следует открыть и отредактировать файлы:
 
 ``` bash
-# для vblog.ru
-sudo nano /etc/apache2/sites-available/vblog.ru.conf
-# для vvlaw.ru
-sudo nano /etc/apache2/sites-available/vvlaw.ru.conf
+# для rfm-bsblog.ru
+sudo nano /etc/apache2/sites-available/rfm-bsblog.ru.conf
+# для rfm-bscover.ru
+sudo nano /etc/apache2/sites-available/rfm-bscover.ru.conf
 ```
 
 По умолчанию файл **.conf** обычно имеет следующее содержание:
@@ -183,10 +184,10 @@ sudo nano /etc/apache2/sites-available/vvlaw.ru.conf
 ``` bash
 <VirtualHost *:80>
 
-ServerAdmin admin@vblog.ru
-ServerName vblog.ru
-ServerAlias www.vblog.ru
-DocumentRoot /var/www/vblog.ru/public_html
+ServerAdmin admin@rfm-bsblog.ru
+ServerName rfm-bsblog.ru
+ServerAlias www.rfm-bsblog.ru
+DocumentRoot /var/www/rfm-bsblog.ru/public_html
 
 ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -215,25 +216,25 @@ sudo nano /etc/hosts
 ``` bash
 127.0.0.1   localhost
 ...
-111.111.111.111 vblog.ru
-111.111.111.111 vvlaw.ru
+111.111.111.111 rfm-bsblog.ru
+111.111.111.111 rfm-bscover.ru
 ```
 
-Теперь все запросы к vblog.ru и vvlaw.ru будут отправлены на локальный компьютер, а оттуда -- на IP-адрес сервера.
+Теперь все запросы к rfm-bsblog.ru и rfm-bscover.ru будут отправлены на локальный компьютер, а оттуда -- на IP-адрес сервера.
 
 Сохраните и закройте файл.
 
 ## Результаты
 
-Чтобы протестировать настройку виртуальных хостов, просто откройте домен в веб-браузере: `**vblog.ru**`
+Чтобы протестировать настройку виртуальных хостов, просто откройте домен в веб-браузере: `**rfm-bsblog.ru**`
 
 сообщение:
 
-`Success! The` **vblog.ru**`virtual host is working!`
+`Success! The` **rfm-bsblog.ru**`virtual host is working!`
 
 **Примечание**: Результат, появившийся на экране, зависит от содержания созданного html файла.
 
-Точно так же нужно проверить и второй сайт: **`vvlaw.ru`**
+Точно так же нужно проверить и второй сайт: **`rfm-bscover.ru`**
 
 Если оба сайта работают, значит, виртуальные хосты настроены правильно.
 
@@ -263,52 +264,52 @@ sudo nano /etc/hosts
 shell
 
 ``` bash
-# для сайта vblog.ru
-nano /etc/apache2/sites-available/vblog.ru.conf
-# для сайта vvlaw.ru
-nano /etc/apache2/sites-available/vvlaw.ru.conf
+# для сайта rfm-bsblog.ru
+nano /etc/apache2/sites-available/rfm-bsblog.ru.conf
+# для сайта rfm-bscover.ru
+nano /etc/apache2/sites-available/rfm-bscover.ru.conf
 ```
 
  <!-- wp:heading {"level":3} -->
 
 ### Файлы конфигурации Аpache
 
-Файл конфигурации для vblog.ru с подстрочными комментариями.
+Файл конфигурации для rfm-bsblog.ru с подстрочными комментариями.
 
 ``` bash
 <VirtualHost *:80>
 # виртуальный хост прослушивает порт 80:
 
-ServerAdmin admin@vblog.ru
+ServerAdmin admin@rfm-bsblog.ru
 # указывается адрес адрес электронной почты администратора, включаемый сервером в любые сообщения об ошибках (без возвращения клиенту). Атрибут необязательной, можно вообще удалить строку.
-ServerName vblog.ru
+ServerName rfm-bsblog.ru
 # имя домена
-ServerAlias www.vblog.ru
+ServerAlias www.rfm-bsblog.ru
 # дополнительные имена, которые должны совпадать, как если бы они являлись исходными именами доменов
-DocumentRoot /var/www/html/vblog.ru
+DocumentRoot /var/www/html/rfm-bsblog.ru
 # определяет место, где должен искать Apache при обработке запроса для домена, определенного в ServerName или ServerAlias
 
-ErrorLog ${APACHE_LOG_DIR}/vblog.ru_error.log
-CustomLog ${APACHE_LOG_DIR}/vblog.ru_access.log combined
+ErrorLog ${APACHE_LOG_DIR}/rfm-bsblog.ru_error.log
+CustomLog ${APACHE_LOG_DIR}/rfm-bsblog.ru_access.log combined
 # В этих строках указано местоположение файлов журнала
 
 </VirtualHost>
 ```
 
-Файл конфигурации для vvlaw.ru выглядит так:
+Файл конфигурации для rfm-bscover.ru выглядит так:
 
 
 
 ``` bash
 <VirtualHost *:80>
 
-ServerAdmin admin@vvlaw.ru
-ServerName vvlaw.ru
-ServerAlias www.vvlaw.ru
-DocumentRoot /var/www/html/vvlaw.ru
+ServerAdmin admin@rfm-bscover.ru
+ServerName rfm-bscover.ru
+ServerAlias www.rfm-bscover.ru
+DocumentRoot /var/www/html/rfm-bscover.ru
 
-ErrorLog ${APACHE_LOG_DIR}/vvlaw.ru_error.log
-CustomLog ${APACHE_LOG_DIR}/vvlaw.ru_access.log combined
+ErrorLog ${APACHE_LOG_DIR}/rfm-bscover.ru_error.log
+CustomLog ${APACHE_LOG_DIR}/rfm-bscover.ru_access.log combined
 
 </VirtualHost>
 ```
@@ -324,8 +325,8 @@ shell
 
 
 ``` bash
-a2ensite vblog.ru.conf
-a2ensite vvlaw.ru.conf
+a2ensite rfm-bsblog.ru.conf
+a2ensite rfm-bscover.ru.conf
 
 # выдается сообщение: bash: a2ensite: команда не найдена
 ```
@@ -337,8 +338,8 @@ a2ensite vvlaw.ru.conf
 При этом способе символическая ссылка создается для каждого виртуального хоста в директории: **`/etc/apache2/sites-enabled`**
 
 ``` bash
-ln -s /etc/apache2/sites-available/vblog.ru.conf /etc/apache2/sites-enabled/
-ln -s /etc/apache2/sites-available/vvlaw.ru.conf /etc/apache2/sites-enabled/
+ln -s /etc/apache2/sites-available/rfm-bsblog.ru.conf /etc/apache2/sites-enabled/
+ln -s /etc/apache2/sites-available/rfm-bscover.ru.conf /etc/apache2/sites-enabled/
 ```
 
 Сделано вторым способом. После включения виртуальных хостов (одним из двух возможных способов) необходимо перезапустить **веб-сервер Apache**:
@@ -357,15 +358,15 @@ systemctl restart apache2
 <!-- wp:list -->
 
 - vblog.com
-- vblog.ru
-- vvlaw.ru
+- rfm-bsblog.ru
+- rfm-bscover.ru
 
 Firefox выдает сообщение:
 
 **This site can't be reached**<br>
 **vblog.com**'s server IP address could not be found.DNS_PROBE_FINISHED_NXDOMAIN
 
-Приэтом ip адрес 127.0.0.1 и [localhost](http://localhost/) открывают сайт vblog.ru.
+Приэтом ip адрес 127.0.0.1 и [localhost](http://localhost/) открывают сайт rfm-bsblog.ru.
 
 ### Решение зреет
 
