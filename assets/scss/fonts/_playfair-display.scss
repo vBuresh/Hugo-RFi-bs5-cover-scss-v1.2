@@ -1,0 +1,9 @@
+// Web Font CSS declaration
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: normal;
+  src:
+  url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+  url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
+}
