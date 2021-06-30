@@ -29,10 +29,11 @@ assets/scss-rfi/_syntax-monokai.scss
 # assets/scss-rfi/_variables.scss
 
 content/about/law
-# исключаются только b6_* и.или s8_*.
-#!не распространяется на b6-* и s8-*
+# исключаются только b6_ и.или s8_
+#!не распространяется на b6- и s8-
 b6_*
 g8_*
+bslast-*
 
 # static/images
 static/js/
