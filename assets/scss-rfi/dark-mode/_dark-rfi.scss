@@ -1,0 +1,51 @@
+// @b^ Docs dark castomisation
+body.dark .list-group-item {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .list-group-item.bg-light {
+  background: $body-overlay-dark !important;
+}
+
+body.dark .offcanvas-body {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .offcanvas-body.bg-light {
+  background: $body-overlay-dark !important;
+}
+
+body.dark .offcanvas-header {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .offcanvas-header.bg-light {
+  background: $body-overlay-dark !important;
+}
+
+body {
+  .toggle-dark {
+    display: block;
+  }
+
+  .toggle-light {
+    display: none;
+  }
+
+  .dark {
+    .toggle-light {
+      display: block;
+    }
+
+    .toggle-dark {
+      display: none;
+    }
+
+    .navbar-brand {
+      color: $mainColour;
+    }
+  }
+}

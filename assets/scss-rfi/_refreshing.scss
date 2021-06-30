@@ -13,8 +13,8 @@
 pre {
   background-color: $precode;
   color: $gray-100;
-  font-size: 1em;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .divider {
@@ -38,33 +38,11 @@ pre {
 // }
 //B^ darkMode
 
-#mode {
-  margin-right: 1.25rem;
-}
+// #mode {
+//   margin-right: 1.25rem;
+// }
 
-body {
-  .toggle-dark {
-    display: block;
-  }
 
-  .toggle-light {
-    display: none;
-  }
-
-  .dark {
-    .toggle-light {
-      display: block;
-    }
-
-    .toggle-dark {
-      display: none;
-    }
-
-    .navbar-brand {
-      color: $mainColour;
-    }
-  }
-}
 //B^ bs castomisation
 
 .navbar-brand {
