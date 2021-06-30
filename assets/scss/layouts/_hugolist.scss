@@ -1,0 +1,23 @@
+// <section class="hugo-list">
+// .list-header
+
+.hugo-list {
+  background-color: $darkbody;
+  color: $rfilightest;
+  padding-bottom: 120px;
+  padding-top: 220px;
+
+  .list-title {
+    font-family: 'Fira Sans';
+    margin-bottom: 40px;
+  }
+
+  .list-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .card {
+    background-color: $darkbg;
+    border: solid $darkgimp;
+  }
+}
