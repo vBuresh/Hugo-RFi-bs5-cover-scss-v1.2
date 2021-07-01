@@ -10,37 +10,6 @@
 // highlight
 //@B^20210617  _reboot.scss 287
 
-pre {
-  background-color: $precode;
-  color: $gray-100;
-  font-size: 1rem;
-  padding: 1rem 1rem 0 1rem;
-}
-
-.divider {
-  background: $gray-500;
-  border-radius: 50px;
-  height: 4px;
-  margin-bottom: 1rem;
-  width: 68px;
-
-  &.text-center {
-    margin: 0 auto;
-  }
-}
-//partial/_defoult/list
-
-.fira-mono {
-  font-family: 'Fira Code'; //    color: $text-muted;
-}
-// .author {
-//   background-color: $precode;
-// }
-//B^ darkMode
-
-// #mode {
-//   margin-right: 1.25rem;
-// }
 
 
 //B^ bs castomisation
@@ -57,6 +26,14 @@ pre {
 //   color: $mainColour;
 // }
 
+
+//B^ GitHub markdown bs castomisation
+table {
+  @extend .table;
+  @extend .table-bordered;
+}
+
+//B^ rfi castomisation
 .maincolour-bg {
   background-color: $mainColour;
 }
@@ -64,3 +41,25 @@ pre {
 .maincolour-color {
   color: $mainColour;
 }
+
+.divider {
+  background: $gray-500;
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1rem;
+  width: 68px;
+
+  &.text-center {
+    margin: 0 auto;
+  }
+}
+//partial/_defoult/list
+
+// .author {
+//   background-color: $precode;
+// }
+//B^ darkMode
+
+// #mode {
+//   margin-right: 1.25rem;
+// }

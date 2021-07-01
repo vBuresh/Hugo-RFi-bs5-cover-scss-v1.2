@@ -1,11 +1,29 @@
 // @b^ Docs dark castomisation
+////////////////////////////
+// dark code 235
+body.dark code:not(.hljs) {
+  background: $precode;
+}
+// dark code 306
+body.dark .card {
+  background: $precode;
+}
+
+body.dark table {
+  @extend .table;
+  @extend .table-bordered;
+}
+
+////////////////////////////
+// new /////////////////////
+////////////////////////////
 body.dark .list-group-item {
   background: $body-bg-dark;
   border: 1px solid $border-dark;
 }
 
 body.dark .list-group-item.bg-light {
-  background: $body-overlay-dark !important;
+  background: $body-overlay-dark;
 }
 
 body.dark .offcanvas-body {
@@ -14,7 +32,7 @@ body.dark .offcanvas-body {
 }
 
 body.dark .offcanvas-body.bg-light {
-  background: $body-overlay-dark !important;
+  background: $body-overlay-dark;
 }
 
 body.dark .offcanvas-header {
@@ -23,7 +41,7 @@ body.dark .offcanvas-header {
 }
 
 body.dark .offcanvas-header.bg-light {
-  background: $body-overlay-dark !important;
+  background: $body-overlay-dark;
 }
 
 body {
