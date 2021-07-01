@@ -29,7 +29,6 @@ toc: true
 {{< highlight yaml "linenos=true,hl_lines=4 11,linenostart=27" >}}
 
 # Highlighting Language - yaml
-
 markup:
 highlight:
 codeFences: true
@@ -49,7 +48,7 @@ tabWidth: 4
 
 Важно помнить, что для полной реализации возможностей и преимуществ Hugo Syntax Highlighting необходимо применять встроенный Hugo шорткод - `❴❴< highlight >❵❵`. Однако не лишне уделить должное внимание и базовым возможностям **Markdown**.
 
-> ##### Примечание:
+> Примечание:
 >
 > Для демонстрации примеров был взят, пожалуй, самый трудный для демонстрации язык `go-html-template`. Чтобы все получилось, пришлось фигурные скобки заменить символами unicode &#10100; и &#10101;. Если этого не сделать, то код просто сработает и показать пример не удастся, так как **Hugo** реагирует на содержимое {{ _внутри фигурных скобок_ }} . Вопреки ожиданиям, даже [шорткод](https://gohugo.io/content-management/shortcodes/) **highlight** не всегда помогает.
 
@@ -238,7 +237,7 @@ Shortcode - `❴❴< highlight go-html-template >❵❵`; options - `"linenos=ta
 
 Наряду с подсветкой синтаксиса выведена нумерация строк. Начало нумерации - со строки 10. Строки 3 и 7, а также диапазон строк 10-12 - выделены, что позволяет обратить особое внимание при их описании.
 
-> ##### Примечание:
+> Примечание:
 >
 > Следует обратить внимание, что только [Goldmark](https://gohugo.io/getting-started/configuration-markup/#goldmark) поддерживает передаваемые атрибуты, такие как `hl_lines` и пр. Также важно, помнить что между параметрами при их перечислении (через запятую) пробелы НЕДОПУСТИМЫ!.
 
@@ -251,7 +250,12 @@ Shortcode - `❴❴< highlight go-html-template >❵❵`; options - `"linenos=ta
 
 Начиная с версии v0.60.0, в Hugo есть возможность подсветки кода упрощенным методом, без применения шорткода, но с добавлением, уже известных нам параметров: `{linenos=table,hl_lines=[1,"4-5"],linenostart=8}`. Подробнее См. [Highlighting in Code Fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences).
 
-Вот как это работает:
+
+### Пример
+
+После указания [синтаксиса языка]({{< ref "#ChroList" >}}), достаточно поместить
+
+ Вот как это выглядит:
 
 ```html {linenos=table,hl_lines=[1,"4-5"],linenostart=2}
 <!-- As a link -->
@@ -312,7 +316,9 @@ goldmark-highlighting это расширение для [goldmark](http://githu
 
 Для подсветки синтаксиса goldmark-highlighting использует [chroma](https://github.com/alecthomas/chroma). A Markdown parser written in Go. Easy to extend, standards-compliant, well-structured.
 
-## List of Chroma Highlighting Languages
+## Список зыков, подсветка синтаксиса которых поддерживается {#ChroList}
+
+List of Chroma Highlighting Languages
 
 See [the full list of Chroma lexers and their aliases](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages) (which is the identifier used in the highlight template func or when doing highlighting in code fences):
 
