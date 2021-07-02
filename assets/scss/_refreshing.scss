@@ -10,8 +10,6 @@
 // highlight
 //@B^20210617  _reboot.scss 287
 
-
-
 //B^ bs castomisation
 
 .navbar-brand {
@@ -26,13 +24,29 @@
 //   color: $mainColour;
 // }
 
-
 //B^ GitHub markdown bs castomisation
 table {
   @extend .table;
   @extend .table-bordered;
 }
 
+blockquote {
+  @extend .blockquote;
+  border-left: 3px solid $gray-400;
+  font-size: 1.125rem;
+  font-style: italic;
+
+  p {
+    margin-left: 1rem;
+  }
+
+}
+
+
+i {
+    @extend .blockquote-footer;
+    @extend .text-end;
+  }
 //B^ rfi castomisation
 .maincolour-bg {
   background-color: $mainColour;

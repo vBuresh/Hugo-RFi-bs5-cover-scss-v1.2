@@ -4,14 +4,17 @@
 body.dark code:not(.hljs) {
   background: $precode;
 }
-// dark code 306
 body.dark .card {
   background: $precode;
 }
-
+// dark code 306
 body.dark table {
   @extend .table;
   @extend .table-bordered;
+}
+
+body.dark blockquote {
+  border-left: solid $gray-600;
 }
 
 ////////////////////////////
