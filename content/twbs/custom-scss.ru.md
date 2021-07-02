@@ -11,7 +11,7 @@ author:
   family_name: Buresh
   display_name: wBuresh
 categories: ["Управление Контентом"]
-tags: [Bootstrap, Примеры]
+tags: [Bootstrap, Настройки]
 # categories: ['Content-management']
 # tags: ['Bootstrap', 'Examples']
 toc: true

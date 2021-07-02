@@ -1,18 +1,23 @@
 ---
 title: "Основы html"
 date: 2021-05-24T19:33:05+03:00
-Lastmod: 2021-05-20T12:17:21+03
+Lastmod: 2021-07-01T21:14:21+03
 draft: false
 description: "элементы html документа (код и примеры)"
 author:
   given_name: serg
-  display_name: g8
-toc: true
+  display_name: g8, b6
 categories:
   - webDev
-tags:
-  - "HTML, MD"
+tags: [HTML, MD]
+toc: true
 ---
+
+<hgroup>
+  <h1 class="allcaps">HTML</h1>
+  <h2 id="living-standard" class="no-num no-toc">Living Standard — Last Updated <span class="text-muted">30 June 2021</span></h2>
+</hgroup>
+
 
 HTML использует разметку ("markup") для отображения текста, изображений и другого контента в веб-браузере. HTML-разметка включает в себя специальные "элементы", такие как `<head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>, <canvas>, <datalist>, <details>, <embed>, <nav>, <output>, <progress>, <video>` и многие
 другие. Подробнее... [MDN: "HTML Руководства для начинающих"](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head)
@@ -46,6 +51,32 @@ HTML-элемент `<head>` содержит машиночитаемую ин�
 </html>
 ```
 > [Источник: MDN](https://developer.mozilla.org/ru/docs/Web/HTML/Element/head)
+
+See w3c html standard
+
+>[4.3.8 The header element](https://html.spec.whatwg.org/multipage/sections.html#the-header-element)
+
+``` HTML
+<body>
+ <header>
+  <h1>Little Green Guys With Guns</h1>
+  <nav>
+   <ul>
+    <li><a href="/games">Games</a>
+    <li><a href="/forum">Forum</a>
+    <li><a href="/download">Download</a>
+   </ul>
+  </nav>
+  <h2>Important News</h2> <!-- this starts a second subsection -->
+  <!-- this is part of the subsection entitled "Important News" -->
+  <p>To play today's games you will need to update your client.</p>
+  <h2>Games</h2> <!-- this starts a third subsection -->
+ </header>
+ <p>You have three active games:</p>
+ <!-- this is still part of the subsection entitled "Games" -->
+ ...
+```
+
 
 
 ## `<body>`
@@ -95,7 +126,7 @@ HTML-элемент `<main>` предназначен для основного 
 
 HTML-элемент `<footer>` представляет собой нижний колонтитул (футер, подвал) для своего ближайшего секционного контента или секционного корня. Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы.
 
-```HTML
+``` html
 <footer>
   Какая-то информация об авторском праве или может
   информация об авторе статьи?
@@ -103,6 +134,7 @@ HTML-элемент `<footer>` представляет собой нижний 
 ```
 >[Источник: MDN](https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer)
 
+See w3c html standard [4.3.9 The footer element](https://html.spec.whatwg.org/multipage/sections.html#the-footer-element)
 
 ## `<aside>`
 
@@ -185,7 +217,7 @@ Be sure to have your pages set up with the latest design and development standar
 
 Убедитесь, что ваши страницы настроены в соответствии с последними стандартами дизайна и разработки. Cтраницы должны выглядеть примерно так:
 
-```HTML
+``` html
 <!doctype html>
 <html lang="en">
   <head>
