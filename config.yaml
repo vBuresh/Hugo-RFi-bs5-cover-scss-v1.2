@@ -2,7 +2,7 @@
 title:                  Hugo-RFi-Cover
 baseURL:                "/"
 # baseURL:              "https://cybmir.ru/"
-# theme: hugo-rfi-bs5cover
+# themes: hugo-rfi-bs5cover
 
 languageCode:           ru
 DefaultContentLanguage: ru
@@ -62,9 +62,9 @@ params:
   # parameter used to specify if you want to calculate the js integrity
   jsIntegrity:          false
   # option to specify the main colour of the theme
+
   # mainColour:         "#F39200"
   # mainColour:         "#00d1b2"
-
   # bs $primary, $secondary, $success, $warning, $light
   mainColour:         "#0d6efd"
   # mainColour:         "#6c757d"

@@ -36,7 +36,7 @@ g8_*
 bslast-*
 
 static/images
-static/js/
+static/js/bootstrap.bundle.min.js.map
 static/css
 
 bootstrap.bundle.min.js.map
