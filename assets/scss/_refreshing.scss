@@ -42,10 +42,9 @@ blockquote {
 
 }
 
-
 i {
     @extend .blockquote-footer;
-    @extend .text-end;
+    // @extend .text-end;
   }
 //B^ rfi castomisation
 .maincolour-bg {
