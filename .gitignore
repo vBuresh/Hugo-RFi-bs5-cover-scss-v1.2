@@ -9,6 +9,7 @@ node_modules/*
 
 assets/bootstrap/scss*
 assets/js/bootstrap.bundle.min.js
+assets/js/darkmode.js
 assets/css/cover.css
 assets/css/dark.css
 

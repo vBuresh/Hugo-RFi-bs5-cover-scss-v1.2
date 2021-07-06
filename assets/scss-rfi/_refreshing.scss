@@ -1,0 +1,88 @@
+// 100px is double the height of the navbar - I made it a big larger for some more space - keep it at 50px at least if you want to use the fixed top nav */
+// body {
+//   padding-top: 100px;
+// }
+//
+// footer {
+//   padding: 52px 0;
+// }
+
+
+// highlight
+//@B^20210617  _reboot.scss 287
+pre {
+  padding: 1rem;
+  font-size: 1em;
+  background-color: $precode;
+  color: $gray-100;
+}
+
+.divider {
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1rem;
+  width: 68px;
+  background: $gray-500;
+
+  &.text-center {
+    margin: 0 auto;
+  }
+}
+
+//partial/_defoult/list
+
+.fira-mono {
+  font-family: "Fira Mono";
+//    color: $text-muted;
+}
+
+// .author {
+//   background-color: $precode;
+// }
+
+//B^ darkMode
+
+#mode {
+  margin-right: 1.25rem;
+}
+
+body .toggle-dark {
+  display: block;
+}
+
+body .toggle-light {
+  display: none;
+}
+
+body.dark .toggle-light {
+  display: block;
+}
+
+body.dark .toggle-dark {
+  display: none;
+}
+
+body.dark .navbar-brand {
+    color: $mainColour;
+}
+//B^ bs castomisation
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+//B^ mainColour
+// body.dark .maincolour-bg {
+//   color: $mainColour;
+// }
+//
+// body.dark .maincolour-color {
+//   color: $mainColour;
+// }
+
+.maincolour-bg {
+  background-color: $mainColour;
+}
+
+.maincolour-color {
+  color: $mainColour;
+}
